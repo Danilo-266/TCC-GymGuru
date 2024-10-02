@@ -45,7 +45,7 @@ namespace Apresentacao
             {
                 MessageBox.Show("USUARIO ENCONTRADO", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaInicial tela = new TelaInicial();
-                tela.WindowState = FormWindowState.Maximized;
+           
                 tela.Show();
                 this.Hide();
                 

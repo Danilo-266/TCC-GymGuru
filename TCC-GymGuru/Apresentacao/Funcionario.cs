@@ -21,5 +21,18 @@ namespace Apresentacao
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            TelaInicial tela = new TelaInicial();
+
+            tela.Show();
+            this.Hide();
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Apresentacao
         private void imgFuncionario_Click(object sender, EventArgs e)
         {
             Funcionario funcionario = new Funcionario();
-            funcionario.WindowState = FormWindowState.Maximized;
+          
             funcionario.Show();
 
             this.Close();
