@@ -39,6 +39,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelCadastrar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,9 +83,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(510, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 21);
+            this.label2.Size = new System.Drawing.Size(115, 21);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Login:";
+            this.label2.Text = "Login(CPF):";
             // 
             // label3
             // 
@@ -101,7 +103,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(86)))), ((int)(((byte)(7)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLogin.Location = new System.Drawing.Point(524, 429);
+            this.btnLogin.Location = new System.Drawing.Point(523, 429);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 28);
             this.btnLogin.TabIndex = 9;
@@ -116,7 +118,7 @@
             this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnFechar.Location = new System.Drawing.Point(675, 12);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(65, 57);
             this.btnFechar.TabIndex = 8;
@@ -155,12 +157,37 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(483, 468);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Não tem conta?";
+            // 
+            // labelCadastrar
+            // 
+            this.labelCadastrar.AutoSize = true;
+            this.labelCadastrar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(86)))), ((int)(((byte)(7)))));
+            this.labelCadastrar.Location = new System.Drawing.Point(579, 468);
+            this.labelCadastrar.Name = "labelCadastrar";
+            this.labelCadastrar.Size = new System.Drawing.Size(79, 16);
+            this.labelCadastrar.TabIndex = 12;
+            this.labelCadastrar.Text = "Cadastre-se";
+            this.labelCadastrar.Click += new System.EventHandler(this.label5_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(752, 511);
+            this.Controls.Add(this.labelCadastrar);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.label3);
@@ -194,5 +221,7 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCadastrar;
     }
 }

@@ -13,12 +13,12 @@ namespace Apresentacao
 {
     public partial class Login : Form
     {
-        public ClienteLoginService service;
+        public FuncionarioService service;
 
        
         public Login()
         {
-            service = new ClienteLoginService();
+            service = new FuncionarioService();
             InitializeComponent();
         }
 
@@ -45,9 +45,11 @@ namespace Apresentacao
             {
                 MessageBox.Show("USUARIO ENCONTRADO", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaInicial tela = new TelaInicial();
-                tela.WindowState = FormWindowState.Maximized;
+           
                 tela.Show();
                 this.Hide();
+
+                
                 
             }
             else
@@ -65,6 +67,13 @@ namespace Apresentacao
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+            this.Hide();
         }
     }
 }
