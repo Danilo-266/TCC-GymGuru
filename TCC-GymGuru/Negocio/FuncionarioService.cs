@@ -10,6 +10,7 @@ namespace Negocio
     public class FuncionarioService
     {
         public FuncionarioRepository repository;
+       
 
         public FuncionarioService()
         {
@@ -24,6 +25,7 @@ namespace Negocio
 
         public void Cadrastro(string cpf, string nome, string email, string genero, string celular, string senha)
         {
+            
             repository.Cadastro(cpf, nome, email, genero, celular, senha);
         }
 
