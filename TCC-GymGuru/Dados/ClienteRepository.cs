@@ -1,32 +1,29 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
 
 namespace Dados
 {
-    public class TreinoRepository
+    public class ClienteRepository
     {
-        public void Cadastro(string nome, string descrissao, int serie, string grupoMuscular)
+        public void Cadastro(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
         {
 
-            string query = "INSERT INTO GymGuruTreino (nome, descricao, series, grupoMuscular) VALUES (@nome, @descricao, @series, @grupoMuscular)";
+            string query = "INSERT INTO GymGuruCliente (cpf, nome, idade, email, genero, celular, experiencia) VALUES (@cpf, @nome, @idade, @email, @genero, @celular, @experiencia)";
             Connection.getConnection();
             using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
             {
+                cmd.Parameters.AddWithValue("@cpf", cpf);
                 cmd.Parameters.AddWithValue("@nome", nome);
-                cmd.Parameters.AddWithValue("@descricao", descrissao);
-                cmd.Parameters.AddWithValue("@series",  serie);
-                cmd.Parameters.AddWithValue("@grupoMuscular", grupoMuscular);
+                cmd.Parameters.AddWithValue("@idade", idade);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@celular", celular);
+                cmd.Parameters.AddWithValue("@experiencia", experiencia);
                 cmd.ExecuteNonQuery();
             }
             if (Connection.SqlCon.State == ConnectionState.Open)
@@ -35,11 +32,11 @@ namespace Dados
 
         public DataTable getAll()
         {
-            DataTable DtResultado = new DataTable("treino");
+            DataTable DtResultado = new DataTable("cliente");
             try
             {
                 Connection.getConnection();
-                String sqlSelect = "select * from GymGuruTreino";
+                String sqlSelect = "select * from GymGuruCliente";
 
                 MySqlCommand SqlCmd = new MySqlCommand();
                 SqlCmd.Connection = Connection.SqlCon;
@@ -56,39 +53,42 @@ namespace Dados
                 Connection.SqlCon.Close();
             return DtResultado;
         }
-            
-            
 
-        public void Update(int id, String nome, String descricao, int series, String grupoMuscular )
+
+
+        public void Update(int id, String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
         {
-           
-            
-                Connection.getConnection();
-                string query = "UPDATE GymGuruTreino SET nome = @nome, descricao = @descricao, series = @series, grupoMuscular = @grupoMuscular WHERE idTreino = @idTreino ";
-                using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
-                {
-                    cmd.Parameters.AddWithValue("@idTreino", id);
-                    cmd.Parameters.AddWithValue("@nome", nome);
-                    cmd.Parameters.AddWithValue("@descricao", descricao);
-                    cmd.Parameters.AddWithValue("@series", series);
-                    cmd.Parameters.AddWithValue("@grupoMuscular", grupoMuscular);
-                    cmd.ExecuteNonQuery();
-                }
-                if (Connection.SqlCon.State == ConnectionState.Open)
+
+
+            Connection.getConnection();
+            string query = "UPDATE GymGuruCliente SET  cpf = @cpf, nome = @nome, idade = @idade ,email = @email, genero = @genero , celular = @celular, experiencia = @experiencia WHERE idCliente = @idCliente ";
+            using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
+            {
+                cmd.Parameters.AddWithValue("@idCliente", id);
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@idade", idade);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@celular", celular);
+                cmd.Parameters.AddWithValue("@experiencia", experiencia);
+                cmd.ExecuteNonQuery();
+            }
+            if (Connection.SqlCon.State == ConnectionState.Open)
                 Connection.SqlCon.Close();
 
 
         }
 
-        public void Remove(int idTreino)
+        public void Remove(int idCliente)
         {
 
             Connection.getConnection();
-            string query = "DELETE FROM GymGuruTreino WHERE idTreino = @idTreino";
+            string query = "DELETE FROM GymGuruCliente WHERE idCliente = @idCliente";
             using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
             {
-                cmd.Parameters.AddWithValue("@idTreino", idTreino);
-                
+                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+
                 cmd.ExecuteNonQuery();
             }
             if (Connection.SqlCon.State == ConnectionState.Open)
@@ -99,19 +99,19 @@ namespace Dados
 
         public DataTable PesquisaNome(String Nome)
         {
-            DataTable DtResultado = new DataTable("fornecedor");
+            DataTable DtResultado = new DataTable("cliente");
             string selectSql;
             try
             {
                 Connection.getConnection();
                 if (!string.IsNullOrEmpty(Nome))
                 {
-                    selectSql = String.Format("SELECT * FROM GymGuruTreino WHERE nome LIKE @pNome");
+                    selectSql = String.Format("SELECT * FROM GymGuruCliente WHERE nome LIKE @pNome");
                     Nome = '%' + Nome + '%';
                 }
                 else
                 {
-                    selectSql = String.Format("SELECT * FROM GymGuruTreino");
+                    selectSql = String.Format("SELECT * FROM GymGuruCliente");
                 }
                 MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
                 if (!string.IsNullOrEmpty(Nome))
@@ -128,3 +128,4 @@ namespace Dados
 
     }
 }
+

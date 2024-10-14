@@ -37,18 +37,18 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgFuncionario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lNome = new System.Windows.Forms.Label();
+            this.lCpf = new System.Windows.Forms.Label();
+            this.lEmail = new System.Windows.Forms.Label();
+            this.lGenero = new System.Windows.Forms.Label();
+            this.lCelular = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbGenero = new System.Windows.Forms.Label();
             this.lbCelular = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.dgFuncionario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -56,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -145,61 +146,61 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(199, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 33);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lNome.AutoSize = true;
+            this.lNome.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNome.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lNome.Location = new System.Drawing.Point(199, 175);
+            this.lNome.Name = "lNome";
+            this.lNome.Size = new System.Drawing.Size(103, 33);
+            this.lNome.TabIndex = 15;
+            this.lNome.Text = "Nome:";
+            this.lNome.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label3
+            // lCpf
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(491, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Cpf:";
+            this.lCpf.AutoSize = true;
+            this.lCpf.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCpf.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lCpf.Location = new System.Drawing.Point(491, 175);
+            this.lCpf.Name = "lCpf";
+            this.lCpf.Size = new System.Drawing.Size(73, 33);
+            this.lCpf.TabIndex = 16;
+            this.lCpf.Text = "Cpf:";
             // 
-            // label4
+            // lEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(841, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 33);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Email:";
+            this.lEmail.AutoSize = true;
+            this.lEmail.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lEmail.Location = new System.Drawing.Point(841, 175);
+            this.lEmail.Name = "lEmail";
+            this.lEmail.Size = new System.Drawing.Size(106, 33);
+            this.lEmail.TabIndex = 17;
+            this.lEmail.Text = "Email:";
             // 
-            // label5
+            // lGenero
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(199, 308);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 33);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Genero:";
+            this.lGenero.AutoSize = true;
+            this.lGenero.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lGenero.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lGenero.Location = new System.Drawing.Point(199, 308);
+            this.lGenero.Name = "lGenero";
+            this.lGenero.Size = new System.Drawing.Size(122, 33);
+            this.lGenero.TabIndex = 18;
+            this.lGenero.Text = "Genero:";
             // 
-            // label6
+            // lCelular
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(491, 308);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 33);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Celular:";
+            this.lCelular.AutoSize = true;
+            this.lCelular.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCelular.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lCelular.Location = new System.Drawing.Point(491, 308);
+            this.lCelular.Name = "lCelular";
+            this.lCelular.Size = new System.Drawing.Size(126, 33);
+            this.lCelular.TabIndex = 19;
+            this.lCelular.Text = "Celular:";
             // 
             // lbNome
             // 
@@ -256,14 +257,6 @@
             this.lbCelular.TabIndex = 24;
             this.lbCelular.Text = "label10";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Location = new System.Drawing.Point(202, 461);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 365);
-            this.panel1.TabIndex = 25;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -275,24 +268,32 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Funcionarios online:";
             // 
+            // dgFuncionario
+            // 
+            this.dgFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFuncionario.Location = new System.Drawing.Point(205, 479);
+            this.dgFuncionario.Name = "dgFuncionario";
+            this.dgFuncionario.Size = new System.Drawing.Size(780, 324);
+            this.dgFuncionario.TabIndex = 27;
+            // 
             // Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.dgFuncionario);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbCelular);
             this.Controls.Add(this.lbGenero);
             this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.lbCpf);
             this.Controls.Add(this.lbNome);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lCelular);
+            this.Controls.Add(this.lGenero);
+            this.Controls.Add(this.lEmail);
+            this.Controls.Add(this.lCpf);
+            this.Controls.Add(this.lNome);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
@@ -304,6 +305,7 @@
             this.Name = "Funcionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
+            this.Load += new System.EventHandler(this.Funcionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -311,6 +313,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,17 +328,17 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lNome;
+        private System.Windows.Forms.Label lCpf;
+        private System.Windows.Forms.Label lEmail;
+        private System.Windows.Forms.Label lGenero;
+        private System.Windows.Forms.Label lCelular;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbGenero;
         private System.Windows.Forms.Label lbCelular;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgFuncionario;
     }
 }

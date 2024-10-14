@@ -98,3 +98,4 @@ C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\obj\Debug\Apresent
 C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\obj\Debug\Apresent.076B8766.Up2Date
 C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\obj\Debug\Apresentacao.exe
 C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\obj\Debug\Apresentacao.Pesquisa.resources

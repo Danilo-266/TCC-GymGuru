@@ -17,10 +17,29 @@ namespace Negocio
             repository = new TreinoRepository();
         }
 
+        public void Cadastrar(String nome, String descricao, int serie, String musculo)
+        {
+            repository.Cadastro(nome, descricao, serie, musculo);
+        }
 
         public DataTable exibir()
         {
             return repository.getAll();
         }
+
+        public void deeletar(int id)
+        {
+            repository.Remove(id);
+        }
+
+        public void update(int id,  String nome, String descricao,  int series, String grupoMuscular)
+        {
+            repository.Update(id, nome,descricao,series,grupoMuscular);
+        }
+
+        public DataTable pesquisar(String nome)
+        {
+           return repository.PesquisaNome(nome);
+       }
     }
 }

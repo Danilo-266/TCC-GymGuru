@@ -37,7 +37,7 @@ namespace Apresentacao
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgFuncionario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgCliente = new System.Windows.Forms.DataGridView();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtIdade = new System.Windows.Forms.TextBox();
@@ -53,13 +53,15 @@ namespace Apresentacao
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnTreino = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,7 +69,7 @@ namespace Apresentacao
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -146,13 +148,14 @@ namespace Apresentacao
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgCliente
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(224, 486);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1264, 308);
-            this.dataGridView1.TabIndex = 17;
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Location = new System.Drawing.Point(224, 486);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.Size = new System.Drawing.Size(1132, 308);
+            this.dgCliente.TabIndex = 17;
+            this.dgCliente.SelectionChanged += new System.EventHandler(this.dgCliente_SelectionChanged);
             // 
             // txtCpf
             // 
@@ -298,59 +301,65 @@ namespace Apresentacao
             this.label8.TabIndex = 33;
             this.label8.Text = "Experiência:";
             // 
-            // button1
+            // btnNovo
             // 
-            this.button1.Location = new System.Drawing.Point(225, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 32);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNovo.Location = new System.Drawing.Point(225, 438);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(119, 32);
+            this.btnNovo.TabIndex = 34;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Location = new System.Drawing.Point(385, 438);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 32);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.Location = new System.Drawing.Point(385, 438);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(119, 32);
+            this.btnAlterar.TabIndex = 35;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // button3
+            // btnExcluir
             // 
-            this.button3.Location = new System.Drawing.Point(548, 438);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 32);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Excluir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(548, 438);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(119, 32);
+            this.btnExcluir.TabIndex = 36;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // button5
+            // btnPesquisa
             // 
-            this.button5.Location = new System.Drawing.Point(713, 438);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 32);
-            this.button5.TabIndex = 37;
-            this.button5.Text = "Pesquisar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Location = new System.Drawing.Point(713, 438);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(119, 32);
+            this.btnPesquisa.TabIndex = 37;
+            this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
-            // button4
+            // btnSalvar
             // 
-            this.button4.Location = new System.Drawing.Point(1369, 809);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 32);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Cadastrrar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(1369, 809);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(119, 32);
+            this.btnSalvar.TabIndex = 38;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button6
+            // btnCancelar
             // 
-            this.button6.Location = new System.Drawing.Point(1224, 809);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(119, 32);
-            this.button6.TabIndex = 39;
-            this.button6.Text = "Cancelar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(1224, 809);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(119, 32);
+            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnTreino
             // 
@@ -361,19 +370,40 @@ namespace Apresentacao
             this.btnTreino.Text = "Definir Treino";
             this.btnTreino.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label9.Location = new System.Drawing.Point(723, 308);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 25);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "ID:";
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(728, 336);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(52, 26);
+            this.txtId.TabIndex = 41;
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnTreino);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnPesquisa);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -389,7 +419,7 @@ namespace Apresentacao
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgCliente);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
@@ -400,6 +430,7 @@ namespace Apresentacao
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -407,7 +438,7 @@ namespace Apresentacao
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +453,7 @@ namespace Apresentacao
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgCliente;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtIdade;
@@ -438,12 +469,14 @@ namespace Apresentacao
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnTreino;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

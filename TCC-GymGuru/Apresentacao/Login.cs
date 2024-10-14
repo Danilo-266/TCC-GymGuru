@@ -15,7 +15,6 @@ namespace Apresentacao
     {
         public FuncionarioService service;
 
-       
         public Login()
         {
             service = new FuncionarioService();
@@ -26,6 +25,7 @@ namespace Apresentacao
         {
             Application.Exit(); 
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -44,8 +44,10 @@ namespace Apresentacao
             if (permissao == true)
             {
                 MessageBox.Show("USUARIO ENCONTRADO", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SessaoUsuario.User = txtLogin.Text;
                 TelaInicial tela = new TelaInicial();
            
+
                 tela.Show();
                 this.Hide();
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Apresentacao
 {
@@ -16,6 +17,7 @@ namespace Apresentacao
         private readonly TreinoService treinoService;
         private DataTable tblTreino = new DataTable();
         private int modo = 0;
+        
         public Treino()
         {
             treinoService = new TreinoService();
@@ -46,6 +48,7 @@ namespace Apresentacao
                     txtExercicio.Enabled = false;
                     txtMusculo.Enabled = false;
                     txtSeries.Enabled = false;
+                    txtId.Enabled = false;
                     break;
                 case 1://Adicionar
                     txtDesc.Enabled=true;
@@ -58,7 +61,7 @@ namespace Apresentacao
                     btnAlterar.Enabled=false;
                     btnExcluir.Enabled=false;
                     btnPesquisar.Enabled=false;
-
+                    txtId.Enabled = false;
                     break;
                     
             }
@@ -157,7 +160,8 @@ namespace Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            modo = 1;
+            Habilita();
         }
 
         private void dgTreino_SelectionChanged(object sender, EventArgs e)
@@ -165,11 +169,116 @@ namespace Apresentacao
             DataGridView row = (DataGridView)sender;
             if (row.CurrentRow == null) 
                 return;
-            txtExercicio.Text = dgTreino.CurrentRow.Cells[0].Value.ToString();
-            txtDesc.Text = dgTreino.CurrentRow.Cells[1].Value.ToString();
-            txtSeries.Text = dgTreino.CurrentRow.Cells[2].Value.ToString();
-            txtMusculo.Text = dgTreino.CurrentRow.Cells[3].Value.ToString();
+            txtExercicio.Text = dgTreino.CurrentRow.Cells[1].Value.ToString();
+            txtDesc.Text = dgTreino.CurrentRow.Cells[2].Value.ToString();
+            txtSeries.Text = dgTreino.CurrentRow.Cells[3].Value.ToString();
+            txtMusculo.Text = dgTreino.CurrentRow.Cells[4].Value.ToString();
+            txtId.Text = dgTreino.CurrentRow.Cells[0].Value.ToString();
+        }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+            String nome = txtExercicio.Text, descricao = txtDesc.Text, grupomuscular = txtMusculo.Text;
+            int.TryParse(txtSeries.Text, out int series);
+            int.TryParse(txtId.Text, out int id);
+            if (txtId.Text == "")
+            {
+                try
+                {
+                    treinoService.Cadastrar(nome, descricao, series, grupomuscular);
+                    MessageBox.Show("TREINO CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "ERRO AO CADASTRAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+       
+                carregaGridView();
+            }
+            else
+            {
+                
+                try
+                {
+                    treinoService.update(id, nome, descricao, series, grupomuscular);
+                    MessageBox.Show("TREINO ATUALIZADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                carregaGridView();
+                modo = 0;
+                Habilita();
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            modo = 1;
+            Habilita();
+            txtDesc.Clear();
+            txtMusculo.Clear();
+            txtId.Clear();
+            txtSeries.Clear();
+            txtExercicio.Clear();
+            modo = 1;
+            Habilita();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int.TryParse(txtId.Text, out int id);
+            DialogResult resposta;
+            resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (resposta == DialogResult.OK)
+            {
+
+
+                try
+                {
+                    treinoService.deeletar(id);
+                    MessageBox.Show("TREINO DELETADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "ERRO AO DELETAR  TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            carregaGridView();
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Pesquisa p = new Pesquisa(1);
+            string txtBusca = "";
+            p.ShowDialog();
+            txtBusca = p.Texto;
+          
+            DataTable dtTreino = treinoService.pesquisar(txtBusca);
+            if (dtTreino != null)
+            {
+                dgTreino.DataSource = dtTreino;
+                dgTreino.Refresh();
+            }
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            modo = 0;
+            Habilita();
         }
     }
 }
