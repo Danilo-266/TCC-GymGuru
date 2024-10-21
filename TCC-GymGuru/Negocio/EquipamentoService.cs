@@ -41,7 +41,11 @@ namespace Negocio
         {
             return repository.PesquisaNome(nome);
         }
-      
+
+        public DataTable Ocupado(int disp)
+        {
+            return repository.PesquisaDisponivel(disp);
+        }
 
     }
 }

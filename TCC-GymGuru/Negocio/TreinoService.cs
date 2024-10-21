@@ -17,9 +17,9 @@ namespace Negocio
             repository = new TreinoRepository();
         }
 
-        public void Cadastrar(String nome, String descricao, int serie, String musculo)
+        public void Cadastrar(String nome, String descricao, int serie, String musculo, int idAparelho)
         {
-            repository.Cadastro(nome, descricao, serie, musculo);
+            repository.Cadastro(nome, descricao, serie, musculo, idAparelho);
         }
 
         public DataTable exibir()
@@ -41,5 +41,16 @@ namespace Negocio
         {
            return repository.PesquisaNome(nome);
        }
+
+        public String pesquisaAparelhoNome(int idAp)
+        {
+            return repository.GetAparelhoNome(idAp);
+        }
+
+        public int pesquisarAparelhoID(string nomeId)
+        {
+            return repository.GetAparelhoId(nomeId);
+        }
+
     }
 }

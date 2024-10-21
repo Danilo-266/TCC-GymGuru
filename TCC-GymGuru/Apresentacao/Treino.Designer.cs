@@ -55,7 +55,8 @@ namespace Apresentacao
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEquipamento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -303,9 +304,9 @@ namespace Apresentacao
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(731, 297);
+            this.txtId.Location = new System.Drawing.Point(969, 297);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(50, 26);
+            this.txtId.Size = new System.Drawing.Size(52, 26);
             this.txtId.TabIndex = 62;
             // 
             // label4
@@ -315,20 +316,28 @@ namespace Apresentacao
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label4.Location = new System.Drawing.Point(726, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 25);
+            this.label4.Size = new System.Drawing.Size(156, 25);
             this.label4.TabIndex = 63;
-            this.label4.Text = "ID:";
+            this.label4.Text = "Equipamento:";
             // 
-            // label9
+            // label6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(875, 346);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(304, 25);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "COLOCAR EQUIPAMENTO:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(964, 269);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 25);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "ID:";
+            // 
+            // txtEquipamento
+            // 
+            this.txtEquipamento.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipamento.Location = new System.Drawing.Point(731, 297);
+            this.txtEquipamento.Name = "txtEquipamento";
+            this.txtEquipamento.Size = new System.Drawing.Size(178, 26);
+            this.txtEquipamento.TabIndex = 65;
             // 
             // Treino
             // 
@@ -336,7 +345,8 @@ namespace Apresentacao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtEquipamento);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
@@ -406,6 +416,7 @@ namespace Apresentacao
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEquipamento;
     }
 }

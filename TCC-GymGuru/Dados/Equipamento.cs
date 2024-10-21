@@ -13,13 +13,16 @@ namespace Dados
         private String descricao { get; set; }
         private String musculo { get; set; }
 
+        private int usabilidade {  get; set; }
+
         public Equipamento() { }
 
-        public Equipamento(string nome, string descricao, string musculo)
+        public Equipamento(string nome, string descricao, string musculo, int usabilidade)
         {
             this.nome = nome;
             this.descricao = descricao;
             this.musculo = musculo;
+            this.usabilidade = usabilidade;
         }
     }
 }

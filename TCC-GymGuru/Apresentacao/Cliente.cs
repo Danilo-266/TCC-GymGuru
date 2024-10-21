@@ -296,6 +296,11 @@ namespace Apresentacao
             modo = 0;
             Habilita();
         }
+
+        private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
     

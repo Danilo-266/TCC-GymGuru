@@ -151,10 +151,11 @@ namespace Apresentacao
             // dgCliente
             // 
             this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Location = new System.Drawing.Point(224, 486);
+            this.dgCliente.Location = new System.Drawing.Point(224, 495);
             this.dgCliente.Name = "dgCliente";
             this.dgCliente.Size = new System.Drawing.Size(1132, 308);
             this.dgCliente.TabIndex = 17;
+            this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
             this.dgCliente.SelectionChanged += new System.EventHandler(this.dgCliente_SelectionChanged);
             // 
             // txtCpf
@@ -363,7 +364,7 @@ namespace Apresentacao
             // 
             // btnTreino
             // 
-            this.btnTreino.Location = new System.Drawing.Point(855, 438);
+            this.btnTreino.Location = new System.Drawing.Point(883, 438);
             this.btnTreino.Name = "btnTreino";
             this.btnTreino.Size = new System.Drawing.Size(119, 32);
             this.btnTreino.TabIndex = 40;

@@ -129,7 +129,7 @@ namespace Apresentacao
 
         private void Equipamento_Load(object sender, EventArgs e)
         {
-            dgEquipamento.ColumnCount = 4;
+            dgEquipamento.ColumnCount = 6;
             dgEquipamento.AutoGenerateColumns = false;
 
             dgEquipamento.Columns[0].Width = 60;
@@ -148,17 +148,37 @@ namespace Apresentacao
             dgEquipamento.Columns[3].HeaderText = "GRUPO MUSCULAR";
             dgEquipamento.Columns[3].DataPropertyName = "grupoMuscular";
 
+            dgEquipamento.Columns[4].Width = 120;
+            dgEquipamento.Columns[4].HeaderText = "ESTADO";
+            dgEquipamento.Columns[4].DataPropertyName = "estado";
+
+            dgEquipamento.Columns[5].Width = 120;
+            dgEquipamento.Columns[5].HeaderText = "USOS";
+            dgEquipamento.Columns[5].DataPropertyName = "usabilidade";
+
             dgEquipamento.AllowUserToAddRows = false;
             dgEquipamento.AllowUserToDeleteRows = false;
             dgEquipamento.MultiSelect = false;
             dgEquipamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            carregaGridView();
+            rBtnTodos.Checked = true;
+          
         }
 
-        public void carregaGridView()
+        public void carregaGridView(int estado)
         {
-            dgEquipamento.DataSource = equipamentoService.exibir();
+            if (estado == 0)
+            {
+                dgEquipamento.DataSource = equipamentoService.exibir();
+            }
+            else if (estado == 1)
+            {
+                dgEquipamento.DataSource = equipamentoService.Ocupado(0);
+            }
+            else if (estado == 2)
+            {
+                dgEquipamento.DataSource = equipamentoService.Ocupado(1);
+            }
             dgEquipamento.Refresh();
         }
 
@@ -184,7 +204,7 @@ namespace Apresentacao
                     MessageBox.Show(ex.Message, "ERRO AO DELETAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            carregaGridView();
+            carregaGridView(0);
 
         }
 
@@ -228,7 +248,7 @@ namespace Apresentacao
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                carregaGridView();
+                carregaGridView(0);
                 modo = 0;
                 Habilita();
             }
@@ -247,7 +267,7 @@ namespace Apresentacao
 
                     MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                carregaGridView();
+                carregaGridView(0);
                 modo = 0;
                 Habilita();
             }
@@ -262,6 +282,26 @@ namespace Apresentacao
             txtNome.Text = dgEquipamento.CurrentRow.Cells[1].Value.ToString();
             txtDesc.Text = dgEquipamento.CurrentRow.Cells[2].Value.ToString();
            txtMusculo.Text = dgEquipamento.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnUso_CheckedChanged(object sender, EventArgs e)
+        {
+            carregaGridView(1);
+        }
+
+        private void rBtnTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            carregaGridView(0);
+        }
+
+        private void rbtnDisp_CheckedChanged(object sender, EventArgs e)
+        {
+            carregaGridView(2);
         }
     }
 }

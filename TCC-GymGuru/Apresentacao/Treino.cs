@@ -49,11 +49,15 @@ namespace Apresentacao
                     txtMusculo.Enabled = false;
                     txtSeries.Enabled = false;
                     txtId.Enabled = false;
+                    txtId.Enabled = false;
+                    txtEquipamento.Enabled = false;
                     break;
                 case 1://Adicionar
                     txtDesc.Enabled=true;
                     txtExercicio.Enabled=true;
                     txtMusculo.Enabled=true;
+                    txtId.Enabled=true;
+                    txtEquipamento.Enabled=true;
                     txtSeries.Enabled=true;
                     btnCancelar.Enabled=true;
                     btnSalvar.Enabled=true;
@@ -71,7 +75,7 @@ namespace Apresentacao
 
         private void Treino_Load(object sender, EventArgs e)
         {
-            dgTreino.ColumnCount= 5;
+            dgTreino.ColumnCount= 6;
             dgTreino.AutoGenerateColumns= false;
 
             dgTreino.Columns[0].Width = 60;
@@ -82,7 +86,7 @@ namespace Apresentacao
             dgTreino.Columns[1].HeaderText = "NOME";
             dgTreino.Columns[1].DataPropertyName = "nome";
 
-            dgTreino.Columns[2].Width = 540;
+            dgTreino.Columns[2].Width = 500;
             dgTreino.Columns[2].HeaderText = "DESCRICÃO";
             dgTreino.Columns[2].DataPropertyName = "descricao";
 
@@ -90,9 +94,13 @@ namespace Apresentacao
             dgTreino.Columns[3].HeaderText = "SERIES";
             dgTreino.Columns[3].DataPropertyName = "series";
 
-            dgTreino.Columns[4].Width = 300;
+            dgTreino.Columns[4].Width = 250;
             dgTreino.Columns[4].HeaderText = "MUSCULO";
             dgTreino.Columns[4].DataPropertyName = "grupoMuscular";
+
+            dgTreino.Columns[5].Width = 100;
+            dgTreino.Columns[5].HeaderText = "EQUIPAMENTO";
+            dgTreino.Columns[5].DataPropertyName = "FkAparelho";
 
             dgTreino.AllowUserToAddRows = false;
             dgTreino.AllowUserToDeleteRows = false;
@@ -169,24 +177,28 @@ namespace Apresentacao
             DataGridView row = (DataGridView)sender;
             if (row.CurrentRow == null) 
                 return;
-            txtExercicio.Text = dgTreino.CurrentRow.Cells[1].Value.ToString();
+            txtExercicio.Text =  dgTreino.CurrentRow.Cells[1].Value.ToString();
             txtDesc.Text = dgTreino.CurrentRow.Cells[2].Value.ToString();
             txtSeries.Text = dgTreino.CurrentRow.Cells[3].Value.ToString();
             txtMusculo.Text = dgTreino.CurrentRow.Cells[4].Value.ToString();
             txtId.Text = dgTreino.CurrentRow.Cells[0].Value.ToString();
+            txtEquipamento.Text = treinoService.pesquisaAparelhoNome(int.Parse(dgTreino.CurrentRow.Cells[5].Value.ToString()) ) ;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            String nome = txtExercicio.Text, descricao = txtDesc.Text, grupomuscular = txtMusculo.Text;
+            String nome = txtExercicio.Text, descricao = txtDesc.Text, grupomuscular = txtMusculo.Text, aparelho = txtEquipamento.Text;
             int.TryParse(txtSeries.Text, out int series);
             int.TryParse(txtId.Text, out int id);
+
+            
+     
             if (txtId.Text == "")
             {
                 try
                 {
-                    treinoService.Cadastrar(nome, descricao, series, grupomuscular);
+                    treinoService.Cadastrar(nome, descricao, series, grupomuscular, treinoService.pesquisarAparelhoID(aparelho));
                     MessageBox.Show("TREINO CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    
 
@@ -196,7 +208,8 @@ namespace Apresentacao
 
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-       
+                modo = 0;
+                Habilita();
                 carregaGridView();
             }
             else
@@ -211,7 +224,7 @@ namespace Apresentacao
                 }
                 catch (Exception ex)
                 {
-
+                  
                     MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 carregaGridView();
@@ -229,6 +242,8 @@ namespace Apresentacao
             txtId.Clear();
             txtSeries.Clear();
             txtExercicio.Clear();
+            txtId.Clear();
+            txtEquipamento.Clear();
             modo = 1;
             Habilita();
         }
@@ -279,6 +294,11 @@ namespace Apresentacao
         {
             modo = 0;
             Habilita();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

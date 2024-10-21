@@ -53,6 +53,10 @@ namespace Apresentacao
             this.txtMusculo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.rbtnUso = new System.Windows.Forms.RadioButton();
+            this.rbtnDisp = new System.Windows.Forms.RadioButton();
+            this.rBtnTodos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -141,7 +145,7 @@ namespace Apresentacao
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(1205, 784);
+            this.btnCancelar.Location = new System.Drawing.Point(1206, 810);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 32);
             this.btnCancelar.TabIndex = 47;
@@ -151,7 +155,7 @@ namespace Apresentacao
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(1350, 784);
+            this.btnSalvar.Location = new System.Drawing.Point(1349, 810);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(119, 32);
             this.btnSalvar.TabIndex = 46;
@@ -202,9 +206,9 @@ namespace Apresentacao
             // dgEquipamento
             // 
             this.dgEquipamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEquipamento.Location = new System.Drawing.Point(205, 461);
+            this.dgEquipamento.Location = new System.Drawing.Point(206, 489);
             this.dgEquipamento.Name = "dgEquipamento";
-            this.dgEquipamento.Size = new System.Drawing.Size(1132, 308);
+            this.dgEquipamento.Size = new System.Drawing.Size(950, 308);
             this.dgEquipamento.TabIndex = 41;
             this.dgEquipamento.SelectionChanged += new System.EventHandler(this.dgEquipamento_SelectionChanged);
             // 
@@ -295,12 +299,68 @@ namespace Apresentacao
             this.txtId.Size = new System.Drawing.Size(48, 26);
             this.txtId.TabIndex = 56;
             // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Location = new System.Drawing.Point(851, 413);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(119, 32);
+            this.btnRelatorio.TabIndex = 58;
+            this.btnRelatorio.Text = "Relatório de Usos";
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rbtnUso
+            // 
+            this.rbtnUso.AutoSize = true;
+            this.rbtnUso.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold);
+            this.rbtnUso.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.rbtnUso.Location = new System.Drawing.Point(503, 461);
+            this.rbtnUso.Name = "rbtnUso";
+            this.rbtnUso.Size = new System.Drawing.Size(82, 22);
+            this.rbtnUso.TabIndex = 61;
+            this.rbtnUso.TabStop = true;
+            this.rbtnUso.Text = "Em Uso";
+            this.rbtnUso.UseVisualStyleBackColor = true;
+            this.rbtnUso.CheckedChanged += new System.EventHandler(this.rbtnUso_CheckedChanged);
+            // 
+            // rbtnDisp
+            // 
+            this.rbtnDisp.AutoSize = true;
+            this.rbtnDisp.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold);
+            this.rbtnDisp.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.rbtnDisp.Location = new System.Drawing.Point(351, 461);
+            this.rbtnDisp.Name = "rbtnDisp";
+            this.rbtnDisp.Size = new System.Drawing.Size(114, 22);
+            this.rbtnDisp.TabIndex = 60;
+            this.rbtnDisp.TabStop = true;
+            this.rbtnDisp.Text = "Disponiveis";
+            this.rbtnDisp.UseVisualStyleBackColor = true;
+            this.rbtnDisp.CheckedChanged += new System.EventHandler(this.rbtnDisp_CheckedChanged);
+            // 
+            // rBtnTodos
+            // 
+            this.rBtnTodos.AutoSize = true;
+            this.rBtnTodos.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnTodos.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.rBtnTodos.Location = new System.Drawing.Point(205, 461);
+            this.rBtnTodos.Name = "rBtnTodos";
+            this.rBtnTodos.Size = new System.Drawing.Size(119, 22);
+            this.rBtnTodos.TabIndex = 59;
+            this.rBtnTodos.TabStop = true;
+            this.rBtnTodos.Text = "Exibir Todos";
+            this.rBtnTodos.UseVisualStyleBackColor = true;
+            this.rBtnTodos.CheckedChanged += new System.EventHandler(this.rBtnTodos_CheckedChanged);
+            // 
             // Equipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.rbtnUso);
+            this.Controls.Add(this.rbtnDisp);
+            this.Controls.Add(this.rBtnTodos);
+            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label4);
@@ -366,5 +426,9 @@ namespace Apresentacao
         private System.Windows.Forms.TextBox txtMusculo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.RadioButton rbtnUso;
+        private System.Windows.Forms.RadioButton rbtnDisp;
+        private System.Windows.Forms.RadioButton rBtnTodos;
     }
 }

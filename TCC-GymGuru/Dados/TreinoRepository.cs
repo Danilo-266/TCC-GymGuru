@@ -16,10 +16,10 @@ namespace Dados
 {
     public class TreinoRepository
     {
-        public void Cadastro(string nome, string descrissao, int serie, string grupoMuscular)
+        public void Cadastro(string nome, string descrissao, int serie, string grupoMuscular, int idAparelho)
         {
 
-            string query = "INSERT INTO GymGuruTreino (nome, descricao, series, grupoMuscular) VALUES (@nome, @descricao, @series, @grupoMuscular)";
+            string query = "INSERT INTO GymGuruTreino (nome, descricao, series, grupoMuscular, FkAparelho) VALUES (@nome, @descricao, @series, @grupoMuscular, @idAparelho)";
             Connection.getConnection();
             using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
             {
@@ -27,6 +27,7 @@ namespace Dados
                 cmd.Parameters.AddWithValue("@descricao", descrissao);
                 cmd.Parameters.AddWithValue("@series",  serie);
                 cmd.Parameters.AddWithValue("@grupoMuscular", grupoMuscular);
+                cmd.Parameters.AddWithValue("@idAparelho", idAparelho);
                 cmd.ExecuteNonQuery();
             }
             if (Connection.SqlCon.State == ConnectionState.Open)
@@ -126,5 +127,59 @@ namespace Dados
             return DtResultado;
         }
 
+
+
+        public String GetAparelhoNome(int idAparelho)
+        {
+            string nomeAparelho = "";
+            string query = "SELECT nome FROM GymGuruAparelho WHERE idAparelho = @id";
+
+            Connection.getConnection();
+
+            using (MySqlCommand command = new MySqlCommand(query, Connection.SqlCon))
+            {
+
+                command.Parameters.AddWithValue("@id", idAparelho);
+
+
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    nomeAparelho = result.ToString();
+                }
+            }
+
+            return nomeAparelho;
+
+
+        }
+
+        public int GetAparelhoId(string aparelhoNome)
+        {
+            int idAparelho = 0;
+            string query = "SELECT idAparelho FROM GymGuruAparelho WHERE nome = @nomes";
+
+            Connection.getConnection(); 
+
+            using (MySqlCommand command = new MySqlCommand(query, Connection.SqlCon))
+            {
+
+                command.Parameters.AddWithValue("@nomes", aparelhoNome);
+
+
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    idAparelho = Convert.ToInt32(result); 
+                }
+
+
+            }
+
+            return idAparelho;
+
+
+        }
     }
 }

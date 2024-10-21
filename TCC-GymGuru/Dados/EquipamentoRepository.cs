@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Dados
         public void Cadastro(String nome, String descricao, String musculo)
         {
 
-            string query = "INSERT INTO GymGuruAparelho (nome, descricao, grupoMuscular) VALUES (@nome, @descricao, @grupoMuscular)";
+            string query = "INSERT INTO GymGuruAparelho (nome, descricao, grupoMuscular, usabilidade) VALUES (@nome, @descricao, @grupoMuscular, 0)";
             Connection.getConnection();
             using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
             {
@@ -117,5 +118,57 @@ namespace Dados
             }
             return DtResultado;
         }
+
+        public DataTable PesquisaDisponivel(int disponivel)
+        {
+            DataTable DtResultado = new DataTable("aparelho");
+            string selectSql;
+
+            if (disponivel == 0)
+            {
+                try
+                {
+                    Connection.getConnection();
+
+                    selectSql = String.Format("SELECT * FROM GymGuruAparelho WHERE estado LIKE 'EM USO'");
+
+
+                    MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                    MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                    SqlData.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    DtResultado = null;
+                }
+                return DtResultado;
+            }
+            else
+            {
+
+                try
+                {
+                    Connection.getConnection();
+
+                    selectSql = String.Format("SELECT * FROM GymGuruAparelho WHERE estado LIKE 'DISPONIVEL'");
+
+
+                    MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                    MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                    SqlData.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    DtResultado = null;
+                }
+                return DtResultado;
+
+
+            }
+        
+        
+        
+        }
+
     }
 }
