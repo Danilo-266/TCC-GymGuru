@@ -41,6 +41,15 @@ namespace Negocio
             return repository.PesquisaNome(nome);
         }
         
+        public DataTable getAllTreino()
+        {
+            return repository.getAllTreino();
+        }
+
+        public DataTable pesquisarTreino(int id)
+        {
+            return repository.PesquisaTreino(id);
+        }
 
     }
 }

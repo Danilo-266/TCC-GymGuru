@@ -301,6 +301,12 @@ namespace Apresentacao
         {
 
         }
+
+        private void btnTreino_Click(object sender, EventArgs e)
+        {
+            ClienteTreino cliTreino = new ClienteTreino();
+            cliTreino.Show();
+        }
     }
     
     

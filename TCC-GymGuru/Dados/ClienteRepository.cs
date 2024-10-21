@@ -126,6 +126,52 @@ namespace Dados
             return DtResultado;
         }
 
+        public DataTable PesquisaTreino(int id)
+        {
+            DataTable DtResultado = new DataTable("clienteTreino");
+            string selectSql;
+            try
+            {
+                Connection.getConnection();
+
+                selectSql = String.Format("SELECT * FROM GymGuruTreinoCliente WHERE idCliente LIKE @pId");
+                id = '%' + id + '%';
+                MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                SqlCmd.Parameters.AddWithValue("pId", id);
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+        public DataTable getAllTreino()
+        {
+            DataTable DtResultado = new DataTable("clienteTreino");
+            try
+            {
+                Connection.getConnection();
+                String sqlSelect = "select * from GymGuruTreinoCliente";
+
+                MySqlCommand SqlCmd = new MySqlCommand();
+                SqlCmd.Connection = Connection.SqlCon;
+                SqlCmd.CommandText = sqlSelect;
+                SqlCmd.CommandType = CommandType.Text;
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            if (Connection.SqlCon.State == ConnectionState.Open)
+                Connection.SqlCon.Close();
+            return DtResultado;
+        }
     }
 }
 
