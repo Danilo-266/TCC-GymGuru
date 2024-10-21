@@ -93,7 +93,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteRepository.cs" />
     <Compile Include="DadosGlobais.cs" />
+    <Compile Include="Equipamento.cs" />
+    <Compile Include="EquipamentoRepository.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="FuncionarioRepository.cs" />
     <Compile Include="Connection.cs" />

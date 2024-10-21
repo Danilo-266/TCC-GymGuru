@@ -53,6 +53,10 @@ namespace Apresentacao
             this.label2 = new System.Windows.Forms.Label();
             this.txtExercicio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEquipamento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,6 +152,7 @@ namespace Apresentacao
             this.btnCancelar.TabIndex = 60;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -157,6 +162,7 @@ namespace Apresentacao
             this.btnSalvar.TabIndex = 59;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
@@ -166,6 +172,7 @@ namespace Apresentacao
             this.btnPesquisar.TabIndex = 58;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -175,6 +182,7 @@ namespace Apresentacao
             this.btnExcluir.TabIndex = 57;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -194,6 +202,7 @@ namespace Apresentacao
             this.btnNovo.TabIndex = 55;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // label7
             // 
@@ -292,12 +301,54 @@ namespace Apresentacao
             this.label3.TabIndex = 49;
             this.label3.Text = "Exercício:";
             // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(969, 297);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(52, 26);
+            this.txtId.TabIndex = 62;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Location = new System.Drawing.Point(726, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 25);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Equipamento:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(964, 269);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 25);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "ID:";
+            // 
+            // txtEquipamento
+            // 
+            this.txtEquipamento.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipamento.Location = new System.Drawing.Point(731, 297);
+            this.txtEquipamento.Name = "txtEquipamento";
+            this.txtEquipamento.Size = new System.Drawing.Size(178, 26);
+            this.txtEquipamento.TabIndex = 65;
+            // 
             // Treino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtEquipamento);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -363,5 +414,9 @@ namespace Apresentacao
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtExercicio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEquipamento;
     }
 }

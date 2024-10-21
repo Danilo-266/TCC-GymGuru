@@ -7,15 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 
 namespace Apresentacao
 {
     public partial class Funcionario : Form
     {
+        private readonly FuncionarioService funcionarioService;
+        private DataTable tblFuncionario = new DataTable();
+        private int modo = 0;
         public Funcionario()
         {
+            funcionarioService = new FuncionarioService();
             InitializeComponent();
-            
+            dgFuncionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgFuncionario.AllowUserToAddRows = false;
+            dgFuncionario.AllowUserToDeleteRows = false;
+            dgFuncionario.AllowUserToOrderColumns = true;
+            dgFuncionario.ReadOnly = true;
+            tblFuncionario = funcionarioService.exibir();
+            useratual();
+
         }
 
         private void imgFunc_Click(object sender, EventArgs e)
@@ -73,8 +85,60 @@ namespace Apresentacao
             
 
         }
-        
 
+        private void Funcionario_Load(object sender, EventArgs e)
+        {//idPersonal, cpf, nome, email, genero, celular, senha, online
+            dgFuncionario.ColumnCount = 6;
+            dgFuncionario.AutoGenerateColumns = false;
 
+            dgFuncionario.Columns[0].Width = 60;
+            dgFuncionario.Columns[0].HeaderText = "ID";
+            dgFuncionario.Columns[0].DataPropertyName = "idPersonal";
+
+            dgFuncionario.Columns[1].Width = 100;
+            dgFuncionario.Columns[1].HeaderText = "CPF";
+            dgFuncionario.Columns[1].DataPropertyName = "cpf";
+            
+            dgFuncionario.Columns[2].Width = 150;
+            dgFuncionario.Columns[2].HeaderText = "NOME";
+            dgFuncionario.Columns[2].DataPropertyName = "nome";
+
+            dgFuncionario.Columns[3].Width = 150;
+            dgFuncionario.Columns[3].HeaderText = "EMAIL";
+            dgFuncionario.Columns[3].DataPropertyName = "email";
+
+            dgFuncionario.Columns[4].Width = 120;
+            dgFuncionario.Columns[4].HeaderText = "GENERO";
+            dgFuncionario.Columns[4].DataPropertyName = "genero";
+
+            dgFuncionario.Columns[5].Width = 120;
+            dgFuncionario.Columns[5].HeaderText = "CELULAR";
+            dgFuncionario.Columns[5].DataPropertyName = "celular";
+
+            dgFuncionario.AllowUserToAddRows = false;
+            dgFuncionario.AllowUserToDeleteRows = false;
+            dgFuncionario.MultiSelect = false;
+            dgFuncionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            carregaGridView();
+        }
+        private void useratual()
+        {
+            DataTable usuario = funcionarioService.pesquisar(SessaoUsuario.User);
+            DataRow row = usuario.Rows[0];
+            lbNome.Text = row["nome"].ToString();
+            lbGenero.Text = row["genero"].ToString();
+            lbEmail.Text = row["email"].ToString();
+            lbCpf.Text = row["cpf"].ToString();
+            lbCelular.Text = row["celular"].ToString() ;
+            
+           
+        }
+
+        private void carregaGridView()
+        {
+            dgFuncionario.DataSource = funcionarioService.exibir();
+            dgFuncionario.Refresh();
+        }
     }
 }
