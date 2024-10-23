@@ -1,7 +1,7 @@
 ﻿
 namespace Apresentacao
 {
-    partial class Treino
+    partial class FrmTreino
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Apresentacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Treino));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTreino));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgFuncionario = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -257,8 +257,9 @@ namespace Apresentacao
             // 
             this.txtDesc.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Location = new System.Drawing.Point(517, 219);
+            this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(957, 26);
+            this.txtDesc.Size = new System.Drawing.Size(957, 47);
             this.txtDesc.TabIndex = 41;
             // 
             // dgTreino
@@ -308,6 +309,7 @@ namespace Apresentacao
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(52, 26);
             this.txtId.TabIndex = 62;
+            this.txtId.Visible = false;
             // 
             // label4
             // 
@@ -330,6 +332,7 @@ namespace Apresentacao
             this.label6.Size = new System.Drawing.Size(44, 25);
             this.label6.TabIndex = 66;
             this.label6.Text = "ID:";
+            this.label6.Visible = false;
             // 
             // txtEquipamento
             // 
@@ -339,7 +342,7 @@ namespace Apresentacao
             this.txtEquipamento.Size = new System.Drawing.Size(178, 26);
             this.txtEquipamento.TabIndex = 65;
             // 
-            // Treino
+            // FrmTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -372,7 +375,7 @@ namespace Apresentacao
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Treino";
+            this.Name = "FrmTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Treino";
             this.Load += new System.EventHandler(this.Treino_Load);

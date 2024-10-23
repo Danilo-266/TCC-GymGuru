@@ -1,7 +1,7 @@
 ﻿
 namespace Apresentacao
 {
-    partial class Relatorio
+    partial class FrmRelatorio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Apresentacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Relatorio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorio));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();

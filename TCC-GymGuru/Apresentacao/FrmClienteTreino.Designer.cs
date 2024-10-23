@@ -1,7 +1,7 @@
 ﻿
 namespace Apresentacao
 {
-    partial class ClienteTreino
+    partial class FrmClienteTreino
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,6 @@ namespace Apresentacao
         {
             this.lbPedido = new System.Windows.Forms.Label();
             this.dgPesquisa = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.bntAtribuir = new System.Windows.Forms.Button();
             this.rbntTdos = new System.Windows.Forms.RadioButton();
@@ -46,9 +45,9 @@ namespace Apresentacao
             this.lbPedido.ForeColor = System.Drawing.SystemColors.Control;
             this.lbPedido.Location = new System.Drawing.Point(22, 12);
             this.lbPedido.Name = "lbPedido";
-            this.lbPedido.Size = new System.Drawing.Size(61, 24);
+            this.lbPedido.Size = new System.Drawing.Size(208, 24);
             this.lbPedido.TabIndex = 6;
-            this.lbPedido.Text = "Label";
+            this.lbPedido.Text = "Treinos Cadastrados:";
             // 
             // dgPesquisa
             // 
@@ -58,33 +57,25 @@ namespace Apresentacao
             this.dgPesquisa.Size = new System.Drawing.Size(361, 175);
             this.dgPesquisa.TabIndex = 42;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(312, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Selecionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(220, 248);
+            this.btnVoltar.Location = new System.Drawing.Point(192, 248);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 44;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // bntAtribuir
             // 
-            this.bntAtribuir.Location = new System.Drawing.Point(91, 248);
+            this.bntAtribuir.Location = new System.Drawing.Point(273, 248);
             this.bntAtribuir.Name = "bntAtribuir";
             this.bntAtribuir.Size = new System.Drawing.Size(114, 23);
             this.bntAtribuir.TabIndex = 45;
             this.bntAtribuir.Text = "Atribuir Novo Treino";
             this.bntAtribuir.UseVisualStyleBackColor = true;
+            this.bntAtribuir.Click += new System.EventHandler(this.bntAtribuir_Click);
             // 
             // rbntTdos
             // 
@@ -98,6 +89,7 @@ namespace Apresentacao
             this.rbntTdos.TabStop = true;
             this.rbntTdos.Text = "Todos";
             this.rbntTdos.UseVisualStyleBackColor = true;
+            this.rbntTdos.CheckedChanged += new System.EventHandler(this.rbntTdos_CheckedChanged);
             // 
             // rbtCliente
             // 
@@ -111,6 +103,7 @@ namespace Apresentacao
             this.rbtCliente.TabStop = true;
             this.rbtCliente.Text = "Cliente Selecionado";
             this.rbtCliente.UseVisualStyleBackColor = true;
+            this.rbtCliente.CheckedChanged += new System.EventHandler(this.rbtCliente_CheckedChanged);
             // 
             // ClienteTreino
             // 
@@ -122,12 +115,15 @@ namespace Apresentacao
             this.Controls.Add(this.rbntTdos);
             this.Controls.Add(this.bntAtribuir);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgPesquisa);
             this.Controls.Add(this.lbPedido);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ClienteTreino";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteTreino";
+            this.Load += new System.EventHandler(this.ClienteTreino_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPesquisa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,7 +134,6 @@ namespace Apresentacao
 
         private System.Windows.Forms.Label lbPedido;
         private System.Windows.Forms.DataGridView dgPesquisa;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button bntAtribuir;
         private System.Windows.Forms.RadioButton rbntTdos;

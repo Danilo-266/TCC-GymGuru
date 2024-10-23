@@ -10,33 +10,24 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class TelaInicial : Form
+    public partial class FrmRelatorio : Form
     {
-        public TelaInicial()
+        public FrmRelatorio()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
         }
 
         private void imgFuncionario_Click(object sender, EventArgs e)
         {
-            Funcionario funcionario = new Funcionario();
-          
+            FrmFuncionario funcionario = new FrmFuncionario();
+
             funcionario.Show();
 
             this.Close();
@@ -44,37 +35,30 @@ namespace Apresentacao
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
+            FrmCliente cliente = new FrmCliente();
             cliente.Show();
             this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Treino treino = new Treino();
+            FrmTreino treino = new FrmTreino();
             treino.Show();
-            this.Close();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Equipamento equipamento = new Equipamento();
-            equipamento.Show();
             this.Close();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Relatorio relatorio = new Relatorio();
+            FrmRelatorio relatorio = new FrmRelatorio();
             relatorio.Show();
             this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            TelaInicial telaInicial = new TelaInicial();
-                telaInicial.Show();
-                this.Close();
+            FrmTelaInicial telaInicial = new FrmTelaInicial();
+            telaInicial.Show();
+            this.Close();
         }
     }
 }

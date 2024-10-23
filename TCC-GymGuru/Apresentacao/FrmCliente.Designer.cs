@@ -1,7 +1,7 @@
 ﻿
 namespace Apresentacao
 {
-    partial class Cliente
+    partial class FrmCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Apresentacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -368,7 +368,7 @@ namespace Apresentacao
             this.btnTreino.Name = "btnTreino";
             this.btnTreino.Size = new System.Drawing.Size(119, 32);
             this.btnTreino.TabIndex = 40;
-            this.btnTreino.Text = "Definir Treino";
+            this.btnTreino.Text = "Treinos Cadastrados";
             this.btnTreino.UseVisualStyleBackColor = true;
             this.btnTreino.Click += new System.EventHandler(this.btnTreino_Click);
             // 
@@ -382,6 +382,7 @@ namespace Apresentacao
             this.label9.Size = new System.Drawing.Size(41, 25);
             this.label9.TabIndex = 42;
             this.label9.Text = "ID:";
+            this.label9.Visible = false;
             // 
             // txtId
             // 
@@ -390,8 +391,9 @@ namespace Apresentacao
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(52, 26);
             this.txtId.TabIndex = 41;
+            this.txtId.Visible = false;
             // 
-            // Cliente
+            // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -429,7 +431,7 @@ namespace Apresentacao
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Cliente";
+            this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.Cliente_Load);

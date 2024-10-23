@@ -1,7 +1,7 @@
 ﻿
 namespace Apresentacao
 {
-    partial class Equipamento
+    partial class FrmEquipamento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Apresentacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipamento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEquipamento));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -257,8 +257,9 @@ namespace Apresentacao
             // 
             this.txtDesc.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Location = new System.Drawing.Point(529, 213);
+            this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(957, 26);
+            this.txtDesc.Size = new System.Drawing.Size(496, 89);
             this.txtDesc.TabIndex = 50;
             // 
             // label4
@@ -285,19 +286,21 @@ namespace Apresentacao
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(532, 280);
+            this.label5.Location = new System.Drawing.Point(1238, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 25);
             this.label5.TabIndex = 57;
             this.label5.Text = "ID:";
+            this.label5.Visible = false;
             // 
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(537, 308);
+            this.txtId.Location = new System.Drawing.Point(1228, 263);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(48, 26);
+            this.txtId.Size = new System.Drawing.Size(63, 26);
             this.txtId.TabIndex = 56;
+            this.txtId.Visible = false;
             // 
             // btnRelatorio
             // 
@@ -351,7 +354,7 @@ namespace Apresentacao
             this.rBtnTodos.UseVisualStyleBackColor = true;
             this.rBtnTodos.CheckedChanged += new System.EventHandler(this.rBtnTodos_CheckedChanged);
             // 
-            // Equipamento
+            // FrmEquipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -384,7 +387,7 @@ namespace Apresentacao
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Equipamento";
+            this.Name = "FrmEquipamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipamento";
             this.Load += new System.EventHandler(this.Equipamento_Load);

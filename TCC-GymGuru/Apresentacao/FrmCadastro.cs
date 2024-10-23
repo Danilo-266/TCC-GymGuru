@@ -11,10 +11,10 @@ using Negocio;
 
 namespace Apresentacao
 {
-    public partial class Cadastro : Form
+    public partial class FrmCadastro : Form
     {
         public FuncionarioService service;
-        public Cadastro()
+        public FrmCadastro()
         {
             InitializeComponent();
             service = new FuncionarioService();
@@ -90,7 +90,7 @@ namespace Apresentacao
                 {
                     service.Cadrastro(cpf, nome, email, genero, celular, senha);
                     MessageBox.Show("FUNCIONARIO CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Login login = new Login();
+                    FrmLogin login = new FrmLogin();
                     login.Show();
                     this.Close();
 
@@ -111,7 +111,7 @@ namespace Apresentacao
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            FrmLogin login = new FrmLogin();
             login.Show();
             this.Close();
         }

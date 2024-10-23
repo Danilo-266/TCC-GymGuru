@@ -11,12 +11,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Apresentacao
 {
-    public partial class Pesquisa : Form
+    public partial class FrmPesquisa : Form
     {
         private int funcao;
 
         private string _texto;
-        public Pesquisa(int n)
+        public FrmPesquisa(int n)
         {
             InitializeComponent();
             funcao = n;

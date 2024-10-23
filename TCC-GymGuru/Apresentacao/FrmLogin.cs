@@ -11,11 +11,11 @@ using Negocio;
 
 namespace Apresentacao
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
         public FuncionarioService service;
 
-        public Login()
+        public FrmLogin()
         {
             service = new FuncionarioService();
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace Apresentacao
             {
                 MessageBox.Show("USUARIO ENCONTRADO", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SessaoUsuario.User = txtLogin.Text;
-                TelaInicial tela = new TelaInicial();
+                FrmTelaInicial tela = new FrmTelaInicial();
            
 
                 tela.Show();
@@ -73,7 +73,7 @@ namespace Apresentacao
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Cadastro cadastro = new Cadastro();
+            FrmCadastro cadastro = new FrmCadastro();
             cadastro.Show();
             this.Hide();
         }

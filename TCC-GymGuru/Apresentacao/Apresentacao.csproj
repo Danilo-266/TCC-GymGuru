@@ -104,102 +104,111 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.cs">
+    <Compile Include="FrmAtribuirTreino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <Compile Include="FrmAtribuirTreino.Designer.cs">
+      <DependentUpon>FrmAtribuirTreino.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="FrmCadastro.Designer.cs">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClienteTreino.cs">
+    <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteTreino.Designer.cs">
-      <DependentUpon>ClienteTreino.cs</DependentUpon>
+    <Compile Include="FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipamento.cs">
+    <Compile Include="FrmClienteTreino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Equipamento.Designer.cs">
-      <DependentUpon>Equipamento.cs</DependentUpon>
+    <Compile Include="FrmClienteTreino.Designer.cs">
+      <DependentUpon>FrmClienteTreino.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario.cs">
+    <Compile Include="FrmEquipamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario.Designer.cs">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <Compile Include="FrmEquipamento.Designer.cs">
+      <DependentUpon>FrmEquipamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="FrmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pesquisa.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pesquisa.Designer.cs">
-      <DependentUpon>Pesquisa.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisa.Designer.cs">
+      <DependentUpon>FrmPesquisa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Relatorio.cs">
+    <Compile Include="FrmRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Relatorio.Designer.cs">
-      <DependentUpon>Relatorio.cs</DependentUpon>
+    <Compile Include="FrmRelatorio.Designer.cs">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="SessaoUsuario.cs" />
-    <Compile Include="TelaInicial.cs">
+    <Compile Include="FrmTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicial.Designer.cs">
-      <DependentUpon>TelaInicial.cs</DependentUpon>
+    <Compile Include="FrmTelaInicial.Designer.cs">
+      <DependentUpon>FrmTelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Treino.cs">
+    <Compile Include="FrmTreino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Treino.Designer.cs">
-      <DependentUpon>Treino.cs</DependentUpon>
+    <Compile Include="FrmTreino.Designer.cs">
+      <DependentUpon>FrmTreino.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastro.resx">
-      <DependentUpon>Cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAtribuirTreino.resx">
+      <DependentUpon>FrmAtribuirTreino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastro.resx">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteTreino.resx">
-      <DependentUpon>ClienteTreino.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipamento.resx">
-      <DependentUpon>Equipamento.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClienteTreino.resx">
+      <DependentUpon>FrmClienteTreino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionario.resx">
-      <DependentUpon>Funcionario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEquipamento.resx">
+      <DependentUpon>FrmEquipamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pesquisa.resx">
-      <DependentUpon>Pesquisa.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesquisa.resx">
+      <DependentUpon>FrmPesquisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatorio.resx">
-      <DependentUpon>Relatorio.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRelatorio.resx">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicial.resx">
-      <DependentUpon>TelaInicial.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTelaInicial.resx">
+      <DependentUpon>FrmTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Treino.resx">
-      <DependentUpon>Treino.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTreino.resx">
+      <DependentUpon>FrmTreino.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

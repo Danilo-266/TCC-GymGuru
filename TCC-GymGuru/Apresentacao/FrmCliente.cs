@@ -11,13 +11,13 @@ using Negocio;
 
 namespace Apresentacao
 {
-    public partial class Cliente : Form
+    public partial class FrmCliente : Form
     {
         private readonly ClienteService clienteService;
         private DataTable tblCliente = new DataTable();
         private int modo = 0;
 
-        public Cliente()
+        public FrmCliente()
         {
             clienteService = new ClienteService();
             InitializeComponent();
@@ -72,7 +72,7 @@ namespace Apresentacao
 
         private void imgFuncionario_Click(object sender, EventArgs e)
         {
-            Funcionario funcionario = new Funcionario();
+            FrmFuncionario funcionario = new FrmFuncionario();
 
             funcionario.Show();
 
@@ -81,35 +81,35 @@ namespace Apresentacao
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
+            FrmCliente cliente = new FrmCliente();
             cliente.Show();
             this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Treino treino = new Treino();
+            FrmTreino treino = new FrmTreino();
             treino.Show();
             this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Equipamento equipamento = new Equipamento();
+            FrmEquipamento equipamento = new FrmEquipamento();
             equipamento.Show();
             this.Close();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Relatorio relatorio = new Relatorio();
+            FrmRelatorio relatorio = new FrmRelatorio();
             relatorio.Show();
             this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            TelaInicial telaInicial = new TelaInicial();
+            FrmTelaInicial telaInicial = new FrmTelaInicial();
             telaInicial.Show();
             this.Close();
         }
@@ -278,7 +278,7 @@ namespace Apresentacao
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            Pesquisa p = new Pesquisa(2);
+            FrmPesquisa p = new FrmPesquisa(2);
             string txtBusca = "";
             p.ShowDialog();
             txtBusca = p.Texto;
@@ -304,7 +304,8 @@ namespace Apresentacao
 
         private void btnTreino_Click(object sender, EventArgs e)
         {
-            ClienteTreino cliTreino = new ClienteTreino();
+            int.TryParse(txtId.Text, out int id);
+            FrmClienteTreino cliTreino = new FrmClienteTreino(id);
             cliTreino.Show();
         }
     }

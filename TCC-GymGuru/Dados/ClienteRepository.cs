@@ -134,8 +134,7 @@ namespace Dados
             {
                 Connection.getConnection();
 
-                selectSql = String.Format("SELECT * FROM GymGuruTreinoCliente WHERE idCliente LIKE @pId");
-                id = '%' + id + '%';
+                selectSql = "SELECT * FROM GymGuruTreinoCliente WHERE idCliente = @pId";
                 MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
                 SqlCmd.Parameters.AddWithValue("pId", id);
                 MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
@@ -146,7 +145,6 @@ namespace Dados
                 DtResultado = null;
             }
             return DtResultado;
-
         }
 
         public DataTable getAllTreino()
