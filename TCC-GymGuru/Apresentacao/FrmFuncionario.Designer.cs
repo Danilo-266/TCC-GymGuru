@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionario));
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,14 +48,15 @@
             this.lbCelular = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgFuncionario = new System.Windows.Forms.DataGridView();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -80,17 +80,6 @@
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(8, 608);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(98, 104);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox4
             // 
@@ -149,11 +138,11 @@
             // lNome
             // 
             this.lNome.AutoSize = true;
-            this.lNome.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNome.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lNome.Location = new System.Drawing.Point(199, 175);
             this.lNome.Name = "lNome";
-            this.lNome.Size = new System.Drawing.Size(103, 33);
+            this.lNome.Size = new System.Drawing.Size(99, 31);
             this.lNome.TabIndex = 15;
             this.lNome.Text = "Nome:";
             this.lNome.Click += new System.EventHandler(this.label1_Click);
@@ -161,110 +150,110 @@
             // lCpf
             // 
             this.lCpf.AutoSize = true;
-            this.lCpf.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCpf.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lCpf.Location = new System.Drawing.Point(491, 175);
             this.lCpf.Name = "lCpf";
-            this.lCpf.Size = new System.Drawing.Size(73, 33);
+            this.lCpf.Size = new System.Drawing.Size(69, 31);
             this.lCpf.TabIndex = 16;
             this.lCpf.Text = "Cpf:";
             // 
             // lEmail
             // 
             this.lEmail.AutoSize = true;
-            this.lEmail.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lEmail.Location = new System.Drawing.Point(841, 175);
             this.lEmail.Name = "lEmail";
-            this.lEmail.Size = new System.Drawing.Size(106, 33);
+            this.lEmail.Size = new System.Drawing.Size(95, 31);
             this.lEmail.TabIndex = 17;
             this.lEmail.Text = "Email:";
             // 
             // lGenero
             // 
             this.lGenero.AutoSize = true;
-            this.lGenero.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lGenero.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lGenero.Location = new System.Drawing.Point(199, 308);
             this.lGenero.Name = "lGenero";
-            this.lGenero.Size = new System.Drawing.Size(122, 33);
+            this.lGenero.Size = new System.Drawing.Size(119, 31);
             this.lGenero.TabIndex = 18;
             this.lGenero.Text = "Genero:";
             // 
             // lCelular
             // 
             this.lCelular.AutoSize = true;
-            this.lCelular.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCelular.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lCelular.Location = new System.Drawing.Point(491, 308);
             this.lCelular.Name = "lCelular";
-            this.lCelular.Size = new System.Drawing.Size(126, 33);
+            this.lCelular.Size = new System.Drawing.Size(116, 31);
             this.lCelular.TabIndex = 19;
             this.lCelular.Text = "Celular:";
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNome.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbNome.Location = new System.Drawing.Point(201, 221);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(69, 23);
+            this.lbNome.Size = new System.Drawing.Size(70, 25);
             this.lbNome.TabIndex = 20;
             this.lbNome.Text = "label7";
             // 
             // lbCpf
             // 
             this.lbCpf.AutoSize = true;
-            this.lbCpf.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCpf.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbCpf.Location = new System.Drawing.Point(495, 221);
             this.lbCpf.Name = "lbCpf";
-            this.lbCpf.Size = new System.Drawing.Size(69, 23);
+            this.lbCpf.Size = new System.Drawing.Size(70, 25);
             this.lbCpf.TabIndex = 21;
             this.lbCpf.Text = "label7";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbEmail.Location = new System.Drawing.Point(843, 221);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(69, 23);
+            this.lbEmail.Size = new System.Drawing.Size(70, 25);
             this.lbEmail.TabIndex = 22;
             this.lbEmail.Text = "label8";
             // 
             // lbGenero
             // 
             this.lbGenero.AutoSize = true;
-            this.lbGenero.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGenero.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbGenero.Location = new System.Drawing.Point(201, 360);
             this.lbGenero.Name = "lbGenero";
-            this.lbGenero.Size = new System.Drawing.Size(69, 23);
+            this.lbGenero.Size = new System.Drawing.Size(70, 25);
             this.lbGenero.TabIndex = 23;
             this.lbGenero.Text = "label9";
             // 
             // lbCelular
             // 
             this.lbCelular.AutoSize = true;
-            this.lbCelular.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCelular.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbCelular.Location = new System.Drawing.Point(495, 360);
             this.lbCelular.Name = "lbCelular";
-            this.lbCelular.Size = new System.Drawing.Size(80, 23);
+            this.lbCelular.Size = new System.Drawing.Size(82, 25);
             this.lbCelular.TabIndex = 24;
             this.lbCelular.Text = "label10";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label7.Location = new System.Drawing.Point(199, 425);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(291, 33);
+            this.label7.Size = new System.Drawing.Size(277, 31);
             this.label7.TabIndex = 26;
             this.label7.Text = "Funcionarios online:";
             // 
@@ -276,12 +265,21 @@
             this.dgFuncionario.Size = new System.Drawing.Size(780, 324);
             this.dgFuncionario.TabIndex = 27;
             // 
-            // Funcionario
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(8, 702);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox6.TabIndex = 63;
+            this.pictureBox6.TabStop = false;
+            // 
+            // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.dgFuncionario);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbCelular);
@@ -295,25 +293,24 @@
             this.Controls.Add(this.lCpf);
             this.Controls.Add(this.lNome);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Name = "Funcionario";
+            this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
             this.Load += new System.EventHandler(this.Funcionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +323,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lNome;
         private System.Windows.Forms.Label lCpf;
@@ -340,5 +336,6 @@
         private System.Windows.Forms.Label lbCelular;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgFuncionario;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

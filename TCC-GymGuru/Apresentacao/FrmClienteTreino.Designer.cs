@@ -35,6 +35,7 @@ namespace Apresentacao
             this.bntAtribuir = new System.Windows.Forms.Button();
             this.rbntTdos = new System.Windows.Forms.RadioButton();
             this.rbtCliente = new System.Windows.Forms.RadioButton();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPesquisa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace Apresentacao
             this.dgPesquisa.Name = "dgPesquisa";
             this.dgPesquisa.Size = new System.Drawing.Size(361, 175);
             this.dgPesquisa.TabIndex = 42;
+            this.dgPesquisa.SelectionChanged += new System.EventHandler(this.dgPesquisa_SelectionChanged);
             // 
             // btnVoltar
             // 
@@ -105,12 +107,23 @@ namespace Apresentacao
             this.rbtCliente.UseVisualStyleBackColor = true;
             this.rbtCliente.CheckedChanged += new System.EventHandler(this.rbtCliente_CheckedChanged);
             // 
-            // ClienteTreino
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(26, 248);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(87, 23);
+            this.btnDeletar.TabIndex = 48;
+            this.btnDeletar.Text = "DeletarTreino";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // FrmClienteTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(426, 290);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.rbtCliente);
             this.Controls.Add(this.rbntTdos);
             this.Controls.Add(this.bntAtribuir);
@@ -120,7 +133,7 @@ namespace Apresentacao
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ClienteTreino";
+            this.Name = "FrmClienteTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteTreino";
             this.Load += new System.EventHandler(this.ClienteTreino_Load);
@@ -138,5 +151,6 @@ namespace Apresentacao
         private System.Windows.Forms.Button bntAtribuir;
         private System.Windows.Forms.RadioButton rbntTdos;
         private System.Windows.Forms.RadioButton rbtCliente;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }

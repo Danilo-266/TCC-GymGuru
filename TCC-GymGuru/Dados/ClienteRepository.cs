@@ -170,6 +170,39 @@ namespace Dados
                 Connection.SqlCon.Close();
             return DtResultado;
         }
+
+        public void CadastroTreino(int IdCliente, int idTreino)
+        {
+
+            string query = "INSERT INTO GymGuruTreinoCliente (idCliente, idTreino) VALUES (@idCliente, @idTreino)";
+            Connection.getConnection();
+            using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
+            {
+                cmd.Parameters.AddWithValue("@idCliente", IdCliente);
+                cmd.Parameters.AddWithValue("@idTreino", idTreino);
+                cmd.ExecuteNonQuery();
+            }
+            if (Connection.SqlCon.State == ConnectionState.Open)
+                Connection.SqlCon.Close();
+        }
+
+        public void RemoveTreino(int idCliente, int idTreino)
+        {
+
+            Connection.getConnection();
+            string query = "DELETE FROM GymGuruTreinoCliente WHERE idCliente = @idCliente AND idTreino = @idTreino";
+            using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
+            {
+                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                cmd.Parameters.AddWithValue("@idTreino", idTreino);
+
+                cmd.ExecuteNonQuery();
+            }
+            if (Connection.SqlCon.State == ConnectionState.Open)
+                Connection.SqlCon.Close();
+
+        }
+
     }
 }
 

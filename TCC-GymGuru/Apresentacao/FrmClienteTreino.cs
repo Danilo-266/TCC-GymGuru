@@ -13,6 +13,7 @@ namespace Apresentacao
 {
     public partial class FrmClienteTreino : Form
     {
+        private String idCliente, idTreino;
         private readonly ClienteService clienteService;
         private DataTable tblClienteTreino = new DataTable();
         private int cliente;
@@ -90,9 +91,30 @@ namespace Apresentacao
 
         private void bntAtribuir_Click(object sender, EventArgs e)
         {
-            FrmAtribuirTreino treino = new FrmAtribuirTreino();
+            FrmAtribuirTreino treino = new FrmAtribuirTreino(cliente);
             treino.Show();
             this.Close();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+
+            clienteService.deletarTreino(int.Parse(idCliente), int.Parse(idTreino));
+            if (rbtCliente.Checked)
+            {
+                carregaGridView(1);
+            }
+            else
+            {
+                carregaGridView(0);
+            }
+            
+        }
+
+        private void dgPesquisa_SelectionChanged(object sender, EventArgs e)
+        {
+            idCliente = dgPesquisa.CurrentRow.Cells[0].Value.ToString();
+            idTreino = dgPesquisa.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

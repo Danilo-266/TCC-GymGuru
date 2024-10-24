@@ -51,5 +51,14 @@ namespace Negocio
             return repository.PesquisaTreino(id);
         }
 
+        public void cadastroTreino(int cliente, int treino)
+        {
+          repository.CadastroTreino(cliente, treino);
+        }
+
+        public void deletarTreino(int id,int treino)
+        {
+            repository.RemoveTreino(id, treino);
+        }
     }
 }

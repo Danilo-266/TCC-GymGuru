@@ -149,9 +149,7 @@ namespace Apresentacao
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            FrmRelatorio relatorio = new FrmRelatorio();
-            relatorio.Show();
-            this.Close();
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

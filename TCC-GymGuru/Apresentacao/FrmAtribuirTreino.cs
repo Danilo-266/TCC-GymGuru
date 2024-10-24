@@ -14,13 +14,15 @@ namespace Apresentacao
    
     public partial class FrmAtribuirTreino : Form
     {
+        int id;
         private readonly ClienteService clienteService;
         private DataTable tblCliente = new DataTable();
         private readonly TreinoService treinoService;
         private DataTable tblTreino = new DataTable();
-      
-        public FrmAtribuirTreino()
+        String idCliente, idTreino;
+        public FrmAtribuirTreino(int cliente)
         {
+            id = cliente;
             dgCliente = new DataGridView();
             dgTreino = new DataGridView();
             clienteService = new ClienteService();
@@ -48,12 +50,12 @@ namespace Apresentacao
 
         private void dgCliente_SelectionChanged(object sender, EventArgs e)
         {
-
+           idCliente= dgCliente.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-
+            idTreino = dgTreino.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void FrmAtribuirTreino_Load(object sender, EventArgs e)
@@ -111,5 +113,32 @@ namespace Apresentacao
             dgTreino.DataSource = treinoService.exibir();
             dgTreino.Refresh();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            FrmClienteTreino anterior = new FrmClienteTreino(id);
+            anterior.Show();
+            this.Close();
         }
+
+        private void btnTreino_Click(object sender, EventArgs e)
+        {
+            var cliente = Application.OpenForms.OfType<FrmCliente>().FirstOrDefault();
+            if (cliente != null)
+            {
+                cliente.Close(); 
+            }
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void btnAtribuir_Click(object sender, EventArgs e)
+        {
+            clienteService.cadastroTreino(int.Parse(idCliente), int.Parse(idTreino));
+            FrmClienteTreino anterior = new FrmClienteTreino(int.Parse(idCliente));
+            anterior.Show();
+            this.Close();
+        }
+    }
     }
