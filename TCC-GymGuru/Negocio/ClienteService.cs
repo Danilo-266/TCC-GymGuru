@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dados;
+using FluentValidation.Results;
 
 namespace Negocio
 {
@@ -16,11 +17,26 @@ namespace Negocio
             repository = new ClienteRepository();
         }
 
-        public void Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
+        public string Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
         {
-            repository.Cadastro(cpf, nome, idade, email, genero, celular, experiencia);
+            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia);
+            ClienteValidator validator = new ClienteValidator();
+            ValidationResult results = validator.Validate(cliente);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
+           
+                repository.Cadastro(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia);
+                return "Cliete cadastrado com sucesso";
+    
         }
-
+    
         public DataTable exibir()
         {
             return repository.getAll();
@@ -31,9 +47,22 @@ namespace Negocio
             repository.Remove(id);
         }
 
-        public void update(int id, String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
+        public string update(int id, String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
         {
-            repository.Update(id, cpf, nome, idade, email, genero, celular, experiencia);
+            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia);
+            ClienteValidator validator = new ClienteValidator();
+            ValidationResult results = validator.Validate(cliente);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
+            repository.Update(id, cpf, nome, idade, email, genero.ToUpper(), celular, experiencia);
+            return "CLIENTE ATUALIZADO COM SUCESSO!";
         }
 
         public DataTable pesquisar(String nome)

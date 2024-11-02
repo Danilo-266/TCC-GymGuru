@@ -8,10 +8,10 @@ namespace Dados
 {
     public class Treino
     {
-        private String nome { get; set; }
-        private String descrissao { get; set; }
-        private int serie { get; set; }
-        private String grupoMuscular { get; set; }
+        public String nome { get; set; }
+        public String descrissao { get; set; }
+        public int serie { get; set; }
+        public String grupoMuscular { get; set; }
     
         public Treino() { }
 

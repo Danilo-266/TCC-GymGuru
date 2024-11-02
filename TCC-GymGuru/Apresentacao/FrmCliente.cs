@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Negocio;
 
 namespace Apresentacao
@@ -198,7 +199,7 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            String cpf = txtCpf.Text, nome = txtNome.Text, email = txtEmail.Text,genero = txtGenero.Text, experiencia = txtExperiencia.Text;
+            String cpf = txtCpf.Text, nome = txtNome.Text, email = txtEmail.Text, genero = txtGenero.Text, experiencia = txtExperiencia.Text;
             int.TryParse(txtCelular.Text, out int celular);
             int.TryParse(txtIdade.Text, out int idade);
             int.TryParse(txtId.Text, out int id);
@@ -206,33 +207,52 @@ namespace Apresentacao
             {
                 try
                 {
-                    clienteService.Cadastrar(cpf, nome, idade,email, genero, celular, experiencia);
-                    MessageBox.Show("CLIENTE CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
-                    carregaGridView();
-                    modo = 0;
-                    Habilita();
+                    string resultados = clienteService.Cadastrar(cpf, nome, idade, email, genero, celular, experiencia);
+                    if (resultados == "Cliete cadastrado com sucesso") {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        carregaGridView();
+                        modo = 0;
+                        Habilita();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // RestaurarValores(Convert.ToString(id), cpf, nome, Convert.ToString(idade), email, genero, Convert.ToString(celular), experiencia);
+                        txtId.Clear();
+                    }
 
                 }
+            
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtId.Clear();
                 }
 
-                carregaGridView();
+             
             }
             else
             {
 
                 try
                 {
-                    clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia);
-                    MessageBox.Show("CLIENTE ATUALIZADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string resultados = clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia);
+                    if (resultados == "CLIENTE ATUALIZADO COM SUCESSO!")
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    carregaGridView();
-                    modo = 0;
-                    Habilita();
+                        carregaGridView();
+                        modo = 0;
+                        Habilita();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // RestaurarValores(Convert.ToString(id), cpf, nome, Convert.ToString(idade), email, genero, Convert.ToString(celular), experiencia);
+                        
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -242,7 +262,17 @@ namespace Apresentacao
                
             }
         }
-
+        private void RestaurarValores(string id, string cpf, string nome, string idade, string email, string genero, string celular, string experiencia)
+        {
+            txtId.Text = id;
+            txtCpf.Text = cpf;
+            txtNome.Text = nome;
+            txtIdade.Text = idade;
+            txtEmail.Text = email;
+            txtGenero.Text = genero;
+            txtCelular.Text = celular;
+            txtExperiencia.Text = experiencia;
+        }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             modo = 1;

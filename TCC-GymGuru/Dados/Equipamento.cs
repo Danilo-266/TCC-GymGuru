@@ -9,11 +9,11 @@ namespace Dados
 {
     public class Equipamento
     {
-        private String nome {  get; set; }
-        private String descricao { get; set; }
-        private String musculo { get; set; }
+        public String nome {  get; set; }
+        public String descricao { get; set; }
+        public String musculo { get; set; }
 
-        private int usabilidade {  get; set; }
+        public int usabilidade {  get; set; }
 
         public Equipamento() { }
 

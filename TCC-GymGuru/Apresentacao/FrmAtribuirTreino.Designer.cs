@@ -92,7 +92,7 @@
             // 
             // btnTreino
             // 
-            this.btnTreino.Location = new System.Drawing.Point(32, 388);
+            this.btnTreino.Location = new System.Drawing.Point(32, 386);
             this.btnTreino.Name = "btnTreino";
             this.btnTreino.Size = new System.Drawing.Size(129, 23);
             this.btnTreino.TabIndex = 52;
