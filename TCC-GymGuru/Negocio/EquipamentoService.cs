@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dados;
+using FluentValidation;
+using FluentValidation.Results;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Negocio
 {
@@ -17,9 +20,22 @@ namespace Negocio
             repository = new EquipamentoRepository();
         }
 
-        public void Cadastrar(String nome, String descricao, String grupoMuscular)
+        public String Cadastrar(String nome, String descricao, String grupoMuscular)
         {
+            Equipamento equip = new Equipamento(nome,descricao,grupoMuscular);
+            EquipamentoValidator validator = new EquipamentoValidator();
+            ValidationResult results = validator.Validate(equip);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
             repository.Cadastro(nome,descricao,grupoMuscular);
+            return "EQUIPAMENTO CADASTRADO COM SUCESSO!";
         }
 
         public DataTable exibir()
@@ -32,9 +48,22 @@ namespace Negocio
             repository.Remove(id);
         }
 
-        public void update(int id, String nome, String descricao, String grupoMuscular)
+        public String update(int id, String nome, String descricao, String grupoMuscular)
         {
+            Equipamento equip = new Equipamento(nome, descricao, grupoMuscular);
+            EquipamentoValidator validator = new EquipamentoValidator();
+            ValidationResult results = validator.Validate(equip);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
             repository.Update(id, nome, descricao, grupoMuscular);
+            return "EQUIPAMENTO ATUALIZADO COM SUCESSO!";
         }
 
         public DataTable pesquisar(String nome)

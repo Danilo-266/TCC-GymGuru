@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dados;
+using FluentValidation.Results;
 
 namespace Negocio
 {
@@ -17,9 +18,22 @@ namespace Negocio
             repository = new TreinoRepository();
         }
 
-        public void Cadastrar(String nome, String descricao, int serie, String musculo, int idAparelho)
+        public String Cadastrar(String nome, String descricao, int serie, String musculo, int idAparelho)
         {
+            Treino treino = new Treino(nome, descricao, serie, musculo);
+            TreinoValidator validator = new TreinoValidator();
+            ValidationResult results = validator.Validate(treino);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
             repository.Cadastro(nome, descricao, serie, musculo, idAparelho);
+            return "TREINO CADASTRADO COM SUCESSO!";
         }
 
         public DataTable exibir()
@@ -32,9 +46,22 @@ namespace Negocio
             repository.Remove(id);
         }
 
-        public void update(int id,  String nome, String descricao,  int series, String grupoMuscular)
+        public String update(int id,  String nome, String descricao,  int series, String grupoMuscular)
         {
+            Treino treino = new Treino(nome, descricao, series, grupoMuscular);
+            TreinoValidator validator = new TreinoValidator();
+            ValidationResult results = validator.Validate(treino);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
             repository.Update(id, nome,descricao,series,grupoMuscular);
+            return "TREINO ATUALIZADO COM SUCESSO!";
         }
 
         public DataTable pesquisar(String nome)

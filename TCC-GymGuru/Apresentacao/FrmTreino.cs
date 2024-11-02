@@ -196,28 +196,46 @@ namespace Apresentacao
             {
                 try
                 {
-                    treinoService.Cadastrar(nome, descricao, series, grupomuscular, treinoService.pesquisarAparelhoID(aparelho));
-                    MessageBox.Show("TREINO CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                   String resultado = treinoService.Cadastrar(nome, descricao, series, grupomuscular, treinoService.pesquisarAparelhoID(aparelho));
+                    if(resultado== "TREINO CADASTRADO COM SUCESSO!")
+                    {
+                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        modo = 0;
+                        Habilita();
+                        carregaGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtId.Clear();
+                    }
 
                 }
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtId.Clear();
                 }
-                modo = 0;
-                Habilita();
-                carregaGridView();
+               
             }
             else
             {
                 
                 try
                 {
-                    treinoService.update(id, nome, descricao, series, grupomuscular);
-                    MessageBox.Show("TREINO ATUALIZADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    string resultados = treinoService.update(id, nome, descricao, series, grupomuscular);
+                    if(resultados == "TREINO ATUALIZADO COM SUCESSO!")
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        carregaGridView();
+                        modo = 0;
+                        Habilita();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }                  
 
                 }
                 catch (Exception ex)
@@ -225,9 +243,7 @@ namespace Apresentacao
                   
                     MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                carregaGridView();
-                modo = 0;
-                Habilita();
+               
             }
         }
 

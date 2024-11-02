@@ -235,28 +235,46 @@ namespace Apresentacao
             {
                 try
                 {
-                    equipamentoService.Cadastrar(nome, descricao, musculo);
-                    MessageBox.Show("EQUIPAMENTO CADASTRADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                    string resultado = equipamentoService.Cadastrar(nome, descricao, musculo);
+                    if (resultado == "EQUIPAMENTO CADASTRADO COM SUCESSO!") {
+                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        carregaGridView(0);
+                        modo = 0;
+                        Habilita();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtId.Clear();
+                    }
+                  
                 }
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtId.Clear();
                 }
 
-                carregaGridView(0);
-                modo = 0;
-                Habilita();
+                
             }
             else
             {
 
                 try
                 {
-                    equipamentoService.update(id, nome, descricao, musculo);
-                    MessageBox.Show("EQUIPAMENTO ATUALIZADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string resultados = equipamentoService.update(id, nome, descricao, musculo);
+                    if (resultados== "EQUIPAMENTO ATUALIZADO COM SUCESSO!")
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        carregaGridView(0);
+                        modo = 0;
+                        Habilita();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
 
                 }
@@ -265,9 +283,7 @@ namespace Apresentacao
 
                     MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                carregaGridView(0);
-                modo = 0;
-                Habilita();
+               
             }
         }
 

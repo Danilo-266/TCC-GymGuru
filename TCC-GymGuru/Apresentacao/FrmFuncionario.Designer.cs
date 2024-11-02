@@ -174,7 +174,7 @@
             this.lGenero.AutoSize = true;
             this.lGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lGenero.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lGenero.Location = new System.Drawing.Point(199, 308);
+            this.lGenero.Location = new System.Drawing.Point(200, 263);
             this.lGenero.Name = "lGenero";
             this.lGenero.Size = new System.Drawing.Size(119, 31);
             this.lGenero.TabIndex = 18;
@@ -185,7 +185,7 @@
             this.lCelular.AutoSize = true;
             this.lCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCelular.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lCelular.Location = new System.Drawing.Point(491, 308);
+            this.lCelular.Location = new System.Drawing.Point(492, 263);
             this.lCelular.Name = "lCelular";
             this.lCelular.Size = new System.Drawing.Size(116, 31);
             this.lCelular.TabIndex = 19;
@@ -196,7 +196,7 @@
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbNome.Location = new System.Drawing.Point(201, 221);
+            this.lbNome.Location = new System.Drawing.Point(201, 206);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(70, 25);
             this.lbNome.TabIndex = 20;
@@ -207,7 +207,7 @@
             this.lbCpf.AutoSize = true;
             this.lbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCpf.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbCpf.Location = new System.Drawing.Point(495, 221);
+            this.lbCpf.Location = new System.Drawing.Point(495, 206);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(70, 25);
             this.lbCpf.TabIndex = 21;
@@ -218,7 +218,7 @@
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbEmail.Location = new System.Drawing.Point(843, 221);
+            this.lbEmail.Location = new System.Drawing.Point(842, 206);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(70, 25);
             this.lbEmail.TabIndex = 22;
@@ -229,7 +229,7 @@
             this.lbGenero.AutoSize = true;
             this.lbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGenero.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbGenero.Location = new System.Drawing.Point(201, 360);
+            this.lbGenero.Location = new System.Drawing.Point(202, 294);
             this.lbGenero.Name = "lbGenero";
             this.lbGenero.Size = new System.Drawing.Size(70, 25);
             this.lbGenero.TabIndex = 23;
@@ -240,7 +240,7 @@
             this.lbCelular.AutoSize = true;
             this.lbCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCelular.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbCelular.Location = new System.Drawing.Point(495, 360);
+            this.lbCelular.Location = new System.Drawing.Point(496, 294);
             this.lbCelular.Name = "lbCelular";
             this.lbCelular.Size = new System.Drawing.Size(82, 25);
             this.lbCelular.TabIndex = 24;
@@ -253,9 +253,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label7.Location = new System.Drawing.Point(199, 425);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(277, 31);
+            this.label7.Size = new System.Drawing.Size(359, 31);
             this.label7.TabIndex = 26;
-            this.label7.Text = "Funcionarios online:";
+            this.label7.Text = "Funcionarios cadastrados:";
             // 
             // dgFuncionario
             // 

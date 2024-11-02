@@ -17,12 +17,12 @@ namespace Dados
 
         public Equipamento() { }
 
-        public Equipamento(string nome, string descricao, string musculo, int usabilidade)
+        public Equipamento(string nome, string descricao, string musculo)
         {
             this.nome = nome;
             this.descricao = descricao;
             this.musculo = musculo;
-            this.usabilidade = usabilidade;
+           
         }
     }
 }
