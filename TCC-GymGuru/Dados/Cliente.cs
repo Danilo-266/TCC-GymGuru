@@ -8,12 +8,12 @@ namespace Dados
 {
     public class Cliente
     {
-        public String cpf {  get; set; }//
-        public String nome {  get; set; }//
-        public int idade {  get; set; }//
-        public string email {  get; set; }//
-        public String genero {  get; set; }//
-        public int celular {  get; set; }//
+        public String cpf {  get; set; }
+        public String nome {  get; set; }
+        public int idade {  get; set; }
+        public string email {  get; set; }
+        public String genero {  get; set; }
+        public int celular {  get; set; }
         public String experiencia {  get; set; }
 
         public Cliente() { }

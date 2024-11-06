@@ -17,8 +17,8 @@ namespace Negocio
             repository = new ClienteRepository();
         }
 
-        public string Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
-        {
+        public string Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia,string cidade ,String rua, string bairro, int numero, string cep, string complemeto)
+        {// mudar validacao
             Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia);
             ClienteValidator validator = new ClienteValidator();
             ValidationResult results = validator.Validate(cliente);
@@ -32,7 +32,7 @@ namespace Negocio
                 }
             }
            
-                repository.Cadastro(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia);
+                repository.Cadastro(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia, cadastroEdenreco(cidade, rua, bairro, numero, cep, complemeto));
                 return "Cliete cadastrado com sucesso";
     
         }
@@ -88,6 +88,22 @@ namespace Negocio
         public void deletarTreino(int id,int treino)
         {
             repository.RemoveTreino(id, treino);
+        }
+
+        public int cadastroEdenreco(string cidade, String rua, string bairro, int numero, string cep, string complemeto)
+        {
+            repository.CadastroEdereco(cidade,rua, bairro, numero, cep, complemeto);
+            return (repository.GetEdenrecoId(cep, numero));
+        }
+
+        public  DataTable getAllEdenreco()
+        {
+            return repository.getAllEndereco();
+        }
+
+        public DataTable getAllEndId(int id)
+        {
+            return repository.getEnderecoPorId(id);
         }
     }
 }
