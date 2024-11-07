@@ -30,7 +30,7 @@ namespace Dados
 
                 RuleFor(cliente => cliente.idade).NotEmpty().WithMessage("Campo IDADE não pode ser vazio!");
 
-                RuleFor(cliente => cliente.celular).NotEmpty().WithMessage("Campo IDADE não pode ser vazio!");
+              //  RuleFor(cliente => cliente.celular).NotEmpty().WithMessage("Campo CELULRA não pode ser vazio!");
 
                 RuleFor(cliente => cliente.experiencia).Length(1,50).WithMessage("Campo EXPERINECIA deve conter de 1 a 50 caracteres!");
             //idEndereco, cidade, rua, bairro, numero, cep, complemento

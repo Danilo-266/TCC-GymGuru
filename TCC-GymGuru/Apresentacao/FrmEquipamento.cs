@@ -225,6 +225,10 @@ namespace Apresentacao
         {
             modo = 0;
             Habilita();
+            txtDesc.Clear();
+            txtMusculo.Clear();
+            txtNome.Clear();
+            txtId.Clear();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
