@@ -20,7 +20,7 @@ namespace Apresentacao
         private DataTable tblCliente = new DataTable();
         private DataTable tblEndereco = new DataTable();
         private int modo = 0;
-
+        private string end = "";
         public FrmCliente()
         {
             clienteService = new ClienteService();
@@ -86,53 +86,6 @@ namespace Apresentacao
 
                     break;
 
-                case 2://mudar clinete
-                    txtId.Enabled = false;
-                    btnAlterar.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnNovo.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnExcluir.Enabled = false;
-                    btnPesquisa.Enabled = false;
-                    txtCelular.Enabled = true;
-                    txtCpf.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtExperiencia.Enabled = true;
-                    txtGenero.Enabled = true;
-                    txtIdade.Enabled = true;
-                    txtNome.Enabled = true;
-                    txtCidade.Enabled = false;
-                    txtRua.Enabled = false;
-                    txtBairro.Enabled = false;
-                    txtNumero.Enabled = false;
-                    txtCEP.Enabled = false;
-                    txtComplemeto.Enabled = false;
-
-                    break;
-
-                case 3://mudar edereco
-                     txtId.Enabled = false;
-                    btnAlterar.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnNovo.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnExcluir.Enabled = false;
-                    btnPesquisa.Enabled = false;
-                    txtCelular.Enabled = false;
-                    txtCpf.Enabled = false;
-                    txtEmail.Enabled = false;
-                    txtExperiencia.Enabled = false;
-                    txtGenero.Enabled = false;
-                    txtIdade.Enabled = false;
-                    txtNome.Enabled = false;
-                    txtCidade.Enabled = true;
-                    txtRua.Enabled = true;
-                    txtBairro.Enabled = true;
-                    txtNumero.Enabled = true;
-                    txtCEP.Enabled = true;
-                    txtComplemeto.Enabled = true;
-
-                    break;
 
             }
         }
@@ -191,6 +144,12 @@ namespace Apresentacao
             txtGenero.Clear();
             txtIdade.Clear();
             txtNome.Clear();
+            txtCidade.Clear();
+            txtRua.Clear();
+            txtBairro.Clear();
+            txtNumero.Clear();
+            txtCEP.Clear();
+            txtComplemeto.Clear();
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -298,7 +257,7 @@ namespace Apresentacao
                 txtBairro.Clear();
                 txtNumero.Clear();
                 txtCEP.Clear();
-                txtComplemeto.Clear();
+                txtComplemeto.Clear();  
                 txtId.Text = dgCliente.CurrentRow.Cells[0]?.Value?.ToString() ?? string.Empty;
                 txtCpf.Text = dgCliente.CurrentRow.Cells[1]?.Value?.ToString() ?? string.Empty;
                 txtNome.Text = dgCliente.CurrentRow.Cells[2]?.Value?.ToString() ?? string.Empty;
@@ -307,7 +266,8 @@ namespace Apresentacao
                 txtGenero.Text = dgCliente.CurrentRow.Cells[5]?.Value?.ToString() ?? string.Empty;
                 txtCelular.Text = dgCliente.CurrentRow.Cells[6]?.Value?.ToString() ?? string.Empty;
                 txtExperiencia.Text = dgCliente.CurrentRow.Cells[7]?.Value?.ToString() ?? string.Empty;
-                string end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
+                
+                 end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
                 int.TryParse(end, out int val);
                 DataTable edenreco = clienteService.getAllEndId(val);
                 if (edenreco.Rows.Count > 0)
@@ -372,7 +332,8 @@ namespace Apresentacao
 
                 try
                 {
-                    string resultados = clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia);
+                    int.TryParse(end, out int idEnd);
+                    string resultados = clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia, cidade, idEnd, rua, bairro, numero, cep, complemento);
                     if (resultados == "CLIENTE ATUALIZADO COM SUCESSO!")
                     {
                         MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -416,6 +377,7 @@ namespace Apresentacao
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             int.TryParse(txtId.Text, out int id);
+            int.TryParse(end, out int idEnd);
             DialogResult resposta;
             resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resposta == DialogResult.OK)
@@ -424,7 +386,7 @@ namespace Apresentacao
 
                 try
                 {
-                    clienteService.deeletar(id);
+                    clienteService.deeletar(id,idEnd);
                     MessageBox.Show("CLIENTE DELETADO COM SUCESSO!", "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
@@ -455,8 +417,10 @@ namespace Apresentacao
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
             modo = 0;
             Habilita();
+            carregaGridView(0);
         }
 
         private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)

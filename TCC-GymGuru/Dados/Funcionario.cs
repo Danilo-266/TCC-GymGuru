@@ -9,23 +9,30 @@ namespace Dados
 {
     public class Funcionario
     {
-        private string cpf { get; set; }
-        private string nome {  get; set; }
+        public String cpf { get; set; }
+        public String nome {  get; set; }
 
-        private string email { get; set; }
+        public String email { get; set; }
 
-        private string genero { get; set; }
-       
-        private string celular { get; set; }
+        public String genero { get; set; }
 
-        private string senha  { get; set; }
+        public String celular { get; set; }
+
+        public String senha  { get; set; }
+        public String comfirmar { get; set; }
+        public String cidade { get; set; }
+        public String rua { get; set; }
+        public String bairro { get; set; }
+        public int numero { get; set; }
+        public String cep { get; set; }
+        public String complemento { get; set; }
 
         public Funcionario()
         {
 
         }
 
-        public Funcionario(string cpf,string nome, string email, string genero, string celular, string senha)
+        public Funcionario(string cpf,string nome, string email, string genero, string celular, string senha,string confirmar , string cidade, string rua, string bairro, int numero, string cep, string complemento)
         {
             this.cpf = cpf;
             this.nome = nome;
@@ -33,6 +40,13 @@ namespace Dados
             this.genero = genero;
             this.celular = celular;
             this.senha = senha;
+            this.comfirmar = comfirmar;
+            this.cidade = cidade;
+            this.rua = rua;
+            this.bairro = bairro;
+            this.numero = numero;
+            this.cep = cep;
+            this.complemento = complemento;
         }
     }
 }

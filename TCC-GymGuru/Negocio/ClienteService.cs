@@ -19,7 +19,7 @@ namespace Negocio
 
         public string Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia,string cidade ,String rua, string bairro, int numero, string cep, string complemeto)
         {// mudar validacao
-            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia);
+            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemeto);
             ClienteValidator validator = new ClienteValidator();
             ValidationResult results = validator.Validate(cliente);
             IList<ValidationFailure> failures = results.Errors;
@@ -42,14 +42,17 @@ namespace Negocio
             return repository.getAll();
         }
 
-        public void deeletar(int id)
+        public void deeletar(int id, int idEnd)
         {
             repository.Remove(id);
+            repository.RemoveEdenreco(idEnd);
+
+
         }
 
-        public string update(int id, String cpf, string nome, int idade, string email, string genero, int celular, string experiencia)
+        public string update(int id, String cpf, string nome, int idade, string email, string genero, int celular, string experiencia, string cidade,int idEndereco , String rua, string bairro, int numero, string cep, string complemeto)
         {
-            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia);
+            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemeto);
             ClienteValidator validator = new ClienteValidator();
             ValidationResult results = validator.Validate(cliente);
             IList<ValidationFailure> failures = results.Errors;
@@ -62,6 +65,7 @@ namespace Negocio
                 }
             }
             repository.Update(id, cpf, nome, idade, email, genero.ToUpper(), celular, experiencia);
+            repository.UpdateEdenreco(idEndereco,cidade,rua, bairro, numero, cep, complemeto);
             return "CLIENTE ATUALIZADO COM SUCESSO!";
         }
 
@@ -105,5 +109,7 @@ namespace Negocio
         {
             return repository.getEnderecoPorId(id);
         }
+
+        
     }
 }
