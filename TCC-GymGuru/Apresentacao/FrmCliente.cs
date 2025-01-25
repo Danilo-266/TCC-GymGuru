@@ -134,22 +134,22 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
-            txtId.Clear();
-            txtCelular.Clear();
-            txtCpf.Clear();
-            txtEmail.Clear();
-            txtExperiencia.Clear();
-            txtGenero.Clear();
-            txtIdade.Clear();
-            txtNome.Clear();
-            txtCidade.Clear();
-            txtRua.Clear();
-            txtBairro.Clear();
-            txtNumero.Clear();
-            txtCEP.Clear();
-            txtComplemeto.Clear();
+           // modo = 1;
+           // Habilita();
+           // txtId.Clear();
+           // txtCelular.Clear();
+          //  txtCpf.Clear();
+           // txtEmail.Clear();
+          //  txtExperiencia.Clear();
+          //  txtGenero.Clear();
+          //  txtIdade.Clear();
+          //  txtNome.Clear();
+          //  txtCidade.Clear();
+          //  txtRua.Clear();
+          //  txtBairro.Clear();
+          //  txtNumero.Clear();
+          //  txtCEP.Clear();
+          //  txtComplemeto.Clear();
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -470,7 +470,46 @@ namespace Apresentacao
         {
 
         }
+
+        private void imgFuncionario_Click_1(object sender, EventArgs e)
+        {
+            FrmFuncionario funcionario = new FrmFuncionario();
+
+            funcionario.Show();
+
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FrmCliente cliente = new FrmCliente();
+            cliente.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            FrmTelaInicial tela = new FrmTelaInicial();
+
+            tela.Show();
+            this.Hide();
+        }
+    }
     }
     
     
-}
+

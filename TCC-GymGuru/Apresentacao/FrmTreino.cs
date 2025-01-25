@@ -314,5 +314,42 @@ namespace Apresentacao
         {
           
         }
+
+        private void imgFuncionario_Click_1(object sender, EventArgs e)
+        {
+            FrmFuncionario funcionario = new FrmFuncionario();
+
+            funcionario.Show();
+
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FrmCliente cliente = new FrmCliente();
+            cliente.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            FrmTelaInicial telaInicial = new FrmTelaInicial();
+            telaInicial.Show();
+            this.Close();
+        }
     }
 }

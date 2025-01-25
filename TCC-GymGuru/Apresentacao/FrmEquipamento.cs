@@ -104,9 +104,10 @@ namespace Apresentacao
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            FrmTelaInicial telaInicial = new FrmTelaInicial();
-            telaInicial.Show();
-            this.Close();
+            FrmTelaInicial tela = new FrmTelaInicial();
+
+            tela.Show();
+            this.Hide();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -320,6 +321,44 @@ namespace Apresentacao
         private void rbtnDisp_CheckedChanged(object sender, EventArgs e)
         {
             carregaGridView(2);
+        }
+
+        private void imgFuncionario_Click_1(object sender, EventArgs e)
+        {
+            FrmFuncionario funcionario = new FrmFuncionario();
+
+            funcionario.Show();
+
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FrmCliente cliente = new FrmCliente();
+            cliente.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            FrmTelaInicial tela = new FrmTelaInicial();
+
+            tela.Show();
+            this.Hide();
         }
     }
 }
