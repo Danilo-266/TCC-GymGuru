@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,20 +48,7 @@ namespace Apresentacao
                     btnCancelar.Enabled = false;
                     btnExcluir.Enabled = true;
                     btnPesquisa.Enabled = true;
-                    txtCelular.Enabled = false;
-                    txtCpf.Enabled = false;
-                    txtEmail.Enabled = false;
-                    txtExperiencia.Enabled = false;
-                    txtGenero.Enabled = false;
-                    txtIdade.Enabled = false;
-                    txtNome.Enabled = false;
-                    txtId.Enabled = false;
-                    txtCidade.Enabled = false;
-                    txtRua.Enabled = false;
-                    txtBairro.Enabled = false;
-                    txtNumero.Enabled = false;
-                    txtCEP.Enabled = false;
-                    txtComplemeto.Enabled = false;
+                   
                     break;
                 case 1://Adicionar
                     txtId.Enabled = false;
@@ -70,19 +58,7 @@ namespace Apresentacao
                     btnCancelar.Enabled = true;
                     btnExcluir.Enabled = false;
                     btnPesquisa.Enabled = false;
-                    txtCelular.Enabled = true;
-                    txtCpf.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtExperiencia.Enabled = true;
-                    txtGenero.Enabled = true;
-                    txtIdade.Enabled = true;
-                    txtNome.Enabled = true;
-                    txtCidade.Enabled = true;
-                    txtRua.Enabled = true;
-                    txtBairro.Enabled = true;
-                    txtNumero.Enabled = true;
-                    txtCEP.Enabled = true;
-                    txtComplemeto.Enabled = true;
+                   
 
                     break;
 
@@ -134,22 +110,7 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // modo = 1;
-           // Habilita();
-           // txtId.Clear();
-           // txtCelular.Clear();
-          //  txtCpf.Clear();
-           // txtEmail.Clear();
-          //  txtExperiencia.Clear();
-          //  txtGenero.Clear();
-          //  txtIdade.Clear();
-          //  txtNome.Clear();
-          //  txtCidade.Clear();
-          //  txtRua.Clear();
-          //  txtBairro.Clear();
-          //  txtNumero.Clear();
-          //  txtCEP.Clear();
-          //  txtComplemeto.Clear();
+            FrmEdicao edicao = new FrmEdicao(0, 0,int.Parse(txtId.Text));
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -245,42 +206,8 @@ namespace Apresentacao
             try
             {
                 txtId.Clear();
-                txtCelular.Clear();
-                txtCpf.Clear();
-                txtEmail.Clear();
-                txtExperiencia.Clear();
-                txtGenero.Clear();
-                txtIdade.Clear();
-                txtNome.Clear();
-                txtCidade.Clear();
-                txtRua.Clear();
-                txtBairro.Clear();
-                txtNumero.Clear();
-                txtCEP.Clear();
-                txtComplemeto.Clear();  
                 txtId.Text = dgCliente.CurrentRow.Cells[0]?.Value?.ToString() ?? string.Empty;
-                txtCpf.Text = dgCliente.CurrentRow.Cells[1]?.Value?.ToString() ?? string.Empty;
-                txtNome.Text = dgCliente.CurrentRow.Cells[2]?.Value?.ToString() ?? string.Empty;
-                txtIdade.Text = dgCliente.CurrentRow.Cells[3]?.Value?.ToString() ?? string.Empty;
-                txtEmail.Text = dgCliente.CurrentRow.Cells[4]?.Value?.ToString() ?? string.Empty;
-                txtGenero.Text = dgCliente.CurrentRow.Cells[5]?.Value?.ToString() ?? string.Empty;
-                txtCelular.Text = dgCliente.CurrentRow.Cells[6]?.Value?.ToString() ?? string.Empty;
-                txtExperiencia.Text = dgCliente.CurrentRow.Cells[7]?.Value?.ToString() ?? string.Empty;
-                
-                 end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
-                int.TryParse(end, out int val);
-                DataTable edenreco = clienteService.getAllEndId(val);
-                if (edenreco.Rows.Count > 0)
-                {
-                    DataRow row = edenreco.Rows[0];
-                    txtCidade.Text = row["cidade"].ToString();
-                    txtRua.Text = row["rua"].ToString();
-                    txtBairro.Text = row["bairro"].ToString();
-                    txtNumero.Text = row["numero"].ToString();
-                    txtCEP.Text = row["cep"].ToString();
-                    txtComplemeto.Text = row["complemento"].ToString();
-                }
-              
+                end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -370,6 +297,7 @@ namespace Apresentacao
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            FrmEdicao edicao = new FrmEdicao(0, 0, int.Parse(txtId.Text));
             modo = 1;
             Habilita();
         }

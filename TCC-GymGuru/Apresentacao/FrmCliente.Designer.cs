@@ -31,21 +31,7 @@ namespace Apresentacao
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.dgCliente = new System.Windows.Forms.DataGridView();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtIdade = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtExperiencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -57,20 +43,6 @@ namespace Apresentacao
             this.txtId = new System.Windows.Forms.TextBox();
             this.rbtClietes = new System.Windows.Forms.RadioButton();
             this.rbtnEndereco = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtRua = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtComplemeto = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -82,7 +54,6 @@ namespace Apresentacao
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgFuncionario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,69 +71,6 @@ namespace Apresentacao
             this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
             this.dgCliente.SelectionChanged += new System.EventHandler(this.dgCliente_SelectionChanged);
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(824, 100);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(85, 26);
-            this.txtCpf.TabIndex = 19;
-            this.txtCpf.Visible = false;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(932, 100);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(83, 26);
-            this.txtNome.TabIndex = 20;
-            this.txtNome.Visible = false;
-            // 
-            // txtIdade
-            // 
-            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(1037, 100);
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(104, 26);
-            this.txtIdade.TabIndex = 21;
-            this.txtIdade.Visible = false;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(1174, 100);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(109, 26);
-            this.txtEmail.TabIndex = 22;
-            this.txtEmail.Visible = false;
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGenero.Location = new System.Drawing.Point(645, 100);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(38, 26);
-            this.txtGenero.TabIndex = 23;
-            this.txtGenero.Visible = false;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(215, 165);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(92, 26);
-            this.txtCelular.TabIndex = 24;
-            this.txtCelular.Visible = false;
-            // 
-            // txtExperiencia
-            // 
-            this.txtExperiencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExperiencia.Location = new System.Drawing.Point(323, 165);
-            this.txtExperiencia.Name = "txtExperiencia";
-            this.txtExperiencia.Size = new System.Drawing.Size(138, 26);
-            this.txtExperiencia.TabIndex = 25;
-            this.txtExperiencia.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -173,90 +81,6 @@ namespace Apresentacao
             this.label2.Size = new System.Drawing.Size(310, 86);
             this.label2.TabIndex = 26;
             this.label2.Text = "Clientes:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(820, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "CPF:";
-            this.label1.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(928, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Nome:";
-            this.label3.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(1032, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Idade:";
-            this.label4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(1169, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 25);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Email:";
-            this.label5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(648, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 25);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Gênero(M/F):";
-            this.label6.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(211, 137);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 25);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Celular:";
-            this.label7.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(318, 137);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 25);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Experiência:";
-            this.label8.Visible = false;
             // 
             // btnNovo
             // 
@@ -377,157 +201,10 @@ namespace Apresentacao
             this.rbtnEndereco.UseVisualStyleBackColor = true;
             this.rbtnEndereco.CheckedChanged += new System.EventHandler(this.rbtnDisp_CheckedChanged);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label10.Location = new System.Drawing.Point(595, 137);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 25);
-            this.label10.TabIndex = 67;
-            this.label10.Text = "Rua:";
-            this.label10.Visible = false;
-            // 
-            // txtRua
-            // 
-            this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(600, 165);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(74, 26);
-            this.txtRua.TabIndex = 66;
-            this.txtRua.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(1134, 137);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 25);
-            this.label11.TabIndex = 69;
-            this.label11.Text = "Bairro:";
-            this.label11.Visible = false;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(1139, 165);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(77, 26);
-            this.txtBairro.TabIndex = 68;
-            this.txtBairro.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(820, 137);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 25);
-            this.label13.TabIndex = 73;
-            this.label13.Text = "CEP:";
-            this.label13.Visible = false;
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(824, 165);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(76, 26);
-            this.txtCEP.TabIndex = 72;
-            this.txtCEP.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label14.Location = new System.Drawing.Point(917, 134);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(162, 25);
-            this.label14.TabIndex = 75;
-            this.label14.Text = "Complemento:";
-            this.label14.Visible = false;
-            // 
-            // txtComplemeto
-            // 
-            this.txtComplemeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemeto.Location = new System.Drawing.Point(922, 165);
-            this.txtComplemeto.Name = "txtComplemeto";
-            this.txtComplemeto.Size = new System.Drawing.Size(197, 26);
-            this.txtComplemeto.TabIndex = 74;
-            this.txtComplemeto.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label15.Location = new System.Drawing.Point(703, 137);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 25);
-            this.label15.TabIndex = 77;
-            this.label15.Text = "Numero:";
-            this.label15.Visible = false;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(707, 165);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(64, 26);
-            this.txtNumero.TabIndex = 76;
-            this.txtNumero.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label12.Location = new System.Drawing.Point(479, 137);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 25);
-            this.label12.TabIndex = 79;
-            this.label12.Text = "Cidade:";
-            this.label12.Visible = false;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(484, 165);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(88, 26);
-            this.txtCidade.TabIndex = 78;
-            this.txtCidade.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.Location = new System.Drawing.Point(21, 597);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 23);
-            this.label16.TabIndex = 115;
-            this.label16.Text = "Relatório";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 519);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 114;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(121, 2);
+            this.panel1.Location = new System.Drawing.Point(121, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(3, 735);
             this.panel1.TabIndex = 113;
@@ -537,7 +214,7 @@ namespace Apresentacao
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Location = new System.Drawing.Point(7, 477);
+            this.label17.Location = new System.Drawing.Point(3, 477);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 23);
             this.label17.TabIndex = 112;
@@ -637,8 +314,6 @@ namespace Apresentacao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1359, 732);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -649,18 +324,6 @@ namespace Apresentacao
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtComplemeto);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtCEP);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtBairro);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtRua);
             this.Controls.Add(this.rbtnEndereco);
             this.Controls.Add(this.rbtClietes);
             this.Controls.Add(this.label9);
@@ -672,28 +335,13 @@ namespace Apresentacao
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtExperiencia);
-            this.Controls.Add(this.txtCelular);
-            this.Controls.Add(this.txtGenero);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtIdade);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.dgCliente);
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -706,21 +354,7 @@ namespace Apresentacao
 
         #endregion
         private System.Windows.Forms.DataGridView dgCliente;
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtGenero;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtExperiencia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
@@ -732,20 +366,6 @@ namespace Apresentacao
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.RadioButton rbtClietes;
         private System.Windows.Forms.RadioButton rbtnEndereco;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCEP;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtComplemeto;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;

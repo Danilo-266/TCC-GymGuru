@@ -181,5 +181,10 @@ namespace Apresentacao
             tela.Show();
             this.Hide();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
