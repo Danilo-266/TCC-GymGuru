@@ -1,41 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\",
+  "WorkspaceRootPath": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\fmredicaotreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\fmredicaotreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\fmredicaotreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmclientetreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmclientetreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmedicaoequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmedicaoequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmedicaoequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmatribuirtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmatribuirtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmedicaocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\fmredicaotreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\fmredicaotreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmtreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\desktop\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmequipamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmclientetreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmclientetreino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|c:\\users\\aluno\\appdata\\tcc-gymguru\\tcc-gymguru\\apresentacao\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\apresentacao\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E24ED84D-EEC0-493B-B9D3-8DE764FB9001}|Apresentacao\\Apresentacao.csproj|solutionrelative:apresentacao\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -46,41 +74,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmCliente.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
-              "RelativeDocumentMoniker": "Apresentacao\\FrmCliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
-              "RelativeToolTip": "Apresentacao\\FrmCliente.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAAAANsAAAALAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FrmTreino.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmTreino.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmTreino.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmTreino.cs",
+              "RelativeToolTip": "Apresentacao\\FrmTreino.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAqwMYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:26:11.528Z",
+              "WhenOpened": "2025-02-17T12:45:30.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "FrmEquipamento.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEquipamento.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmEquipamento.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEquipamento.cs",
+              "RelativeToolTip": "Apresentacao\\FrmEquipamento.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAiwO0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:43:57.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".Designer.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\.Designer.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\.Designer.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\.Designer.cs",
+              "RelativeToolTip": "Apresentacao\\.Designer.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAewBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:42:30.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmAtribuirTreino.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmAtribuirTreino.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmAtribuirTreino.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmAtribuirTreino.cs [Design]",
+              "RelativeToolTip": "Apresentacao\\FrmAtribuirTreino.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:08:24.838Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FmrEdicaoTreino.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FmrEdicaoTreino.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs",
+              "RelativeToolTip": "Apresentacao\\FmrEdicaoTreino.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:52:32.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmTreino.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmTreino.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmTreino.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmTreino.cs [Design]",
+              "RelativeToolTip": "Apresentacao\\FrmTreino.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:46:12.4Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmEquipamento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEquipamento.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmEquipamento.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEquipamento.cs [Design]",
+              "RelativeToolTip": "Apresentacao\\FrmEquipamento.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T11:42:34.779Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FrmCliente.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
+              "RelativeDocumentMoniker": "Apresentacao\\FrmCliente.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
+              "RelativeToolTip": "Apresentacao\\FrmCliente.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAANsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:26:11.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FrmEdicaoCliente.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmEdicaoCliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
               "RelativeToolTip": "Apresentacao\\FrmEdicaoCliente.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAwDAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAnwFkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T03:26:08.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "FrmClienteTreino.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmClienteTreino.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmClienteTreino.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmClienteTreino.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmClienteTreino.cs [Design]",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmClienteTreino.cs [Design]",
               "RelativeToolTip": "Apresentacao\\FrmClienteTreino.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T11:16:05.587Z",
@@ -88,35 +203,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "FrmFuncionario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmFuncionario.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmFuncionario.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmFuncionario.cs",
               "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmFuncionario.cs [Design]",
-              "RelativeToolTip": "Apresentacao\\FrmFuncionario.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmFuncionario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T11:07:22.544Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-17T11:07:22.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "FrmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmLogin.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmLogin.cs",
               "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmLogin.cs [Design]",
-              "RelativeToolTip": "Apresentacao\\FrmLogin.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T11:07:21.092Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-17T11:07:21.092Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "FmrEdicaoTreino.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FmrEdicaoTreino.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs [Design]",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FmrEdicaoTreino.cs [Design]",
               "RelativeToolTip": "Apresentacao\\FmrEdicaoTreino.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T11:06:25.759Z",
@@ -124,11 +237,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "FrmEdicaoEquipamento.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoEquipamento.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoEquipamento.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmEdicaoEquipamento.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoEquipamento.cs [Design]",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoEquipamento.cs [Design]",
               "RelativeToolTip": "Apresentacao\\FrmEdicaoEquipamento.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T11:04:57.441Z",
@@ -136,11 +249,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "FrmEdicaoCliente.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmEdicaoCliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs [Design]",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmEdicaoCliente.cs [Design]",
               "RelativeToolTip": "Apresentacao\\FrmEdicaoCliente.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T03:21:00.866Z",
@@ -148,15 +261,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "FrmCliente.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs",
               "RelativeDocumentMoniker": "Apresentacao\\FrmCliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs [Design]",
+              "ToolTip": "C:\\Users\\aluno\\Desktop\\TCC-GymGuru\\TCC-GymGuru\\Apresentacao\\FrmCliente.cs [Design]",
               "RelativeToolTip": "Apresentacao\\FrmCliente.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:26:07.544Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-02T17:26:07.544Z"
             }
           ]
         }

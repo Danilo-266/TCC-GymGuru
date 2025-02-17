@@ -38,12 +38,6 @@ namespace Apresentacao
             this.btnNovo = new System.Windows.Forms.Button();
             this.dgEquipamento = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtDesc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMusculo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnRelatorio = new System.Windows.Forms.Button();
@@ -147,70 +141,6 @@ namespace Apresentacao
             this.label2.Size = new System.Drawing.Size(517, 86);
             this.label2.TabIndex = 48;
             this.label2.Text = "Equipamentos:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(687, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
-            this.label3.TabIndex = 53;
-            this.label3.Text = "Nome:";
-            this.label3.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(815, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 25);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Descrissão:";
-            this.label1.Visible = false;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(692, 96);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(102, 26);
-            this.txtNome.TabIndex = 51;
-            this.txtNome.Visible = false;
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(820, 103);
-            this.txtDesc.Multiline = true;
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(157, 26);
-            this.txtDesc.TabIndex = 50;
-            this.txtDesc.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(999, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 25);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "Musculo:";
-            this.label4.Visible = false;
-            // 
-            // txtMusculo
-            // 
-            this.txtMusculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMusculo.Location = new System.Drawing.Point(1004, 103);
-            this.txtMusculo.Name = "txtMusculo";
-            this.txtMusculo.Size = new System.Drawing.Size(102, 26);
-            this.txtMusculo.TabIndex = 54;
-            this.txtMusculo.Visible = false;
             // 
             // label5
             // 
@@ -414,12 +344,6 @@ namespace Apresentacao
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtMusculo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -452,12 +376,6 @@ namespace Apresentacao
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView dgEquipamento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMusculo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnRelatorio;

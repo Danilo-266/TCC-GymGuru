@@ -41,9 +41,7 @@ namespace Apresentacao
                     btnNovo.Enabled = true;
                     btnPesquisa.Enabled = true;
                     btnSalvar.Enabled = false;
-                    txtDesc.Enabled = false;
-                    txtMusculo.Enabled = false;
-                    txtNome.Enabled = false;
+                 
                     txtId.Enabled = false;
                     break;
                 case 1://Adicionar
@@ -54,9 +52,7 @@ namespace Apresentacao
                     btnPesquisa.Enabled = false;
                     btnSalvar.Enabled = true;
                     txtId.Enabled = false;
-                    txtDesc.Enabled = true;
-                    txtMusculo.Enabled = true;
-                    txtNome.Enabled = true;
+              
                     break;
 
             }
@@ -114,9 +110,7 @@ namespace Apresentacao
         {
             modo = 1;
             Habilita();
-            txtDesc.Clear();
-            txtMusculo.Clear();
-            txtNome.Clear();
+    
             txtId.Clear();
         }
 
@@ -226,70 +220,13 @@ namespace Apresentacao
         {
             modo = 0;
             Habilita();
-            txtDesc.Clear();
-            txtMusculo.Clear();
-            txtNome.Clear();
+
             txtId.Clear();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text, descricao = txtDesc.Text, musculo = txtMusculo.Text;
-            int.TryParse(txtId.Text, out int id);
-            if (txtId.Text == "")
-            {
-                try
-                {
-                    string resultado = equipamentoService.Cadastrar(nome, descricao, musculo);
-                    if (resultado == "EQUIPAMENTO CADASTRADO COM SUCESSO!") {
-                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        carregaGridView(0);
-                        modo = 0;
-                        Habilita();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtId.Clear();
-                    }
-                  
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO CADASTRAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtId.Clear();
-                }
-
-                
-            }
-            else
-            {
-
-                try
-                {
-                    string resultados = equipamentoService.update(id, nome, descricao, musculo);
-                    if (resultados== "EQUIPAMENTO ATUALIZADO COM SUCESSO!")
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        carregaGridView(0);
-                        modo = 0;
-                        Habilita();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR EQUIPAMENTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-               
-            }
+        
         }
 
         private void dgEquipamento_SelectionChanged(object sender, EventArgs e)
@@ -298,9 +235,7 @@ namespace Apresentacao
             if (row.CurrentRow == null)
                 return;
             txtId.Text = dgEquipamento.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = dgEquipamento.CurrentRow.Cells[1].Value.ToString();
-            txtDesc.Text = dgEquipamento.CurrentRow.Cells[2].Value.ToString();
-           txtMusculo.Text = dgEquipamento.CurrentRow.Cells[3].Value.ToString();
+  
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -363,7 +363,7 @@
             this.label2.Text = "Label:";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // FrmEdicao
+            // FrmEdicaoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -399,7 +399,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCpf);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEdicao";
+            this.Name = "FrmEdicaoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEdicao";
             this.Load += new System.EventHandler(this.FrmEdicao_Load);

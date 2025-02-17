@@ -38,18 +38,12 @@ namespace Apresentacao
             this.btnNovo = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtSeries = new System.Windows.Forms.TextBox();
             this.txtMusculo = new System.Windows.Forms.TextBox();
-            this.txtDesc = new System.Windows.Forms.TextBox();
             this.dgTreino = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtExercicio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEquipamento = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -152,18 +146,6 @@ namespace Apresentacao
             this.label5.Text = "Grupo Muscular:";
             this.label5.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(612, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 25);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Descrissão:";
-            this.label1.Visible = false;
-            // 
             // txtSeries
             // 
             this.txtSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,16 +163,6 @@ namespace Apresentacao
             this.txtMusculo.Size = new System.Drawing.Size(167, 26);
             this.txtMusculo.TabIndex = 44;
             this.txtMusculo.Visible = false;
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(617, 103);
-            this.txtDesc.Multiline = true;
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(131, 26);
-            this.txtDesc.TabIndex = 41;
-            this.txtDesc.Visible = false;
             // 
             // dgTreino
             // 
@@ -213,27 +185,6 @@ namespace Apresentacao
             this.label2.Text = "Treinos:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtExercicio
-            // 
-            this.txtExercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExercicio.Location = new System.Drawing.Point(468, 103);
-            this.txtExercicio.Name = "txtExercicio";
-            this.txtExercicio.Size = new System.Drawing.Size(120, 26);
-            this.txtExercicio.TabIndex = 42;
-            this.txtExercicio.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(472, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 25);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Exercício:";
-            this.label3.Visible = false;
-            // 
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,18 +193,6 @@ namespace Apresentacao
             this.txtId.Size = new System.Drawing.Size(52, 26);
             this.txtId.TabIndex = 62;
             this.txtId.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(778, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 25);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "Equipamento:";
-            this.label4.Visible = false;
             // 
             // label6
             // 
@@ -266,15 +205,6 @@ namespace Apresentacao
             this.label6.TabIndex = 66;
             this.label6.Text = "ID:";
             this.label6.Visible = false;
-            // 
-            // txtEquipamento
-            // 
-            this.txtEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipamento.Location = new System.Drawing.Point(783, 114);
-            this.txtEquipamento.Name = "txtEquipamento";
-            this.txtEquipamento.Size = new System.Drawing.Size(151, 26);
-            this.txtEquipamento.TabIndex = 65;
-            this.txtEquipamento.Visible = false;
             // 
             // panel1
             // 
@@ -400,8 +330,6 @@ namespace Apresentacao
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEquipamento);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
@@ -412,12 +340,8 @@ namespace Apresentacao
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSeries);
             this.Controls.Add(this.txtMusculo);
-            this.Controls.Add(this.txtExercicio);
-            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.dgTreino);
             this.Name = "FrmTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -443,18 +367,12 @@ namespace Apresentacao
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSeries;
         private System.Windows.Forms.TextBox txtMusculo;
-        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.DataGridView dgTreino;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtExercicio;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEquipamento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

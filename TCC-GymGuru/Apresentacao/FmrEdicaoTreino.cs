@@ -16,5 +16,10 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
+
+        private void FmrEdicaoTreino_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

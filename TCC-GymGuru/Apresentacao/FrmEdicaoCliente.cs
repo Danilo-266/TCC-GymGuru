@@ -87,15 +87,13 @@ namespace Apresentacao
 
                 try
                 {
-                    int.TryParse(end, out int idEnd);
+                    int idEnd= 0;
                     string resultados = clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia, cidade, idEnd, rua, bairro, numero, cep, complemento);
                     if (resultados == "CLIENTE ATUALIZADO COM SUCESSO!")
                     {
                         MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        carregaGridView(0);
-                        modo = 0;
-                        Habilita();
+                       
                     }
                     else
                     {
