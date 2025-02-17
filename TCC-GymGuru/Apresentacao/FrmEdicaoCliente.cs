@@ -12,7 +12,7 @@ using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace Apresentacao
 {
-    public partial class FrmEdicao : Form
+    public partial class FrmEdicaoCliente : Form
     {
 
         private readonly ClienteService clienteService;
@@ -20,7 +20,7 @@ namespace Apresentacao
         int funcao = 0;
         int evento = 0;
         int id = 0;
-        public FrmEdicao(int tipo,int modo ,int pesquisa)
+        public FrmEdicaoCliente(int tipo,int modo ,int pesquisa)
         {
             clienteService = new ClienteService();
             InitializeComponent();

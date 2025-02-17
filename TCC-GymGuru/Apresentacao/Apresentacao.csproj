@@ -107,6 +107,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Designer.cs" />
+    <Compile Include="FmrEdicaoTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrEdicaoTreino.Designer.cs">
+      <DependentUpon>FmrEdicaoTreino.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAtribuirTreino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +138,17 @@
     <Compile Include="FrmClienteTreino.Designer.cs">
       <DependentUpon>FrmClienteTreino.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEdicao.cs">
+    <Compile Include="FrmEdicaoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEdicao.Designer.cs">
-      <DependentUpon>FrmEdicao.cs</DependentUpon>
+    <Compile Include="FrmEdicaoCliente.Designer.cs">
+      <DependentUpon>FrmEdicaoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEdicaoEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEdicaoEquipamento.Designer.cs">
+      <DependentUpon>FrmEdicaoEquipamento.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEquipamento.cs">
       <SubType>Form</SubType>
@@ -176,6 +189,9 @@
     <Compile Include="FrmTreino.Designer.cs">
       <DependentUpon>FrmTreino.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FmrEdicaoTreino.resx">
+      <DependentUpon>FmrEdicaoTreino.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAtribuirTreino.resx">
       <DependentUpon>FrmAtribuirTreino.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,8 +204,11 @@
     <EmbeddedResource Include="FrmClienteTreino.resx">
       <DependentUpon>FrmClienteTreino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEdicao.resx">
-      <DependentUpon>FrmEdicao.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEdicaoCliente.resx">
+      <DependentUpon>FrmEdicaoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEdicaoEquipamento.resx">
+      <DependentUpon>FrmEdicaoEquipamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEquipamento.resx">
       <DependentUpon>FrmEquipamento.cs</DependentUpon>
