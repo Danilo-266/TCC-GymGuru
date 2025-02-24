@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class FmrEdicaoTreino
+    partial class FrmEdicaoTreino
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@
             this.btnCancelar.TabIndex = 113;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -82,7 +83,6 @@
             this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 117;
             this.label3.Text = "Exercício:";
-            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -94,7 +94,6 @@
             this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 116;
             this.label1.Text = "Descrissão:";
-            this.label1.Visible = false;
             // 
             // txtExercicio
             // 
@@ -103,7 +102,6 @@
             this.txtExercicio.Name = "txtExercicio";
             this.txtExercicio.Size = new System.Drawing.Size(208, 26);
             this.txtExercicio.TabIndex = 115;
-            this.txtExercicio.Visible = false;
             // 
             // txtDesc
             // 
@@ -113,7 +111,6 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(383, 45);
             this.txtDesc.TabIndex = 114;
-            this.txtDesc.Visible = false;
             // 
             // label7
             // 
@@ -125,7 +122,6 @@
             this.label7.Size = new System.Drawing.Size(86, 25);
             this.label7.TabIndex = 123;
             this.label7.Text = "Series:";
-            this.label7.Visible = false;
             // 
             // label5
             // 
@@ -137,7 +133,6 @@
             this.label5.Size = new System.Drawing.Size(186, 25);
             this.label5.TabIndex = 122;
             this.label5.Text = "Grupo Muscular:";
-            this.label5.Visible = false;
             // 
             // txtSeries
             // 
@@ -146,7 +141,6 @@
             this.txtSeries.Name = "txtSeries";
             this.txtSeries.Size = new System.Drawing.Size(82, 26);
             this.txtSeries.TabIndex = 121;
-            this.txtSeries.Visible = false;
             // 
             // txtMusculo
             // 
@@ -155,7 +149,6 @@
             this.txtMusculo.Name = "txtMusculo";
             this.txtMusculo.Size = new System.Drawing.Size(249, 26);
             this.txtMusculo.TabIndex = 120;
-            this.txtMusculo.Visible = false;
             // 
             // label4
             // 
@@ -167,17 +160,16 @@
             this.label4.Size = new System.Drawing.Size(156, 25);
             this.label4.TabIndex = 118;
             this.label4.Text = "Equipamento:";
-            this.label4.Visible = false;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(452, 181);
+            this.comboBox1.Location = new System.Drawing.Point(447, 181);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(189, 21);
             this.comboBox1.TabIndex = 124;
             // 
-            // FmrEdicaoTreino
+            // FrmEdicaoTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +189,8 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FmrEdicaoTreino";
+            this.Name = "FrmEdicaoTreino";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrEdicaoTreino";
             this.Load += new System.EventHandler(this.FmrEdicaoTreino_Load);
             this.ResumeLayout(false);

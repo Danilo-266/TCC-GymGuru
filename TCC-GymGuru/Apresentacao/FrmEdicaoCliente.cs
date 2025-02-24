@@ -17,18 +17,19 @@ namespace Apresentacao
 
         private readonly ClienteService clienteService;
 
-        int funcao = 0;
-        int evento = 0;
         int id = 0;
-        public FrmEdicaoCliente(int tipo,int modo ,int pesquisa)
+        public FrmEdicaoCliente(int pesquisa)
         {
             clienteService = new ClienteService();
             InitializeComponent();
-                 funcao  = tipo;
-                evento = modo;
              id = pesquisa;
         }
+
         
+
+
+
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -36,6 +37,44 @@ namespace Apresentacao
 
         private void FrmEdicao_Load(object sender, EventArgs e)
         {
+            if (id ==0)
+            {
+                label2.Text = "Cadastrar cliente";
+            }
+            else
+            {
+                label2.Text = "Atualizar cliente";
+            }
+
+            DataTable dt = clienteService.pesquisaPorId(id);
+           
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                txtCpf.Text = dt.Rows[0]["cpf"].ToString();
+                txtNome.Text = dt.Rows[0]["nome"].ToString();
+                txtIdade.Text = dt.Rows[0]["idade"].ToString();
+                txtEmail.Text = dt.Rows[0]["email"].ToString();
+                txtGenero.Text = dt.Rows[0]["genero"].ToString();
+                txtCelular.Text = dt.Rows[0]["celular"].ToString();
+                txtExperiencia.Text = dt.Rows[0]["experiencia"].ToString();
+                int end = int.Parse(dt.Rows[0]["idEdenreco"].ToString());
+
+ 
+                DataTable dtEnd = clienteService.getAllEndId(end);
+                txtCidade.Text = dtEnd.Rows[0]["cidade"].ToString();
+                txtRua.Text = dtEnd.Rows[0]["rua"].ToString();
+                txtBairro.Text = dtEnd.Rows[0]["bairro"].ToString();
+                txtNumero.Text = dtEnd.Rows[0]["numero"].ToString();
+                txtCEP.Text = dtEnd.Rows[0]["cep"].ToString();
+                txtComplemeto.Text = dtEnd.Rows[0]["complemento"].ToString();
+
+
+                //idEndereco, , , , , cep, complemento
+            }
+
+
+
+
 
         }
 
@@ -68,7 +107,7 @@ namespace Apresentacao
                     {
                         MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        this.Close();
+                        
                     }
 
                 }
@@ -77,7 +116,7 @@ namespace Apresentacao
                 {
 
                     MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    
                 }
 
 
@@ -92,8 +131,8 @@ namespace Apresentacao
                     if (resultados == "CLIENTE ATUALIZADO COM SUCESSO!")
                     {
                         MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
 
-                       
                     }
                     else
                     {
@@ -109,6 +148,11 @@ namespace Apresentacao
                 }
 
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

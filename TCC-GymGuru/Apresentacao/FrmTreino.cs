@@ -29,45 +29,11 @@ namespace Apresentacao
             dgTreino.ReadOnly = true;
 
             tblTreino = treinoService.exibir();
-            Habilita();
-
-        }
-
-        private void Habilita()
-        {
-            switch (modo)
-            {
-                case 0://neutro
-                    btnAlterar.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnNovo.Enabled = true;
-                    btnCancelar.Enabled = false;
-                    btnExcluir.Enabled = true;
-                    btnPesquisar.Enabled = true;
-          
-                    txtMusculo.Enabled = false;
-                    txtSeries.Enabled = false;
-                    txtId.Enabled = false;
-                    txtId.Enabled = false;
             
-                    break;
-                case 1://Adicionar
-       
-                    txtMusculo.Enabled=true;
-                    txtId.Enabled=true;
 
-                    txtSeries.Enabled=true;
-                    btnCancelar.Enabled=true;
-                    btnSalvar.Enabled=true;
-                    btnNovo.Enabled=false;
-                    btnAlterar.Enabled=false;
-                    btnExcluir.Enabled=false;
-                    btnPesquisar.Enabled=false;
-                    txtId.Enabled = false;
-                    break;
-                    
-            }
         }
+
+       
 
 
 
@@ -164,8 +130,7 @@ namespace Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
+         
         }
 
         private void dgTreino_SelectionChanged(object sender, EventArgs e)
@@ -174,8 +139,6 @@ namespace Apresentacao
             if (row.CurrentRow == null) 
                 return;
 
-            txtSeries.Text = dgTreino.CurrentRow.Cells[3].Value.ToString();
-            txtMusculo.Text = dgTreino.CurrentRow.Cells[4].Value.ToString();
             txtId.Text = dgTreino.CurrentRow.Cells[0].Value.ToString();
 
         }
@@ -188,18 +151,11 @@ namespace Apresentacao
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
-    
-            txtMusculo.Clear();
-            txtId.Clear();
-            txtSeries.Clear();
-      
-            txtId.Clear();
-      
-            modo = 1;
-            Habilita();
+            FrmEdicaoTreino edicao = new FrmEdicaoTreino(int.Parse(txtId.Text));
+            edicao.Show();
+
         }
+            
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -246,7 +202,7 @@ namespace Apresentacao
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             modo = 0;
-            Habilita();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

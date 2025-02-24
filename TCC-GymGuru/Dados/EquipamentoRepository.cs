@@ -170,5 +170,31 @@ namespace Dados
         
         }
 
+        public DataTable PesquisaEquipamentoPorId(int id)
+        {
+            DataTable DtResultado = new DataTable("equipamento");
+            string selectSql;
+
+            try
+            {
+                Connection.getConnection();
+                selectSql = "SELECT * FROM GymGuruAparelho WHERE idAparelho = @idAparelho";
+
+                MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                SqlCmd.Parameters.AddWithValue("@idAparelho", id);
+
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
     }
+
+
+
 }

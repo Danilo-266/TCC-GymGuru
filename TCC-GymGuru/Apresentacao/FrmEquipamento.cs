@@ -27,36 +27,10 @@ namespace Apresentacao
             dgEquipamento.AllowUserToOrderColumns = false;
             dgEquipamento.ReadOnly = true;
             tblEquipamento = equipamentoService.exibir();
-            Habilita();
+           
         }
 
-        private void Habilita()
-        {
-            switch (modo)
-            {
-                case 0://neutro
-                    btnAlterar.Enabled = true;
-                    btnCancelar.Enabled = false;
-                    btnExcluir.Enabled = true;
-                    btnNovo.Enabled = true;
-                    btnPesquisa.Enabled = true;
-                    btnSalvar.Enabled = false;
-                 
-                    txtId.Enabled = false;
-                    break;
-                case 1://Adicionar
-                    btnAlterar.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnExcluir.Enabled = false;
-                    btnNovo.Enabled = false;
-                    btnPesquisa.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    txtId.Enabled = false;
-              
-                    break;
-
-            }
-        }
+      
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -108,16 +82,14 @@ namespace Apresentacao
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
-    
-            txtId.Clear();
+            FrmEdicaoEquipamento edicao = new FrmEdicaoEquipamento(int.Parse(txtId.Text));
+            edicao.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
+            FrmEdicaoEquipamento edicao = new FrmEdicaoEquipamento(int.Parse(txtId.Text));
+            edicao.Show();
         }
 
         private void Equipamento_Load(object sender, EventArgs e)
@@ -218,10 +190,7 @@ namespace Apresentacao
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            modo = 0;
-            Habilita();
-
-            txtId.Clear();
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

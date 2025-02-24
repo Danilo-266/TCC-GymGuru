@@ -34,37 +34,9 @@ namespace Apresentacao
     
             tblCliente = clienteService.exibir();
             tblEndereco = clienteService.getAllEdenreco();
-            Habilita();
+           
         }
 
-        private void Habilita()
-        {
-            switch (modo)
-            {
-                case 0://neutro
-                    btnAlterar.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnNovo.Enabled = true;
-                    btnCancelar.Enabled = false;
-                    btnExcluir.Enabled = true;
-                    btnPesquisa.Enabled = true;
-                   
-                    break;
-                case 1://Adicionar
-                    txtId.Enabled = false;
-                    btnAlterar.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnNovo.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnExcluir.Enabled = false;
-                    btnPesquisa.Enabled = false;
-                   
-
-                    break;
-
-
-            }
-        }
 
         private void imgFuncionario_Click(object sender, EventArgs e)
         {
@@ -110,7 +82,8 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmEdicaoCliente edicao = new FrmEdicaoCliente(0, 0,int.Parse(txtId.Text));
+            FrmEdicaoCliente edicao = new FrmEdicaoCliente( 0);
+            edicao.Show();
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -222,9 +195,10 @@ namespace Apresentacao
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            FrmEdicaoCliente edicao = new FrmEdicaoCliente(0, 0, int.Parse(txtId.Text));
-            modo = 1;
-            Habilita();
+            FrmEdicaoCliente edicao = new FrmEdicaoCliente( int.Parse(txtId.Text));
+            edicao.Show();
+
+            
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -272,7 +246,7 @@ namespace Apresentacao
         {
 
             modo = 0;
-            Habilita();
+        
             carregaGridView(0);
         }
 

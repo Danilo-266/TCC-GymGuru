@@ -69,7 +69,6 @@
             this.label12.Size = new System.Drawing.Size(65, 18);
             this.label12.TabIndex = 103;
             this.label12.Text = "Cidade:";
-            this.label12.Visible = false;
             // 
             // txtCidade
             // 
@@ -78,7 +77,6 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(88, 26);
             this.txtCidade.TabIndex = 102;
-            this.txtCidade.Visible = false;
             // 
             // label15
             // 
@@ -90,7 +88,6 @@
             this.label15.Size = new System.Drawing.Size(73, 18);
             this.label15.TabIndex = 101;
             this.label15.Text = "Numero:";
-            this.label15.Visible = false;
             // 
             // txtNumero
             // 
@@ -99,7 +96,6 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(64, 26);
             this.txtNumero.TabIndex = 100;
-            this.txtNumero.Visible = false;
             // 
             // label14
             // 
@@ -111,7 +107,6 @@
             this.label14.Size = new System.Drawing.Size(118, 18);
             this.label14.TabIndex = 99;
             this.label14.Text = "Complemento:";
-            this.label14.Visible = false;
             // 
             // txtComplemeto
             // 
@@ -120,7 +115,6 @@
             this.txtComplemeto.Name = "txtComplemeto";
             this.txtComplemeto.Size = new System.Drawing.Size(308, 26);
             this.txtComplemeto.TabIndex = 98;
-            this.txtComplemeto.Visible = false;
             // 
             // label13
             // 
@@ -132,7 +126,6 @@
             this.label13.Size = new System.Drawing.Size(47, 18);
             this.label13.TabIndex = 97;
             this.label13.Text = "CEP:";
-            this.label13.Visible = false;
             // 
             // txtCEP
             // 
@@ -141,7 +134,6 @@
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(120, 26);
             this.txtCEP.TabIndex = 96;
-            this.txtCEP.Visible = false;
             // 
             // label11
             // 
@@ -153,7 +145,6 @@
             this.label11.Size = new System.Drawing.Size(59, 18);
             this.label11.TabIndex = 95;
             this.label11.Text = "Bairro:";
-            this.label11.Visible = false;
             // 
             // txtBairro
             // 
@@ -162,7 +153,6 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(145, 26);
             this.txtBairro.TabIndex = 94;
-            this.txtBairro.Visible = false;
             // 
             // label10
             // 
@@ -174,7 +164,6 @@
             this.label10.Size = new System.Drawing.Size(43, 18);
             this.label10.TabIndex = 93;
             this.label10.Text = "Rua:";
-            this.label10.Visible = false;
             // 
             // txtRua
             // 
@@ -183,7 +172,6 @@
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(166, 26);
             this.txtRua.TabIndex = 92;
-            this.txtRua.Visible = false;
             // 
             // label6
             // 
@@ -195,7 +183,6 @@
             this.label6.Size = new System.Drawing.Size(110, 18);
             this.label6.TabIndex = 89;
             this.label6.Text = "Gênero(M/F):";
-            this.label6.Visible = false;
             // 
             // label5
             // 
@@ -207,7 +194,6 @@
             this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 88;
             this.label5.Text = "Email:";
-            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -219,7 +205,6 @@
             this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 87;
             this.label4.Text = "Idade:";
-            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -231,7 +216,6 @@
             this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 86;
             this.label3.Text = "Nome:";
-            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -243,7 +227,6 @@
             this.label1.Size = new System.Drawing.Size(46, 18);
             this.label1.TabIndex = 85;
             this.label1.Text = "CPF:";
-            this.label1.Visible = false;
             // 
             // txtGenero
             // 
@@ -252,7 +235,6 @@
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(46, 26);
             this.txtGenero.TabIndex = 84;
-            this.txtGenero.Visible = false;
             // 
             // txtEmail
             // 
@@ -261,7 +243,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 26);
             this.txtEmail.TabIndex = 83;
-            this.txtEmail.Visible = false;
             // 
             // txtIdade
             // 
@@ -270,7 +251,6 @@
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(104, 26);
             this.txtIdade.TabIndex = 82;
-            this.txtIdade.Visible = false;
             // 
             // txtNome
             // 
@@ -279,7 +259,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(195, 26);
             this.txtNome.TabIndex = 81;
-            this.txtNome.Visible = false;
             // 
             // txtCpf
             // 
@@ -288,7 +267,6 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(141, 26);
             this.txtCpf.TabIndex = 80;
-            this.txtCpf.Visible = false;
             // 
             // btnCancelar
             // 
@@ -298,6 +276,7 @@
             this.btnCancelar.TabIndex = 105;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -319,7 +298,6 @@
             this.label8.Size = new System.Drawing.Size(100, 18);
             this.label8.TabIndex = 109;
             this.label8.Text = "Experiência:";
-            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -331,7 +309,6 @@
             this.label7.Size = new System.Drawing.Size(66, 18);
             this.label7.TabIndex = 108;
             this.label7.Text = "Celular:";
-            this.label7.Visible = false;
             // 
             // txtExperiencia
             // 
@@ -340,7 +317,6 @@
             this.txtExperiencia.Name = "txtExperiencia";
             this.txtExperiencia.Size = new System.Drawing.Size(138, 26);
             this.txtExperiencia.TabIndex = 107;
-            this.txtExperiencia.Visible = false;
             // 
             // txtCelular
             // 
@@ -349,7 +325,6 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(124, 26);
             this.txtCelular.TabIndex = 106;
-            this.txtCelular.Visible = false;
             // 
             // label2
             // 

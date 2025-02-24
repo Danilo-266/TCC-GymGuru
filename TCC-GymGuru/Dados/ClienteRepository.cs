@@ -204,6 +204,29 @@ namespace Dados
 
         }
 
+        public DataTable PesquisaClientePorId(int id)
+        {
+            DataTable DtResultado = new DataTable("cliente");
+            string selectSql;
+
+            try
+            {
+                Connection.getConnection();
+                selectSql = "SELECT * FROM GymGuruCliente WHERE idCliente = @idCliente";
+
+                MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                SqlCmd.Parameters.AddWithValue("@idCliente", id);
+
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
 
         //ENDERECO
 

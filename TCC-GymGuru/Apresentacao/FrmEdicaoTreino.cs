@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class FmrEdicaoTreino : Form
+    public partial class FrmEdicaoTreino : Form
     {
-        public FmrEdicaoTreino()
+        int id;
+        public FrmEdicaoTreino(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void FmrEdicaoTreino_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

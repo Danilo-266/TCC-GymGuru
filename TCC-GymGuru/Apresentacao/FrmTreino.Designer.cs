@@ -30,16 +30,10 @@ namespace Apresentacao
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTreino));
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSeries = new System.Windows.Forms.TextBox();
-            this.txtMusculo = new System.Windows.Forms.TextBox();
             this.dgTreino = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -61,26 +55,6 @@ namespace Apresentacao
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(1069, 173);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(119, 32);
-            this.btnCancelar.TabIndex = 60;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(1219, 173);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(119, 32);
-            this.btnSalvar.TabIndex = 59;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
@@ -121,48 +95,6 @@ namespace Apresentacao
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Location = new System.Drawing.Point(1252, 86);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 25);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "Series:";
-            this.label7.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(1064, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 25);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "Grupo Muscular:";
-            this.label5.Visible = false;
-            // 
-            // txtSeries
-            // 
-            this.txtSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeries.Location = new System.Drawing.Point(1256, 114);
-            this.txtSeries.Name = "txtSeries";
-            this.txtSeries.Size = new System.Drawing.Size(82, 26);
-            this.txtSeries.TabIndex = 46;
-            this.txtSeries.Visible = false;
-            // 
-            // txtMusculo
-            // 
-            this.txtMusculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMusculo.Location = new System.Drawing.Point(1069, 114);
-            this.txtMusculo.Name = "txtMusculo";
-            this.txtMusculo.Size = new System.Drawing.Size(167, 26);
-            this.txtMusculo.TabIndex = 44;
-            this.txtMusculo.Visible = false;
             // 
             // dgTreino
             // 
@@ -332,16 +264,10 @@ namespace Apresentacao
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtSeries);
-            this.Controls.Add(this.txtMusculo);
             this.Controls.Add(this.dgTreino);
             this.Name = "FrmTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -359,16 +285,10 @@ namespace Apresentacao
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSeries;
-        private System.Windows.Forms.TextBox txtMusculo;
         private System.Windows.Forms.DataGridView dgTreino;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;

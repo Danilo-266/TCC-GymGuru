@@ -58,6 +58,7 @@
             this.btnCancelar.TabIndex = 113;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -78,7 +79,6 @@
             this.label4.Size = new System.Drawing.Size(107, 25);
             this.label4.TabIndex = 119;
             this.label4.Text = "Musculo:";
-            this.label4.Visible = false;
             // 
             // txtMusculo
             // 
@@ -87,7 +87,6 @@
             this.txtMusculo.Name = "txtMusculo";
             this.txtMusculo.Size = new System.Drawing.Size(214, 26);
             this.txtMusculo.TabIndex = 118;
-            this.txtMusculo.Visible = false;
             // 
             // label3
             // 
@@ -99,7 +98,6 @@
             this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 117;
             this.label3.Text = "Nome:";
-            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -111,7 +109,6 @@
             this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 116;
             this.label1.Text = "Descrissão:";
-            this.label1.Visible = false;
             // 
             // txtNome
             // 
@@ -120,7 +117,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(283, 26);
             this.txtNome.TabIndex = 115;
-            this.txtNome.Visible = false;
             // 
             // txtDesc
             // 
@@ -130,7 +126,6 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(542, 49);
             this.txtDesc.TabIndex = 114;
-            this.txtDesc.Visible = false;
             // 
             // FrmEdicaoEquipamento
             // 
@@ -150,6 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEdicaoEquipamento";
             this.Text = "FrmEdicaoEquipamento";
+            this.Load += new System.EventHandler(this.FrmEdicaoEquipamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
