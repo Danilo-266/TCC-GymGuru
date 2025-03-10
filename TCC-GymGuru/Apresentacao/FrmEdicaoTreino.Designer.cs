@@ -40,7 +40,7 @@
             this.txtSeries = new System.Windows.Forms.TextBox();
             this.txtMusculo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEquipamento = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -72,6 +72,7 @@
             this.btnSalvar.TabIndex = 112;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label3
             // 
@@ -161,13 +162,14 @@
             this.label4.TabIndex = 118;
             this.label4.Text = "Equipamento:";
             // 
-            // comboBox1
+            // comboBoxEquipamento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(447, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 124;
+            this.comboBoxEquipamento.FormattingEnabled = true;
+            this.comboBoxEquipamento.Location = new System.Drawing.Point(447, 181);
+            this.comboBoxEquipamento.Name = "comboBoxEquipamento";
+            this.comboBoxEquipamento.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxEquipamento.TabIndex = 124;
+            this.comboBoxEquipamento.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FrmEdicaoTreino
             // 
@@ -175,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(672, 310);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxEquipamento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSeries);
@@ -188,7 +190,6 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEdicaoTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrEdicaoTreino";
@@ -212,6 +213,6 @@
         private System.Windows.Forms.TextBox txtSeries;
         private System.Windows.Forms.TextBox txtMusculo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEquipamento;
     }
 }

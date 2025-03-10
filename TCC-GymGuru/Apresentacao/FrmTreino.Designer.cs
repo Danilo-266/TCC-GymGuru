@@ -103,6 +103,7 @@ namespace Apresentacao
             this.dgTreino.Name = "dgTreino";
             this.dgTreino.Size = new System.Drawing.Size(1067, 373);
             this.dgTreino.TabIndex = 40;
+            this.dgTreino.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTreino_CellContentClick);
             this.dgTreino.SelectionChanged += new System.EventHandler(this.dgTreino_SelectionChanged);
             // 
             // label2

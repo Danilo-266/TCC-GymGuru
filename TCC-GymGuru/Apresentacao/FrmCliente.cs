@@ -82,8 +82,10 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmEdicaoCliente edicao = new FrmEdicaoCliente( 0);
-            edicao.Show();
+            
+            FrmEdicaoCliente frmEdicao = new FrmEdicaoCliente(0);
+            frmEdicao.FormClosed += (s, args) => carregaGridView(0);
+            frmEdicao.ShowDialog();
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -195,10 +197,10 @@ namespace Apresentacao
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            FrmEdicaoCliente edicao = new FrmEdicaoCliente( int.Parse(txtId.Text));
-            edicao.Show();
+            FrmEdicaoCliente frmEdicao = new FrmEdicaoCliente(int.Parse(txtId.Text));
+            frmEdicao.FormClosed += (s, args) => carregaGridView(0);
+            frmEdicao.ShowDialog();
 
-            
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

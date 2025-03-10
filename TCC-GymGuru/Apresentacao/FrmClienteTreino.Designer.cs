@@ -130,7 +130,6 @@ namespace Apresentacao
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dgPesquisa);
             this.Controls.Add(this.lbPedido);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClienteTreino";

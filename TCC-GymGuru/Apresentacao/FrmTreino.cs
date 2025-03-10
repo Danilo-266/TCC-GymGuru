@@ -46,7 +46,7 @@ namespace Apresentacao
             dgTreino.Columns[0].HeaderText = "ID";
             dgTreino.Columns[0].DataPropertyName = "idTreino";
 
-            dgTreino.Columns[1].Width = 300;
+            dgTreino.Columns[1].Width = 200;
             dgTreino.Columns[1].HeaderText = "NOME";
             dgTreino.Columns[1].DataPropertyName = "nome";
 
@@ -58,7 +58,7 @@ namespace Apresentacao
             dgTreino.Columns[3].HeaderText = "SERIES";
             dgTreino.Columns[3].DataPropertyName = "series";
 
-            dgTreino.Columns[4].Width = 250;
+            dgTreino.Columns[4].Width = 110;
             dgTreino.Columns[4].HeaderText = "MUSCULO";
             dgTreino.Columns[4].DataPropertyName = "grupoMuscular";
 
@@ -130,7 +130,9 @@ namespace Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+            FrmEdicaoTreino frmEdicao = new FrmEdicaoTreino(int.Parse(txtId.Text));
+            frmEdicao.FormClosed += (s, args) => carregaGridView();
+            frmEdicao.ShowDialog();
         }
 
         private void dgTreino_SelectionChanged(object sender, EventArgs e)
@@ -151,8 +153,10 @@ namespace Apresentacao
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            FrmEdicaoTreino edicao = new FrmEdicaoTreino(int.Parse(txtId.Text));
-            edicao.Show();
+            
+            FrmEdicaoTreino frmEdicao = new FrmEdicaoTreino(0);
+            frmEdicao.FormClosed += (s, args) => carregaGridView();
+            frmEdicao.ShowDialog();
 
         }
             
@@ -245,6 +249,11 @@ namespace Apresentacao
             FrmTelaInicial telaInicial = new FrmTelaInicial();
             telaInicial.Show();
             this.Close();
+        }
+
+        private void dgTreino_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -373,7 +373,6 @@
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCpf);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEdicaoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEdicao";

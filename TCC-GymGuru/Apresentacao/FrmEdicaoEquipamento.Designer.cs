@@ -49,6 +49,7 @@
             this.label2.Size = new System.Drawing.Size(103, 39);
             this.label2.TabIndex = 111;
             this.label2.Text = "Label:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnCancelar
             // 
@@ -68,6 +69,7 @@
             this.btnSalvar.TabIndex = 112;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label4
             // 
@@ -144,6 +146,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEdicaoEquipamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEdicaoEquipamento";
             this.Load += new System.EventHandler(this.FrmEdicaoEquipamento_Load);
             this.ResumeLayout(false);

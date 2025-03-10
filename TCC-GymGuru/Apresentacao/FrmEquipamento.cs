@@ -82,14 +82,17 @@ namespace Apresentacao
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            FrmEdicaoEquipamento edicao = new FrmEdicaoEquipamento(int.Parse(txtId.Text));
-            edicao.Show();
+            FrmEdicaoEquipamento frmEdicao = new FrmEdicaoEquipamento(0);
+            frmEdicao.FormClosed += (s, args) =>  carregaGridView(0); 
+            frmEdicao.ShowDialog();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            FrmEdicaoEquipamento edicao = new FrmEdicaoEquipamento(int.Parse(txtId.Text));
-            edicao.Show();
+            
+            FrmEdicaoEquipamento frmEdicao = new FrmEdicaoEquipamento(int.Parse(txtId.Text));
+            frmEdicao.FormClosed += (s, args) => carregaGridView(0);
+            frmEdicao.ShowDialog();
         }
 
         private void Equipamento_Load(object sender, EventArgs e)
