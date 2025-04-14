@@ -270,6 +270,7 @@ namespace Apresentacao
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.dgTreino);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTreino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Treino";

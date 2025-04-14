@@ -29,6 +29,7 @@ namespace Apresentacao
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClienteTreino));
             this.lbPedido = new System.Windows.Forms.Label();
             this.dgPesquisa = new System.Windows.Forms.DataGridView();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -130,6 +131,7 @@ namespace Apresentacao
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dgPesquisa);
             this.Controls.Add(this.lbPedido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmClienteTreino";

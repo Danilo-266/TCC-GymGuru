@@ -337,6 +337,7 @@
             this.Controls.Add(this.lCpf);
             this.Controls.Add(this.lNome);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";

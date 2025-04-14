@@ -313,6 +313,7 @@ namespace Apresentacao
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";

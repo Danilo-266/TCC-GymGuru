@@ -328,6 +328,7 @@ namespace Apresentacao
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.dgEquipamento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEquipamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipamento";

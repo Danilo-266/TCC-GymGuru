@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEdicaoCliente));
             this.label12 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -373,6 +374,7 @@
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCpf);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEdicaoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEdicao";
