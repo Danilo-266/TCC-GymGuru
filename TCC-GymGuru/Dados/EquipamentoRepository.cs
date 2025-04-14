@@ -99,16 +99,20 @@ namespace Dados
                 Connection.getConnection();
                 if (!string.IsNullOrEmpty(Nome))
                 {
+                   
                     selectSql = String.Format("SELECT * FROM GymGuruAparelho WHERE nome LIKE @pNome");
-                    Nome = '%' + Nome + '%';
+                    Nome = Nome + '%'; 
                 }
                 else
                 {
                     selectSql = String.Format("SELECT * FROM GymGuruAparelho");
                 }
+
                 MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+
                 if (!string.IsNullOrEmpty(Nome))
-                    SqlCmd.Parameters.AddWithValue("pNome", Nome);
+                    SqlCmd.Parameters.AddWithValue("@pNome", Nome);
+
                 MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
                 SqlData.Fill(DtResultado);
             }
@@ -118,7 +122,6 @@ namespace Dados
             }
             return DtResultado;
         }
-
         public DataTable PesquisaDisponivel(int disponivel)
         {
             DataTable DtResultado = new DataTable("aparelho");
@@ -170,5 +173,31 @@ namespace Dados
         
         }
 
+        public DataTable PesquisaEquipamentoPorId(int id)
+        {
+            DataTable DtResultado = new DataTable("equipamento");
+            string selectSql;
+
+            try
+            {
+                Connection.getConnection();
+                selectSql = "SELECT * FROM GymGuruAparelho WHERE idAparelho = @idAparelho";
+
+                MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+                SqlCmd.Parameters.AddWithValue("@idAparelho", id);
+
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
     }
+
+
+
 }

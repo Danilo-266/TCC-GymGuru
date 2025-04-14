@@ -94,6 +94,11 @@ namespace Negocio
             repository.RemoveTreino(id, treino);
         }
 
+        public DataTable pesquisaPorId(int id )
+        {
+        return(repository.PesquisaClientePorId(id));
+        }
+
         public int cadastroEdenreco(string cidade, String rua, string bairro, int numero, string cep, string complemeto)
         {
             repository.CadastroEdereco(cidade,rua, bairro, numero, cep, complemeto);

@@ -76,5 +76,10 @@ namespace Negocio
             return repository.PesquisaDisponivel(disp);
         }
 
+        public DataTable PesquisaPorId(int id)
+        {
+            return repository.PesquisaEquipamentoPorId(id);
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,62 +34,9 @@ namespace Apresentacao
     
             tblCliente = clienteService.exibir();
             tblEndereco = clienteService.getAllEdenreco();
-            Habilita();
+           
         }
 
-        private void Habilita()
-        {
-            switch (modo)
-            {
-                case 0://neutro
-                    btnAlterar.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnNovo.Enabled = true;
-                    btnCancelar.Enabled = false;
-                    btnExcluir.Enabled = true;
-                    btnPesquisa.Enabled = true;
-                    txtCelular.Enabled = false;
-                    txtCpf.Enabled = false;
-                    txtEmail.Enabled = false;
-                    txtExperiencia.Enabled = false;
-                    txtGenero.Enabled = false;
-                    txtIdade.Enabled = false;
-                    txtNome.Enabled = false;
-                    txtId.Enabled = false;
-                    txtCidade.Enabled = false;
-                    txtRua.Enabled = false;
-                    txtBairro.Enabled = false;
-                    txtNumero.Enabled = false;
-                    txtCEP.Enabled = false;
-                    txtComplemeto.Enabled = false;
-                    break;
-                case 1://Adicionar
-                    txtId.Enabled = false;
-                    btnAlterar.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnNovo.Enabled = false;
-                    btnCancelar.Enabled = true;
-                    btnExcluir.Enabled = false;
-                    btnPesquisa.Enabled = false;
-                    txtCelular.Enabled = true;
-                    txtCpf.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtExperiencia.Enabled = true;
-                    txtGenero.Enabled = true;
-                    txtIdade.Enabled = true;
-                    txtNome.Enabled = true;
-                    txtCidade.Enabled = true;
-                    txtRua.Enabled = true;
-                    txtBairro.Enabled = true;
-                    txtNumero.Enabled = true;
-                    txtCEP.Enabled = true;
-                    txtComplemeto.Enabled = true;
-
-                    break;
-
-
-            }
-        }
 
         private void imgFuncionario_Click(object sender, EventArgs e)
         {
@@ -134,22 +82,10 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
-            txtId.Clear();
-            txtCelular.Clear();
-            txtCpf.Clear();
-            txtEmail.Clear();
-            txtExperiencia.Clear();
-            txtGenero.Clear();
-            txtIdade.Clear();
-            txtNome.Clear();
-            txtCidade.Clear();
-            txtRua.Clear();
-            txtBairro.Clear();
-            txtNumero.Clear();
-            txtCEP.Clear();
-            txtComplemeto.Clear();
+            
+            FrmEdicaoCliente frmEdicao = new FrmEdicaoCliente(0);
+            frmEdicao.FormClosed += (s, args) => carregaGridView(0);
+            frmEdicao.ShowDialog();
         }
 
         private void Cliente_Load(object sender, EventArgs e)
@@ -245,42 +181,8 @@ namespace Apresentacao
             try
             {
                 txtId.Clear();
-                txtCelular.Clear();
-                txtCpf.Clear();
-                txtEmail.Clear();
-                txtExperiencia.Clear();
-                txtGenero.Clear();
-                txtIdade.Clear();
-                txtNome.Clear();
-                txtCidade.Clear();
-                txtRua.Clear();
-                txtBairro.Clear();
-                txtNumero.Clear();
-                txtCEP.Clear();
-                txtComplemeto.Clear();  
                 txtId.Text = dgCliente.CurrentRow.Cells[0]?.Value?.ToString() ?? string.Empty;
-                txtCpf.Text = dgCliente.CurrentRow.Cells[1]?.Value?.ToString() ?? string.Empty;
-                txtNome.Text = dgCliente.CurrentRow.Cells[2]?.Value?.ToString() ?? string.Empty;
-                txtIdade.Text = dgCliente.CurrentRow.Cells[3]?.Value?.ToString() ?? string.Empty;
-                txtEmail.Text = dgCliente.CurrentRow.Cells[4]?.Value?.ToString() ?? string.Empty;
-                txtGenero.Text = dgCliente.CurrentRow.Cells[5]?.Value?.ToString() ?? string.Empty;
-                txtCelular.Text = dgCliente.CurrentRow.Cells[6]?.Value?.ToString() ?? string.Empty;
-                txtExperiencia.Text = dgCliente.CurrentRow.Cells[7]?.Value?.ToString() ?? string.Empty;
-                
-                 end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
-                int.TryParse(end, out int val);
-                DataTable edenreco = clienteService.getAllEndId(val);
-                if (edenreco.Rows.Count > 0)
-                {
-                    DataRow row = edenreco.Rows[0];
-                    txtCidade.Text = row["cidade"].ToString();
-                    txtRua.Text = row["rua"].ToString();
-                    txtBairro.Text = row["bairro"].ToString();
-                    txtNumero.Text = row["numero"].ToString();
-                    txtCEP.Text = row["cep"].ToString();
-                    txtComplemeto.Text = row["complemento"].ToString();
-                }
-              
+                end = dgCliente.CurrentRow.Cells[8]?.Value?.ToString() ?? string.Empty;
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -290,88 +192,15 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //idEndereco, rua, bairro, numero, cep, complemento
-            String cpf = txtCpf.Text, nome = txtNome.Text, email = txtEmail.Text, genero = txtGenero.Text, experiencia = txtExperiencia.Text;
-            string rua = txtRua.Text, bairro =txtBairro.Text, cep =txtCEP.Text, complemento = txtComplemeto.Text, cidade = txtCidade.Text;
-            int.TryParse(txtCelular.Text, out int celular);
-            int.TryParse(txtNumero.Text, out int numero);
-            int.TryParse(txtIdade.Text, out int idade);
-            int.TryParse(txtId.Text, out int id);
-            if (txtId.Text == "")
-            {
-                try
-                {
-                    string resultados = clienteService.Cadastrar(cpf, nome, idade, email, genero, celular, experiencia, cidade,rua,bairro, numero,cep,complemento);
-                    if (resultados == "Cliete cadastrado com sucesso") {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        carregaGridView(0);
-                        modo = 0;
-                        Habilita();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       
-                        txtId.Clear();
-                    }
-
-                }
-            
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtId.Clear();
-                }
-
-             
-            }
-            else
-            {
-
-                try
-                {
-                    int.TryParse(end, out int idEnd);
-                    string resultados = clienteService.update(id, cpf, nome, idade, email, genero, celular, experiencia, cidade, idEnd, rua, bairro, numero, cep, complemento);
-                    if (resultados == "CLIENTE ATUALIZADO COM SUCESSO!")
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        carregaGridView(0);
-                        modo = 0;
-                        Habilita();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-               
-            }
+           
         }
-        private void RestaurarValores(string id, string cpf, string nome, string idade, string email, string genero, string celular, string experiencia)
-        {
-            txtId.Text = id;
-            txtCpf.Text = cpf;
-            txtNome.Text = nome;
-            txtIdade.Text = idade;
-            txtEmail.Text = email;
-            txtGenero.Text = genero;
-            txtCelular.Text = celular;
-            txtExperiencia.Text = experiencia;
-        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
+            FrmEdicaoCliente frmEdicao = new FrmEdicaoCliente(int.Parse(txtId.Text));
+            frmEdicao.FormClosed += (s, args) => carregaGridView(0);
+            frmEdicao.ShowDialog();
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -419,7 +248,7 @@ namespace Apresentacao
         {
 
             modo = 0;
-            Habilita();
+        
             carregaGridView(0);
         }
 
@@ -439,13 +268,7 @@ namespace Apresentacao
         {
             carregaGridView(1);
             txtId.Clear();
-            txtCelular.Clear();
-            txtCpf.Clear();
-            txtEmail.Clear();
-            txtExperiencia.Clear();
-            txtGenero.Clear();
-            txtIdade.Clear();
-            txtNome.Clear();
+
 
         }
 
@@ -456,12 +279,7 @@ namespace Apresentacao
 
         private void rbtClietes_CheckedChanged(object sender, EventArgs e)
         {
-           txtCidade.Clear();
-            txtRua.Clear();
-            txtBairro.Clear();
-            txtNumero.Clear();
-            txtCEP.Clear();
-            txtComplemeto.Clear();
+
             carregaGridView(0);
 
         }
@@ -470,7 +288,46 @@ namespace Apresentacao
         {
 
         }
+
+        private void imgFuncionario_Click_1(object sender, EventArgs e)
+        {
+            FrmFuncionario funcionario = new FrmFuncionario();
+
+            funcionario.Show();
+
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FrmCliente cliente = new FrmCliente();
+            cliente.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            FrmTelaInicial tela = new FrmTelaInicial();
+
+            tela.Show();
+            this.Hide();
+        }
+    }
     }
     
     
-}
+

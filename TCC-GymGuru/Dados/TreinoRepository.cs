@@ -107,16 +107,20 @@ namespace Dados
                 Connection.getConnection();
                 if (!string.IsNullOrEmpty(Nome))
                 {
+                    
                     selectSql = String.Format("SELECT * FROM GymGuruTreino WHERE nome LIKE @pNome");
-                    Nome = '%' + Nome + '%';
+                    Nome = Nome + '%'; 
                 }
                 else
                 {
                     selectSql = String.Format("SELECT * FROM GymGuruTreino");
                 }
+
                 MySqlCommand SqlCmd = new MySqlCommand(selectSql, Connection.SqlCon);
+
                 if (!string.IsNullOrEmpty(Nome))
-                    SqlCmd.Parameters.AddWithValue("pNome", Nome);
+                    SqlCmd.Parameters.AddWithValue("@pNome", Nome); 
+
                 MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
                 SqlData.Fill(DtResultado);
             }
@@ -126,6 +130,7 @@ namespace Dados
             }
             return DtResultado;
         }
+
 
 
 

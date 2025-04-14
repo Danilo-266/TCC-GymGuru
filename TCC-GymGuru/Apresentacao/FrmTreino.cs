@@ -29,47 +29,11 @@ namespace Apresentacao
             dgTreino.ReadOnly = true;
 
             tblTreino = treinoService.exibir();
-            Habilita();
+            
 
         }
 
-        private void Habilita()
-        {
-            switch (modo)
-            {
-                case 0://neutro
-                    btnAlterar.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnNovo.Enabled = true;
-                    btnCancelar.Enabled = false;
-                    btnExcluir.Enabled = true;
-                    btnPesquisar.Enabled = true;
-                    txtDesc.Enabled = false;
-                    txtExercicio.Enabled = false;
-                    txtMusculo.Enabled = false;
-                    txtSeries.Enabled = false;
-                    txtId.Enabled = false;
-                    txtId.Enabled = false;
-                    txtEquipamento.Enabled = false;
-                    break;
-                case 1://Adicionar
-                    txtDesc.Enabled=true;
-                    txtExercicio.Enabled=true;
-                    txtMusculo.Enabled=true;
-                    txtId.Enabled=true;
-                    txtEquipamento.Enabled=true;
-                    txtSeries.Enabled=true;
-                    btnCancelar.Enabled=true;
-                    btnSalvar.Enabled=true;
-                    btnNovo.Enabled=false;
-                    btnAlterar.Enabled=false;
-                    btnExcluir.Enabled=false;
-                    btnPesquisar.Enabled=false;
-                    txtId.Enabled = false;
-                    break;
-                    
-            }
-        }
+       
 
 
 
@@ -82,7 +46,7 @@ namespace Apresentacao
             dgTreino.Columns[0].HeaderText = "ID";
             dgTreino.Columns[0].DataPropertyName = "idTreino";
 
-            dgTreino.Columns[1].Width = 300;
+            dgTreino.Columns[1].Width = 200;
             dgTreino.Columns[1].HeaderText = "NOME";
             dgTreino.Columns[1].DataPropertyName = "nome";
 
@@ -94,7 +58,7 @@ namespace Apresentacao
             dgTreino.Columns[3].HeaderText = "SERIES";
             dgTreino.Columns[3].DataPropertyName = "series";
 
-            dgTreino.Columns[4].Width = 250;
+            dgTreino.Columns[4].Width = 110;
             dgTreino.Columns[4].HeaderText = "MUSCULO";
             dgTreino.Columns[4].DataPropertyName = "grupoMuscular";
 
@@ -166,8 +130,9 @@ namespace Apresentacao
 
         private void button2_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
+            FrmEdicaoTreino frmEdicao = new FrmEdicaoTreino(int.Parse(txtId.Text));
+            frmEdicao.FormClosed += (s, args) => carregaGridView();
+            frmEdicao.ShowDialog();
         }
 
         private void dgTreino_SelectionChanged(object sender, EventArgs e)
@@ -175,92 +140,26 @@ namespace Apresentacao
             DataGridView row = (DataGridView)sender;
             if (row.CurrentRow == null) 
                 return;
-            txtExercicio.Text =  dgTreino.CurrentRow.Cells[1].Value.ToString();
-            txtDesc.Text = dgTreino.CurrentRow.Cells[2].Value.ToString();
-            txtSeries.Text = dgTreino.CurrentRow.Cells[3].Value.ToString();
-            txtMusculo.Text = dgTreino.CurrentRow.Cells[4].Value.ToString();
+
             txtId.Text = dgTreino.CurrentRow.Cells[0].Value.ToString();
-            txtEquipamento.Text = treinoService.pesquisaAparelhoNome(int.Parse(dgTreino.CurrentRow.Cells[5].Value.ToString()) ) ;
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            String nome = txtExercicio.Text, descricao = txtDesc.Text, grupomuscular = txtMusculo.Text, aparelho = txtEquipamento.Text;
-            int.TryParse(txtSeries.Text, out int series);
-            int.TryParse(txtId.Text, out int id);
-
-            
-     
-            if (txtId.Text == "")
-            {
-                try
-                {
-                   String resultado = treinoService.Cadastrar(nome, descricao, series, grupomuscular, treinoService.pesquisarAparelhoID(aparelho));
-                    if(resultado== "TREINO CADASTRADO COM SUCESSO!")
-                    {
-                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        modo = 0;
-                        Habilita();
-                        carregaGridView();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultado, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtId.Clear();
-                    }
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO CADASTRAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtId.Clear();
-                }
-               
-            }
-            else
-            {
-                
-                try
-                {
-                    string resultados = treinoService.update(id, nome, descricao, series, grupomuscular);
-                    if(resultados == "TREINO ATUALIZADO COM SUCESSO!")
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        carregaGridView();
-                        modo = 0;
-                        Habilita();
-                    }
-                    else
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }                  
-
-                }
-                catch (Exception ex)
-                {
-                  
-                    MessageBox.Show(ex.Message, "ERRO AO ATUALIZAR TREINO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-               
-            }
+        
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            modo = 1;
-            Habilita();
-            txtDesc.Clear();
-            txtMusculo.Clear();
-            txtId.Clear();
-            txtSeries.Clear();
-            txtExercicio.Clear();
-            txtId.Clear();
-            txtEquipamento.Clear();
-            modo = 1;
-            Habilita();
+            
+            FrmEdicaoTreino frmEdicao = new FrmEdicaoTreino(0);
+            frmEdicao.FormClosed += (s, args) => carregaGridView();
+            frmEdicao.ShowDialog();
+
         }
+            
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -307,12 +206,54 @@ namespace Apresentacao
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             modo = 0;
-            Habilita();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void imgFuncionario_Click_1(object sender, EventArgs e)
+        {
+            FrmFuncionario funcionario = new FrmFuncionario();
+
+            funcionario.Show();
+
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            FrmCliente cliente = new FrmCliente();
+            cliente.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            FrmTreino treino = new FrmTreino();
+            treino.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            FrmEquipamento equipamento = new FrmEquipamento();
+            equipamento.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            FrmTelaInicial telaInicial = new FrmTelaInicial();
+            telaInicial.Show();
+            this.Close();
+        }
+
+        private void dgTreino_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
