@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dados;
 using Negocio;
 
 namespace Apresentacao
@@ -212,6 +213,9 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            FrmFormularioEquipamento form = new FrmFormularioEquipamento(equipamentoService.listaEquipamento());
+            form.ShowDialog();
 
         }
 

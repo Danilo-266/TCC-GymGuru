@@ -140,14 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include=".Designer.cs" />
-    <Compile Include="DataSetGymGuru.cs">
-      <DependentUpon>DataSetGymGuru.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetGymGuru.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetGymGuru.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FrmEdicaoTreino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +188,11 @@
     <Compile Include="FrmEquipamento.Designer.cs">
       <DependentUpon>FrmEquipamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFormulario.cs">
+    <Compile Include="FrmFormularioEquipamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFormulario.Designer.cs">
-      <DependentUpon>FrmFormulario.cs</DependentUpon>
+    <Compile Include="FrmFormularioEquipamento.Designer.cs">
+      <DependentUpon>FrmFormularioEquipamento.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFuncionario.cs">
       <SubType>Form</SubType>
@@ -260,8 +252,8 @@
     <EmbeddedResource Include="FrmEquipamento.resx">
       <DependentUpon>FrmEquipamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFormulario.resx">
-      <DependentUpon>FrmFormulario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFormularioEquipamento.resx">
+      <DependentUpon>FrmFormularioEquipamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
@@ -282,18 +274,9 @@
     <EmbeddedResource Include="FrmTreino.resx">
       <DependentUpon>FrmTreino.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSetGymGuru.xsc">
-      <DependentUpon>DataSetGymGuru.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetGymGuru.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetGymGuru.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetGymGuru.xss">
-      <DependentUpon>DataSetGymGuru.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="RelatorioEquipamento.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Dados.Equipamento.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -326,6 +309,10 @@
     <None Include="Resources\Design sem nome %289%291.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dados\Dados.csproj">
+      <Project>{a68d033c-575e-4cd4-a968-d3d6c220eb67}</Project>
+      <Name>Dados</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{b983bfa3-606f-4f95-ade1-de0a194b5982}</Project>
       <Name>Negocio</Name>

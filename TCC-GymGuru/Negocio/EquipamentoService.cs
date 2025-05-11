@@ -22,7 +22,7 @@ namespace Negocio
 
         public String Cadastrar(String nome, String descricao, String grupoMuscular)
         {
-            Equipamento equip = new Equipamento(nome,descricao,grupoMuscular);
+            Equipamento equip = new Equipamento(0,nome,descricao,grupoMuscular, 0);
             EquipamentoValidator validator = new EquipamentoValidator();
             ValidationResult results = validator.Validate(equip);
             IList<ValidationFailure> failures = results.Errors;
@@ -50,7 +50,7 @@ namespace Negocio
 
         public String update(int id, String nome, String descricao, String grupoMuscular)
         {
-            Equipamento equip = new Equipamento(nome, descricao, grupoMuscular);
+            Equipamento equip = new Equipamento(0, nome, descricao, grupoMuscular, 0);
             EquipamentoValidator validator = new EquipamentoValidator();
             ValidationResult results = validator.Validate(equip);
             IList<ValidationFailure> failures = results.Errors;
@@ -80,6 +80,12 @@ namespace Negocio
         {
             return repository.PesquisaEquipamentoPorId(id);
         }
+
+        public List<Equipamento> listaEquipamento()
+        {
+            return repository.listagemEquipamento();
+        }
+
 
     }
 }
