@@ -378,7 +378,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Sum(Fields!usabilidade.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>SemiBold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -427,7 +430,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetEquipamento</DataSetName>
-        <Top>1.04606cm</Top>
+        <Top>0.17293cm</Top>
         <Left>0.26458cm</Left>
         <Height>2.56109cm</Height>
         <Width>18.23297cm</Width>
@@ -438,7 +441,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.48958in</Height>
+    <Height>1.14583in</Height>
     <Style />
   </Body>
   <Width>7.50125in</Width>
