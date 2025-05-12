@@ -78,7 +78,7 @@ namespace Apresentacao
         {
             reportViewer1.Reset();
             reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.ReportPath = @"C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\RelatorioEquipamento.rdlc";
+            reportViewer1.LocalReport.ReportPath = @"C:\Users\lucas\OneDrive\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\RelatorioEquipamento.rdlc";
 
             ReportDataSource rds = new ReportDataSource("DataSetEquipamento", equipamentosParaRelatorio);
             reportViewer1.LocalReport.DataSources.Add(rds);
