@@ -196,6 +196,39 @@ namespace Dados
             return DtResultado;
         }
 
+        public List<Equipamento> listagemEquipamento()
+        {
+            
+            List<Equipamento> listaEquipamentos = new List<Equipamento>();
+
+            
+                Connection.getConnection();
+                string query = "SELECT idAparelho, nome, descricao, grupoMuscular, usabilidade FROM cl203518.GymGuruAparelho ORDER BY usabilidade DESC;";
+                    MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                listaEquipamentos.Add(new Equipamento
+                {
+                    id = reader.GetInt32("idAparelho"),
+                    nome = reader.GetString("nome"),
+                    descricao = reader.GetString("descricao"),
+                    musculo = reader.GetString("grupoMuscular"),
+                    usabilidade = reader.IsDBNull(reader.GetOrdinal("usabilidade")) ? 0 : reader.GetInt32("usabilidade")
+                });
+            }
+            reader.Close();
+            Connection.SqlCon.Close();
+
+
+            return listaEquipamentos;
+              
+            
+            
+        }
+
+
     }
 
 

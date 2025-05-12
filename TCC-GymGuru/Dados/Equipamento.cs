@@ -9,20 +9,25 @@ namespace Dados
 {
     public class Equipamento
     {
+        public int id {  get; set; }
         public String nome {  get; set; }
         public String descricao { get; set; }
         public String musculo { get; set; }
+
+
 
         public int usabilidade {  get; set; }
 
         public Equipamento() { }
 
-        public Equipamento(string nome, string descricao, string musculo)
+        public Equipamento(int id, string nome, string descricao, string musculo, int usabilidade )
         {
+            this.id = id;
             this.nome = nome;
             this.descricao = descricao;
             this.musculo = musculo;
-           
+            this.usabilidade = usabilidade;
+
         }
     }
 }
