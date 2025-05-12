@@ -13,15 +13,18 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class FrmFormularioEquipamento: Form
-    {
-        List<Equipamento> listaEquipamentos = new List<Equipamento>();
-        public FrmFormularioEquipamento(List<Equipamento> listaEquipamentos)
+  
+
+    
+        public partial class FrmFormularioEquipamento : Form
         {
-            InitializeComponent();
-            this.listaEquipamentos  = listaEquipamentos;
-          
-        }
+            List<Equipamento> listaEquipamentos = new List<Equipamento>();
+
+            public FrmFormularioEquipamento(List<Equipamento> listaEquipamentos)
+            {
+                InitializeComponent();
+                this.listaEquipamentos = listaEquipamentos;
+            }
 
         private void FrmFormulario_Load(object sender, EventArgs e)
         {
@@ -29,31 +32,23 @@ namespace Apresentacao
             {
                 if (listaEquipamentos != null && listaEquipamentos.Count > 0)
                 {
-                    // Criar um DataTable
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("id", typeof(int));
-                    dt.Columns.Add("nome", typeof(string));
-                    dt.Columns.Add("descricao", typeof(string));
-                    dt.Columns.Add("musculo", typeof(string));
-                    dt.Columns.Add("usabilidade", typeof(int));
+                    
+                    var musculosUnicos = listaEquipamentos
+                     .Select(equip => equip.musculo)
+                     .Where(m => !string.IsNullOrEmpty(m))
+                       .Distinct()
+                      .OrderBy(m => m)
+                      .ToList();
+                    musculosUnicos.Insert(0, "Todos");
 
-                    // Preencher o DataTable com os dados
-                    foreach (var equipamento in listaEquipamentos)
-                    {
-                        dt.Rows.Add(equipamento.id, equipamento.nome, equipamento.descricao, equipamento.musculo, equipamento.usabilidade);
-                    }
+                   
+                    comboBox1.DataSource = musculosUnicos;
+                    comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-                    // Configurar o ReportViewer
-                    reportViewer1.Reset();
-                    reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.ReportPath = @"C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\RelatorioEquipamento.rdlc";
+                    comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
 
-                    // Criar e adicionar o DataSource
-                    ReportDataSource rds = new ReportDataSource("DataSetEquipamento", dt);
-                    reportViewer1.LocalReport.DataSources.Add(rds);
-
-                    // Atualizar o relatório
-                    reportViewer1.RefreshReport();
+                   
+                    AtualizarRelatorio(listaEquipamentos);
                 }
                 else
                 {
@@ -66,11 +61,38 @@ namespace Apresentacao
             }
         }
 
-
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.Refresh();
+            string musculoSelecionado = comboBox1.SelectedItem.ToString();
+            List<Equipamento> listaFiltrada;
+
+            if (musculoSelecionado == "Todos")
+                listaFiltrada = listaEquipamentos;
+            else
+                listaFiltrada = listaEquipamentos.FindAll(equip => equip.musculo == musculoSelecionado);
+
+            AtualizarRelatorio(listaFiltrada);
+        }
+
+        private void AtualizarRelatorio(List<Equipamento> equipamentosParaRelatorio)
+        {
+            reportViewer1.Reset();
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.ReportPath = @"C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\RelatorioEquipamento.rdlc";
+
+            ReportDataSource rds = new ReportDataSource("DataSetEquipamento", equipamentosParaRelatorio);
+            reportViewer1.LocalReport.DataSources.Add(rds);
+
             reportViewer1.RefreshReport();
         }
-    }
+
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+            {
+                
+            }
+        }
+    
+
+
 }
