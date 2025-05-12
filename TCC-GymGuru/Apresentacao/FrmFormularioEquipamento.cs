@@ -25,60 +25,47 @@ namespace Apresentacao
 
         private void FrmFormulario_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-
-            
-                try
+            try
+            {
+                if (listaEquipamentos != null && listaEquipamentos.Count > 0)
                 {
-                    // Obter a lista de equipamentos
-                   
+                    // Criar um DataTable
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("id", typeof(int));
+                    dt.Columns.Add("nome", typeof(string));
+                    dt.Columns.Add("descricao", typeof(string));
+                    dt.Columns.Add("musculo", typeof(string));
+                    dt.Columns.Add("usabilidade", typeof(int));
 
-                    // Verificar se há dados na lista
-                    if (listaEquipamentos != null && listaEquipamentos.Count > 0)
+                    // Preencher o DataTable com os dados
+                    foreach (var equipamento in listaEquipamentos)
                     {
-                        Console.WriteLine("Quantidade de equipamentos: " + listaEquipamentos.Count);
-
-                        // Verificar os dados da lista
-                        foreach (var equipamento in listaEquipamentos)
-                        {
-                            Console.WriteLine($"ID: {equipamento.id}, Nome: {equipamento.nome}, Usabilidade: {equipamento.usabilidade}");
-                        }
-
-                        // Configurar o ReportViewer
-                        reportViewer1.Reset();
-                        reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.LocalReport.ReportPath = "RelatorioEquipamentos.rdlc";
-
-                        // Criar e adicionar o DataSource
-                        ReportDataSource rds = new ReportDataSource("DataSetEquipamento", listaEquipamentos);
-                        reportViewer1.LocalReport.DataSources.Add(rds);
-
-                        // Atualizar o relatório
-                        reportViewer1.LocalReport.Refresh();
-                        reportViewer1.RefreshReport();
+                        dt.Rows.Add(equipamento.id, equipamento.nome, equipamento.descricao, equipamento.musculo, equipamento.usabilidade);
                     }
-                    else
-                    {
-                        MessageBox.Show("A lista de equipamentos está vazia!");
-                    }
+
+                    // Configurar o ReportViewer
+                    reportViewer1.Reset();
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.ReportPath = @"C:\Users\Usuario\Desktop\TCC-GymGuru\TCC-GymGuru\Apresentacao\RelatorioEquipamento.rdlc";
+
+                    // Criar e adicionar o DataSource
+                    ReportDataSource rds = new ReportDataSource("DataSetEquipamento", dt);
+                    reportViewer1.LocalReport.DataSources.Add(rds);
+
+                    // Atualizar o relatório
+                    reportViewer1.RefreshReport();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Erro ao carregar o relatório: " + ex.Message);
+                    MessageBox.Show("A lista de equipamentos está vazia!");
                 }
-            
-
-
-
-            /*
-
-            ReportDataSource rds = new ReportDataSource("DataSetEquipamento", listaEquipamentos);
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.LocalReport.ReportPath = "RelatorioEquipamento.rdlc";
-            reportViewer1.RefreshReport();*/
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar o relatório: " + ex.Message + "\n" + ex.StackTrace);
+            }
         }
+
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
