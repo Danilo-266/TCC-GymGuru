@@ -62,9 +62,10 @@
             this.Filtro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Filtro.Location = new System.Drawing.Point(12, 12);
             this.Filtro.Name = "Filtro";
-            this.Filtro.Size = new System.Drawing.Size(56, 24);
+            this.Filtro.Size = new System.Drawing.Size(63, 24);
             this.Filtro.TabIndex = 2;
-            this.Filtro.Text = "Filto:";
+            this.Filtro.Text = "Filtro:";
+            this.Filtro.Click += new System.EventHandler(this.Filtro_Click);
             // 
             // label1
             // 
