@@ -51,6 +51,8 @@ namespace Apresentacao
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgFuncionario = new System.Windows.Forms.PictureBox();
+            this.rbPersonal = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -62,9 +64,9 @@ namespace Apresentacao
             // dgCliente
             // 
             this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Location = new System.Drawing.Point(208, 229);
+            this.dgCliente.Location = new System.Drawing.Point(179, 227);
             this.dgCliente.Name = "dgCliente";
-            this.dgCliente.Size = new System.Drawing.Size(985, 364);
+            this.dgCliente.Size = new System.Drawing.Size(1126, 364);
             this.dgCliente.TabIndex = 17;
             this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
             this.dgCliente.SelectionChanged += new System.EventHandler(this.dgCliente_SelectionChanged);
@@ -74,7 +76,7 @@ namespace Apresentacao
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(193, 37);
+            this.label2.Location = new System.Drawing.Point(167, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(310, 86);
             this.label2.TabIndex = 26;
@@ -82,7 +84,7 @@ namespace Apresentacao
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(208, 609);
+            this.btnNovo.Location = new System.Drawing.Point(182, 611);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(119, 32);
             this.btnNovo.TabIndex = 34;
@@ -92,7 +94,7 @@ namespace Apresentacao
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(352, 609);
+            this.btnAlterar.Location = new System.Drawing.Point(326, 611);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(119, 32);
             this.btnAlterar.TabIndex = 35;
@@ -102,7 +104,7 @@ namespace Apresentacao
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(496, 609);
+            this.btnExcluir.Location = new System.Drawing.Point(470, 611);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(119, 32);
             this.btnExcluir.TabIndex = 36;
@@ -112,7 +114,7 @@ namespace Apresentacao
             // 
             // btnPesquisa
             // 
-            this.btnPesquisa.Location = new System.Drawing.Point(645, 609);
+            this.btnPesquisa.Location = new System.Drawing.Point(619, 611);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(119, 32);
             this.btnPesquisa.TabIndex = 37;
@@ -122,7 +124,7 @@ namespace Apresentacao
             // 
             // btnTreino
             // 
-            this.btnTreino.Location = new System.Drawing.Point(799, 609);
+            this.btnTreino.Location = new System.Drawing.Point(773, 611);
             this.btnTreino.Name = "btnTreino";
             this.btnTreino.Size = new System.Drawing.Size(119, 32);
             this.btnTreino.TabIndex = 40;
@@ -156,12 +158,12 @@ namespace Apresentacao
             this.rbtClietes.AutoSize = true;
             this.rbtClietes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtClietes.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.rbtClietes.Location = new System.Drawing.Point(216, 201);
+            this.rbtClietes.Location = new System.Drawing.Point(182, 201);
             this.rbtClietes.Name = "rbtClietes";
-            this.rbtClietes.Size = new System.Drawing.Size(87, 22);
+            this.rbtClietes.Size = new System.Drawing.Size(74, 22);
             this.rbtClietes.TabIndex = 64;
             this.rbtClietes.TabStop = true;
-            this.rbtClietes.Text = "Clientes";
+            this.rbtClietes.Text = "Todos";
             this.rbtClietes.UseVisualStyleBackColor = true;
             this.rbtClietes.CheckedChanged += new System.EventHandler(this.rbtClietes_CheckedChanged);
             // 
@@ -170,7 +172,7 @@ namespace Apresentacao
             this.rbtnEndereco.AutoSize = true;
             this.rbtnEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.rbtnEndereco.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.rbtnEndereco.Location = new System.Drawing.Point(319, 201);
+            this.rbtnEndereco.Location = new System.Drawing.Point(459, 201);
             this.rbtnEndereco.Name = "rbtnEndereco";
             this.rbtnEndereco.Size = new System.Drawing.Size(98, 22);
             this.rbtnEndereco.TabIndex = 65;
@@ -286,12 +288,42 @@ namespace Apresentacao
             this.imgFuncionario.TabStop = false;
             this.imgFuncionario.Click += new System.EventHandler(this.imgFuncionario_Click_1);
             // 
+            // rbPersonal
+            // 
+            this.rbPersonal.AutoSize = true;
+            this.rbPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.rbPersonal.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.rbPersonal.Location = new System.Drawing.Point(355, 201);
+            this.rbPersonal.Name = "rbPersonal";
+            this.rbPersonal.Size = new System.Drawing.Size(102, 22);
+            this.rbPersonal.TabIndex = 114;
+            this.rbPersonal.TabStop = true;
+            this.rbPersonal.Text = "Personais";
+            this.rbPersonal.UseVisualStyleBackColor = true;
+            this.rbPersonal.CheckedChanged += new System.EventHandler(this.rbPersonal_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.radioButton1.Location = new System.Drawing.Point(262, 201);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(87, 22);
+            this.radioButton1.TabIndex = 115;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Clientes";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1359, 732);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbPersonal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -351,5 +383,7 @@ namespace Apresentacao
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox imgFuncionario;
+        private System.Windows.Forms.RadioButton rbPersonal;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

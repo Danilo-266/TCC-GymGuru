@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Dados;
+using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using Dados;
-using FluentValidation.Results;
 
 namespace Negocio
 {
@@ -17,7 +18,7 @@ namespace Negocio
             repository = new ClienteRepository();
         }
 
-        public string Cadastrar(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia,string cidade ,String rua, string bairro, int numero, string cep, string complemeto)
+        public string CadastrarCliente(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia,string cidade ,String rua, string bairro, int numero, string cep, string complemeto, string senha)
         {// mudar validacao
             Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemeto);
             ClienteValidator validator = new ClienteValidator();
@@ -32,11 +33,34 @@ namespace Negocio
                 }
             }
            
-                repository.Cadastro(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia, cadastroEdenreco(cidade, rua, bairro, numero, cep, complemeto));
+                repository.CadastroUsuario(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia, cadastroEdenreco(cidade, rua, bairro, numero, cep, complemeto), senha);
                 return "Cliete cadastrado com sucesso";
     
         }
-    
+
+
+        public string CadastrarPersonal(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia, string cidade, String rua, string bairro, int numero, string cep, string complemeto,string cref , string senha)
+        {// mudar validacao
+            Cliente cliente = new Cliente(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemeto);
+            ClienteValidator validator = new ClienteValidator();
+            ValidationResult results = validator.Validate(cliente);
+            IList<ValidationFailure> failures = results.Errors;
+            if (!results.IsValid)
+            {
+                foreach (ValidationFailure failure in failures)
+                {
+                    string ERRO = failure.ErrorMessage;
+                    return ERRO;
+                }
+            }
+
+            repository.CadastroPersonnal(cpf, nome, idade, email, genero.ToUpper(), celular, experiencia, cadastroEdenreco(cidade, rua, bairro, numero, cep, complemeto), cref , senha);
+            return "Cliete cadastrado com sucesso";
+
+        }
+
+
+
         public DataTable exibir()
         {
             return repository.getAll();
@@ -115,6 +139,31 @@ namespace Negocio
             return repository.getEnderecoPorId(id);
         }
 
-        
-    }
+        public DataTable getAllUsuarios()
+        {
+            return repository.getClientePorStatus("Cliente");
+        }
+
+        public DataTable getAllPersonais()
+        {
+            return repository.getClientePorStatus("Personal");
+        }
+
+        public string GerarSenha(int tamanho)
+        {
+            const string caracteresPermitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder senha = new StringBuilder();
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] numeroAleatorio = new byte[1];
+                while (senha.Length < tamanho)
+                {
+                    rng.GetBytes(numeroAleatorio);
+                    int posicao = numeroAleatorio[0] % caracteresPermitidos.Length;
+                    senha.Append(caracteresPermitidos[posicao]);
+                }
+            }
+            return senha.ToString();
+        }
+        }
 }

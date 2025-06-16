@@ -108,9 +108,9 @@ namespace Apresentacao
 
             try
             {
-                if (modo == 0) 
+                if (modo == 0)
                 {
-                    
+
                     dgCliente.Columns.Add("ID", "ID");
                     dgCliente.Columns.Add("CPF", "CPF");
                     dgCliente.Columns.Add("NOME", "NOME");
@@ -120,6 +120,9 @@ namespace Apresentacao
                     dgCliente.Columns.Add("CELULAR", "CELULAR");
                     dgCliente.Columns.Add("EXPERIENCIA", "EXPERIENCIA");
                     dgCliente.Columns.Add("ENDERECO", "ENDERECO");
+                    dgCliente.Columns.Add("ESTADO", "ESTADO");
+                    dgCliente.Columns.Add("CREF", "CREF");
+
 
 
                     dgCliente.Columns[0].DataPropertyName = "idCliente";
@@ -131,13 +134,15 @@ namespace Apresentacao
                     dgCliente.Columns[6].DataPropertyName = "celular";
                     dgCliente.Columns[7].DataPropertyName = "experiencia";
                     dgCliente.Columns[8].DataPropertyName = "idEdenreco";
+                    dgCliente.Columns[9].DataPropertyName = "estado";
+                    dgCliente.Columns[10].DataPropertyName = "cref";
 
 
                     dgCliente.DataSource = clienteService.exibir();
                 }
-                else if (modo == 1) 
+                else if (modo == 1)
                 {
-                    
+
                     dgCliente.Columns.Add("ID", "ID");
                     dgCliente.Columns.Add("CIDADE", "CIDADE");
                     dgCliente.Columns.Add("RUA", "RUA");
@@ -146,7 +151,7 @@ namespace Apresentacao
                     dgCliente.Columns.Add("CEP", "CEP");
                     dgCliente.Columns.Add("COMPLEMENTO", "COMPLEMENTO");
 
-                   
+
                     dgCliente.Columns[0].DataPropertyName = "idEndereco";
                     dgCliente.Columns[1].DataPropertyName = "cidade";
                     dgCliente.Columns[2].DataPropertyName = "rua";
@@ -155,11 +160,73 @@ namespace Apresentacao
                     dgCliente.Columns[5].DataPropertyName = "cep";
                     dgCliente.Columns[6].DataPropertyName = "complemento";
 
-                 
+
                     dgCliente.DataSource = clienteService.getAllEdenreco();
                 }
+                else if (modo == 2) {
+                    dgCliente.Columns.Add("ID", "ID");
+                    dgCliente.Columns.Add("CPF", "CPF");
+                    dgCliente.Columns.Add("NOME", "NOME");
+                    dgCliente.Columns.Add("IDADE", "IDADE");
+                    dgCliente.Columns.Add("EMAIL", "EMAIL");
+                    dgCliente.Columns.Add("GENERO", "GENERO");
+                    dgCliente.Columns.Add("CELULAR", "CELULAR");
+                    dgCliente.Columns.Add("EXPERIENCIA", "EXPERIENCIA");
+                    dgCliente.Columns.Add("ENDERECO", "ENDERECO");
+                    dgCliente.Columns.Add("ESTADO", "ESTADO");
+                    dgCliente.Columns.Add("CREF", "CREF");
 
-                
+
+
+                    dgCliente.Columns[0].DataPropertyName = "idCliente";
+                    dgCliente.Columns[1].DataPropertyName = "cpf";
+                    dgCliente.Columns[2].DataPropertyName = "nome";
+                    dgCliente.Columns[3].DataPropertyName = "idade";
+                    dgCliente.Columns[4].DataPropertyName = "email";
+                    dgCliente.Columns[5].DataPropertyName = "genero";
+                    dgCliente.Columns[6].DataPropertyName = "celular";
+                    dgCliente.Columns[7].DataPropertyName = "experiencia";
+                    dgCliente.Columns[8].DataPropertyName = "idEdenreco";
+                    dgCliente.Columns[9].DataPropertyName = "estado";
+                    dgCliente.Columns[10].DataPropertyName = "cref";
+
+                    dgCliente.DataSource = clienteService.getAllUsuarios();
+                }
+                else if (modo == 3)
+                {
+                    dgCliente.Columns.Add("ID", "ID");
+                    dgCliente.Columns.Add("CPF", "CPF");
+                    dgCliente.Columns.Add("NOME", "NOME");
+                    dgCliente.Columns.Add("IDADE", "IDADE");
+                    dgCliente.Columns.Add("EMAIL", "EMAIL");
+                    dgCliente.Columns.Add("GENERO", "GENERO");
+                    dgCliente.Columns.Add("CELULAR", "CELULAR");
+                    dgCliente.Columns.Add("EXPERIENCIA", "EXPERIENCIA");
+                    dgCliente.Columns.Add("ENDERECO", "ENDERECO");
+                    dgCliente.Columns.Add("ESTADO", "ESTADO");
+                    dgCliente.Columns.Add("CREF", "CREF");
+
+
+
+                    dgCliente.Columns[0].DataPropertyName = "idCliente";
+                    dgCliente.Columns[1].DataPropertyName = "cpf";
+                    dgCliente.Columns[2].DataPropertyName = "nome";
+                    dgCliente.Columns[3].DataPropertyName = "idade";
+                    dgCliente.Columns[4].DataPropertyName = "email";
+                    dgCliente.Columns[5].DataPropertyName = "genero";
+                    dgCliente.Columns[6].DataPropertyName = "celular";
+                    dgCliente.Columns[7].DataPropertyName = "experiencia";
+                    dgCliente.Columns[8].DataPropertyName = "idEdenreco";
+                    dgCliente.Columns[9].DataPropertyName = "estado";
+                    dgCliente.Columns[10].DataPropertyName = "cref";
+
+
+                    dgCliente.DataSource = clienteService.getAllPersonais();
+                }
+
+
+
+
                 dgCliente.Refresh();
             }
             catch (ArgumentOutOfRangeException ex)
@@ -325,6 +392,16 @@ namespace Apresentacao
 
             tela.Show();
             this.Hide();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            carregaGridView(2);
+        }
+
+        private void rbPersonal_CheckedChanged(object sender, EventArgs e)
+        {
+            carregaGridView(3);
         }
     }
     }

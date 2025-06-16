@@ -10,10 +10,9 @@ namespace Dados
 {
     public class ClienteRepository
     {
-        public void Cadastro(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia, int idEdenreco)
+        public void CadastroUsuario(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia, int idEdenreco, string senha)
         {
-
-            string query = "INSERT INTO GymGuruCliente (cpf, nome, idade, email, genero, celular, experiencia, idEdenreco) VALUES (@cpf, @nome, @idade, @email, @genero, @celular, @experiencia, @idEdenreco)";
+            string query = "INSERT INTO GymGuruCliente (cpf, nome, idade, email, genero, celular, experiencia, idEdenreco, estado, cref, senha) VALUES (@cpf, @nome, @idade, @email, @genero, @celular, @experiencia, @idEdenreco, @estado, @cref, @senha)";
             Connection.getConnection();
             using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
             {
@@ -25,6 +24,32 @@ namespace Dados
                 cmd.Parameters.AddWithValue("@celular", celular);
                 cmd.Parameters.AddWithValue("@experiencia", experiencia);
                 cmd.Parameters.AddWithValue("@idEdenreco", idEdenreco);
+                cmd.Parameters.AddWithValue("@estado", "Cliente");
+                cmd.Parameters.AddWithValue("@cref", DBNull.Value);  // cliente não tem cref
+                cmd.Parameters.AddWithValue("@senha", senha);
+                cmd.ExecuteNonQuery();
+            }
+            if (Connection.SqlCon.State == ConnectionState.Open)
+                Connection.SqlCon.Close();
+        }
+
+        public void CadastroPersonnal(String cpf, string nome, int idade, string email, string genero, int celular, string experiencia, int idEdenreco, string cref, string senha)
+        {
+            string query = "INSERT INTO GymGuruCliente (cpf, nome, idade, email, genero, celular, experiencia, idEdenreco, estado, cref, senha) VALUES (@cpf, @nome, @idade, @email, @genero, @celular, @experiencia, @idEdenreco, @estado, @cref, @senha)";
+            Connection.getConnection();
+            using (MySqlCommand cmd = new MySqlCommand(query, Connection.SqlCon))
+            {
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@idade", idade);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@celular", celular);
+                cmd.Parameters.AddWithValue("@experiencia", experiencia);
+                cmd.Parameters.AddWithValue("@idEdenreco", idEdenreco);
+                cmd.Parameters.AddWithValue("@estado", "Personal");
+                cmd.Parameters.AddWithValue("@cref", cref);
+                cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.ExecuteNonQuery();
             }
             if (Connection.SqlCon.State == ConnectionState.Open)
@@ -232,6 +257,34 @@ namespace Dados
             return DtResultado;
         }
 
+        public DataTable getClientePorStatus(String status)
+        {
+            DataTable DtResultado = new DataTable("cliente");
+            try
+            {
+                Connection.getConnection();
+                string sqlSelect = "SELECT * FROM GymGuruCliente WHERE estado = @estado";
+
+                MySqlCommand SqlCmd = new MySqlCommand();
+                SqlCmd.Connection = Connection.SqlCon;
+                SqlCmd.CommandText = sqlSelect;
+                SqlCmd.CommandType = CommandType.Text;
+                SqlCmd.Parameters.AddWithValue("@estado", status);
+
+                MySqlDataAdapter SqlData = new MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                if (Connection.SqlCon.State == ConnectionState.Open)
+                    Connection.SqlCon.Close();
+            }
+            return DtResultado;
+        }
 
         //ENDERECO
 
@@ -368,6 +421,9 @@ namespace Dados
             }
             return DtResultado;
         }
+
+
+       
 
     }
 }

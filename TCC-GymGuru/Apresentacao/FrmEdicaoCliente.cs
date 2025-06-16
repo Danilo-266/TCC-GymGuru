@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
@@ -87,38 +88,80 @@ namespace Apresentacao
         {
             
             String cpf = txtCpf.Text, nome = txtNome.Text, email = txtEmail.Text, genero = txtGenero.Text, experiencia = txtExperiencia.Text;
-            string rua = txtRua.Text, bairro = txtBairro.Text, cep = txtCEP.Text, complemento = txtComplemeto.Text, cidade = txtCidade.Text;
+            string rua = txtRua.Text, bairro = txtBairro.Text, cep = txtCEP.Text, complemento = txtComplemeto.Text, cidade = txtCidade.Text, cref = txtPersonal.Text; 
             int.TryParse(txtCelular.Text, out int celular);
             int.TryParse(txtNumero.Text, out int numero);
             int.TryParse(txtIdade.Text, out int idade);
+            string tipo = "";
+
+            if (rbPersonal.Checked)
+            {
+                tipo = "Personal";
+            }
+            else if (rbUsuario.Checked)
+            {
+                tipo = "Usuario";
+            }
+
+            string senha = clienteService.GerarSenha(6);
            
             if (id == 0)
             {
-                try
+                if (rbUsuario.Checked)
                 {
-                    string resultados = clienteService.Cadastrar(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemento);
-                    if (resultados == "Cliete cadastrado com sucesso")
+                    try
                     {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string resultados = clienteService.CadastrarCliente(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemento, senha);
+                        if (resultados == "Cliete cadastrado com sucesso")
+                        {
+                            MessageBox.Show("Cliente Cadastrado com sucesso:\n\nLogin no APP Mobile:\n\nLogin: " + email + "\nSenha: " + senha, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        this.Close();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        }
+
                     }
-                    else
-                    {
-                        MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        string resultados = clienteService.CadastrarPersonal(cpf, nome, idade, email, genero, celular, experiencia, cidade, rua, bairro, numero, cep, complemento,cref ,senha);
+                        if (resultados == "Cliete cadastrado com sucesso")
+                        {
+                            MessageBox.Show("Cliente Cadastrado com sucesso:\n\nLogin no APP Mobile:\nLogin: " + email + "\nSenha: " + senha, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(resultados, "AVISO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        }
+
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
 
                 }
-
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message, "ERRO AO CADASTRAR CLIENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                }
-
 
             }
             else
@@ -153,6 +196,23 @@ namespace Apresentacao
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            txtPersonal.Enabled = true; 
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPersonal.Clear();
+            txtPersonal.Enabled = false;   
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
