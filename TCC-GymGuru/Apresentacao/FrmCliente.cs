@@ -138,7 +138,11 @@ namespace Apresentacao
                     dgCliente.Columns[10].DataPropertyName = "cref";
 
 
-                    dgCliente.DataSource = clienteService.exibir();
+                    DataTable dt = clienteService.exibir();
+                    dt.DefaultView.Sort = "NOME ASC";
+                    dgCliente.DataSource = dt;
+
+
                 }
                 else if (modo == 1)
                 {
@@ -190,7 +194,10 @@ namespace Apresentacao
                     dgCliente.Columns[9].DataPropertyName = "estado";
                     dgCliente.Columns[10].DataPropertyName = "cref";
 
-                    dgCliente.DataSource = clienteService.getAllUsuarios();
+                    DataTable dt = clienteService.getAllUsuarios();
+                    dt.DefaultView.Sort = "NOME ASC";
+                    dgCliente.DataSource = dt;
+
                 }
                 else if (modo == 3)
                 {
@@ -220,8 +227,11 @@ namespace Apresentacao
                     dgCliente.Columns[9].DataPropertyName = "estado";
                     dgCliente.Columns[10].DataPropertyName = "cref";
 
+                    DataTable dt = clienteService.getAllPersonais();
+                    dt.DefaultView.Sort = "NOME ASC";
+                    dgCliente.DataSource = dt;
 
-                    dgCliente.DataSource = clienteService.getAllPersonais();
+                    
                 }
 
 

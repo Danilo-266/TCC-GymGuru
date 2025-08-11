@@ -135,7 +135,9 @@ namespace Apresentacao
 
         private void carregaGridView()
         {
-            dgFuncionario.DataSource = funcionarioService.exibir();
+            DataTable dt = funcionarioService.exibir();
+            dt.DefaultView.Sort = "nome ASC";
+            dgFuncionario.DataSource = dt;
             dgFuncionario.Refresh();
         }
 
